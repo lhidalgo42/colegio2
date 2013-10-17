@@ -44,7 +44,7 @@
     
     <td><input type="date" style="width:115px;" id="<?php echo"fechaS".$i.""?>" placeholder="Fecha"></td>
     
-    <td><input type="number" style="width:50px;" onChange="beca(<?php echo $i; ?>)" id="<?php echo"1sem".$i.""?>" placeholder="% Beca"></td>
+    <td><input type="number" style="width:50px;" <?php /* onChange="beca(<?php echo $i; ?>)" */?> id="<?php echo"1sem".$i.""?>" placeholder="% Beca"></td>
     
     <td><input type="number" style="width:50px;" id="<?php echo"2sem".$i.""?>" placeholder="% Beca"></td>
     
