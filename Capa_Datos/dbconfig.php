@@ -5,5 +5,5 @@
  */
 $servidor = '186.105.152.243';
 $nombre_usuario = 'root';
-$contrasena = '';
+$contrasena = '1234';
 $base_de_datos = 'colegio';
