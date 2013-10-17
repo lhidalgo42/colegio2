@@ -32,83 +32,12 @@ body {
 <br>
 
 <form method="post" action="javascript:enviar()">
-<div><table  border="1" class="table table-bordered">
-  <tr>
-    <td><strong>Familia</strong></td>
-    <td><input type="text" id="familia" disabled class="span3"></td>
-    <td><strong>Apoderado Economico</strong></td>
-    <td>
-  <div class="btn-group" id="AEconomico" idModal="" data-toggle="buttons-radio">
-  <button type="button" class="btn" onClick="clickButton(0)">Mama</button>
-  <button type="button" class="btn" onClick="clickButton(1)">Papa</button>
-</div></td>
-  </tr>
-  <tr>
-    <td><strong>Madre</strong></td>
-    <td><a id="modalMAMA" role="button" onClick="MostrarPadre(0)" class="btn" data-toggle="modal" rut="" nombre="" apellidoP="" apellidoM="" >Mama</a></td>
-    <td>Padre</td>
-    <td><a id="modalPAPA" role="button" onClick="MostrarPadre(1)" class="btn" data-toggle="modal">Papa</a></td>
-  </tr>
-</table>
-</div>
-<!-- Datos de lumnos
+<div id="padres">
+<?php include("padres.php"); ?>
 
--->
-<div id="ninos"><center><table border="1" class="table table-bordered span9">
-<thead>
-  <tr>
-    <td  colspan="2"><center><strong>NOMBRE DE LOS NIÑOS</strong></center></td>
-    <td rowspan="2"><center><strong>CURSO</strong></center></td>
-    <td colspan="3"><center><strong>PAGO DE MATRICULA</strong></center></td>
-    <td colspan="3"><center><strong>PAGO DE SEGURO ESCOLAR</strong></center></td>
-    <td colspan="2"><center><strong>BECAS</strong></center></td>
-  </tr>
-  <tr>
-  	<td><center>RUT</center></td>
-    <td><center>Nombre</center></td>  
-    <td><center>N° de Boleta</center></td>
-    <td><center>MONTO</center></td>
-    <td><center>FECHA</center></td>
-    <td><center>VALE N°</center></td>
-    <td><center>MONTO</center></td>
-    <td><center>FECHA</center></td>
-    <td><center>1 SEMESTRE</center></td>
-    <td><center>2 SEMESTRE</center></td>
-  </tr>
-  </thead>
-  <?php 
-  $cursos=array("Kinder","1° Basico","2° Basico","3° Basico","4° Basico", "5° Basico","6° Basico","7° Basico","8° Basico");
-  for($i=1;$i<5;$i++)
-  {?>
-  <tr>
-  <td class="span"><input type="text" class="span1" id="<?php echo"rut".$i.""?>" placeholder="Rut"></td>
-  
-    <td class="span2"><input type="text" class="span2" onFocus="verificarRut(rut<?php echo $i; ?>)" id="<?php echo"name".$i.""?>" placeholder="Nombre"></td>
-    
-    <td class="span1"><select id="Curso<?php echo $i; ?>" onChange="curso(<?php echo $i; ?>)" class="input-small"><option></option>
-    <?php for($e=0;$e<9;$e++){ ?><<option value="<?php echo $cursos[$e]; ?>"><?php echo $cursos[$e]; ?></option> <?php } ?></select></td>
-    
-    <td class="span1"><input type="number" class="span1" value="0" min="0" id="<?php echo"bolM".$i.""?>" placeholder="N° de Boleta"></td>
-    
-    <td class="span1"><input type="number" class="span1" valorMonto="" value="0" min="0" id="<?php echo"montoM".$i.""?>" placeholder="Monto"></td>
-    
-    <td><input type="date" style="width:115px;" id="<?php echo"fechaM".$i.""?>" placeholder="Fecha"></td>
-    
-    <td><input type="number" style="width:30px;" class="span1" value="0" min="0" id="<?php echo"valeS".$i.""?>" placeholder="VALE N°"></td>
-    
-    <td><a id="modal<?php echo $i; ?>" role="button" onClick="MostrarC(<?php echo $i; ?>)"class="btn" data-toggle="modal">Clinica</a></td>
-    
-    <td><input type="date" style="width:115px;" id="<?php echo"fechaS".$i.""?>" placeholder="Fecha"></td>
-    
-    <td><input type="number" style="width:50px;" onChange="beca(<?php echo $i; ?>)" id="<?php echo"1sem".$i.""?>" placeholder="% Beca"></td>
-    
-    <td><input type="number" style="width:50px;" id="<?php echo"2sem".$i.""?>" placeholder="% Beca"></td>
-    
-  </tr>
-  <?php 
-  }
-  ?>
-</table></center></div>
+</div>
+<!-- Datos de alumnos-->
+<div id="ninos"><center><?php include("Alumnos.php"); ?></center></div>
 <!-- fin datos alumnos-->
 <!--Despliega Errores-->
  <p><span id="mensaje" class="alert-danger"></span></p>
