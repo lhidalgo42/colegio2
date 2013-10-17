@@ -1,3 +1,4 @@
+<?php $campos=array(array("inputRUT","rut"),array("inputNombre","nombre"),array("inputApellidoP","apellido1"),array("inputApellidoM","apellido2"),array("inputFechaNac","fechaNac"),array("inputProfesion","profesion"),array("inputDireccion","direccion"),array("inputComuna","comuna"),array("inputEmail","email"),array("inputLugarTrabajo","lugarTrabajo"),array("inputDireccionT","direccionTrabajo"),array("inputTelefonos","telefonos")); ?>
 <!doctype html>
 <html>
 <head>
@@ -32,6 +33,9 @@ body {
 <br>
 
 <form method="post" action="javascript:enviar()">
+<!--Despliega Errores-->
+ <p><center><span id="mensaje" class="alert-danger"></span></center></p><br>
+
 <div id="padres">
 <?php include("padres.php"); ?>
 
@@ -39,8 +43,6 @@ body {
 <!-- Datos de alumnos-->
 <div id="ninos"><center><?php include("Alumnos.php"); ?></center></div>
 <!-- fin datos alumnos-->
-<!--Despliega Errores-->
- <p><span id="mensaje" class="alert-danger"></span></p>
 <br>
 <br>
 <!-- inicio Documentos -->
@@ -52,39 +54,35 @@ body {
 
 
 <script>
-function clickButton(I){
-if(I == 0){
-var A = $("#AEconomico").children()[0];
-A.html("<strong>MAMA</strong>");}
-else{
-var A =$("#AEconomico").children()[1]
-A.html("<strong>PAPA</strong>");}
-}
-function MostrarPadre(I){
-$("#sexo").val(I);
-$("#guardarPapa").attr("onClick","GuardarPapa("+I+")")
-if(I==0)
-$("#tittlePapa").html("<center>Complete los Datos de la Madre</center>");
-if(I==1)
-$("#tittlePapa").html("<center>Complete los Datos del Padre</center>");
-$('#myModalPapa').modal('show');
-}
-
+function CerrarPapa(){// funcion que restaura el modal y lo deja vacio (datos copias del modalPapa	
+$("#bodyPapa").html('<center><div class="control-group"><label class="control-label" for="inputRUT">RUT</label><div class="controls"><input type="text" id="inputRUT" placeholder="Rut" required></div></div><p><center><span id="mensaje2" class="alert-danger"></span></center></p><div class="control-group"><label class="control-label" for="inputNombre">Nombre</label><div class="controls"><input type="text" id="inputNombre" placeholder="Nombre" onFocus="verificarRut(inputRUT)" required></div></div><div class="control-group"><label class="control-label" for="inputApellidoP">Apellido Paterno</label><div class="controls"><input type="text" id="inputApellidoP" placeholder="Apellido Paterno" onFocus="verificarRut(inputRUT)" required></div></div><div class="control-group"><label class="control-label" for="inputApellidoM">Apellido Materno</label><div class="controls"><input type="text" id="inputApellidoM" placeholder="Apellido Materno" onFocus="verificarRut(inputRUT)" required></div></div><div class="control-group"><label class="control-label" for="inputFechaNac">Fecha Nacimiento</label><div class="controls"><input type="date" id="inputFechaNac" placeholder="Fecha Nacimiento" onFocus="verificarRut(inputRUT)" required>   </div></div><div class="control-group"><label class="control-label" for="inputProfesion">Profesión</label><div class="controls"><input type="text" id="inputProfesion" placeholder="Profesion" onFocus="verificarRut(inputRUT)" required></div></div><div class="control-group"><label class="control-label" for="inputDireccion">Dirección</label><div class="controls"><input type="text" id="inputDireccion" placeholder="Direccion" onFocus="verificarRut(inputRUT)" required></div></div><div class="control-group"><label class="control-label" for="inputComuna">Comuna</label><div class="controls"><input type="text" id="inputComuna" placeholder="Comuna" onFocus="verificarRut(inputRUT)" required></div></div><div class="control-group"><label class="control-label" for="inputEmail">Email</label><div class="controls"><input type="email" id="inputEmail" placeholder="Email" onFocus="verificarRut(inputRUT)"></div></div><div class="control-group"><label class="control-label" for="inputLugarTrabajo">Lugar de trabajo</label><div class="controls"><input type="password" id="inputLugarTrabajo" placeholder="Lugar de Trabajo" onFocus="verificarRut(inputRUT)"></div> </div><div class="control-group"><label class="control-label" for="inputDireccionT">Direccion Trabajo</label><div class="controls"><input type="password" id="inputDireccionT" placeholder="Direccion Trabajo" onFocus="verificarRut(inputRUT)"></div></div><div class="control-group"><label class="control-label" for="inputTelefonos">Telefonos</label><small>Si es mas de uno, separarlos por coma</small><div class="controls"><input type="text" id="inputTelefonos" placeholder="Telefnonos" onFocus="verificarRut(inputRUT)"></div></div></center>');}
 function GuardarPapa(I){
 var Nombre = $("#inputNombre").val();
 var Apellido = $("#inputApellidoP").val();
 	if(I==0){
-$("#modalMAMA").html(Nombre+" "+Apellido)	
-	}
+$("#modalMAMA").html(Nombre+" "+Apellido)
+<?php foreach($campos as $campo){?>
+$("#modalMAMA").attr("<?php echo $campo[1]; ?>",$("#<?php echo $campo[0]; ?>").val());
+<?php } ?>}
 	if(I==1){
-$("#modalPAPA").html(Nombre+" "+Apellido)		
-	}
-	$('#myModalPapa').modal('hide');
+$("#modalPAPA").html(Nombre+" "+Apellido)	
+<?php foreach($campos as $campo){?>
+$("#modalPAPA").attr("<?php echo $campo[1]; ?>",$("#<?php echo $campo[0]; ?>").val());
+<?php } ?>}
+	CerrarPapa()
+	$('#myModalPapa').modal('hide');}
 	
+function MostrarPadre(I){
+$("#guardarPapa").attr("onClick","GuardarPapa("+I+")")
+if(I==0){
+$("#tittlePapa").html("<center>Complete los Datos de la Madre</center>");
+<?php foreach($campos as $campo){?>$("#<?php echo $campo[0]; ?>").val($("#modalMAMA").attr("<?php echo $campo[1]; ?>"));<?php } ?>
 }
-function CerrarPapa()
-{
-	
+if(I==1){
+$("#tittlePapa").html("<center>Complete los Datos del Padre</center>");
+<?php foreach($campos as $campo){?>$("#<?php echo $campo[0]; ?>").val($("#modalPAPA").attr("<?php echo $campo[1]; ?>"));<?php } ?>
+}
+$('#myModalPapa').modal('show');
 }
   function curso(I){
     var curso = $('#Curso'+I).val();
@@ -111,57 +109,10 @@ function beca(I){
 	var total = ((100-beca)*monto)/100
 	$("#montoM"+I).val(total)	
 }
-function verificarRut( Objeto ){
-	var tmpstr = "";
-	$('#mensaje').html("");
-	var intlargo = Objeto.value;
-	if (intlargo.length> 0){
-		crut = Objeto.value;
-		largo = crut.length;
-		if ( largo <2 ){
-			$('#mensaje').html("<small><h4>El rut ingresado no es válido</h4></small>");
-			Objeto.focus();
-			 return false;
-			 }
-		for ( i=0; i <crut.length ; i++ )
-		if ( crut.charAt(i) != ' ' && crut.charAt(i) != '.' && crut.charAt(i) != '-' ){
-			tmpstr = tmpstr + crut.charAt(i);
-			}
-		rut = tmpstr;crut=tmpstr;
-		largo = crut.length;
-		if ( largo> 2 )
-		rut = crut.substring(0, largo - 1);
-		else rut = crut.charAt(0);
-		dv = crut.charAt(largo-1);
-		if ( rut == null || dv == null )
-		return 0;
-		var dvr = '0';
-		suma = 0;
-		mul  = 2;
-		for (i= rut.length-1 ; i>= 0; i--){
-			suma = suma + rut.charAt(i) * mul;
-			if (mul == 7)
-			mul = 2;
-			else mul++;
-			}
-			res = suma % 11;
-			if (res==1)
-			dvr = 'k';
-			else if (res==0)
-			dvr = '0';
-			else{
-				dvi = 11-res;dvr = dvi + "";
-				}
-			if ( dvr != dv.toLowerCase() )
-{
-	$('#mensaje').html("<small><h4>El rut ingresado no es válido</h4></small>");
-	Objeto.focus();
-	return false;
-	}
-	return true;
-	}
-}
-function sumar(I){ var A= parseFloat($("#Col"+I).val())+parseFloat($("#MatK"+I).val())+parseFloat($("#Cou"+I).val())+parseFloat($("#Alm"+I).val())+parseFloat($("#Deu"+I).val());$("#Total"+I).html("<strong>"+A+"</strong>");}function total(I){if(I == "Tot"){var A = parseFloat($("#ColT").children().html())+parseFloat($("#MatKT").children().html())+parseFloat($("#CouT").children().html())+parseFloat($("#AlmT").children().html())+parseFloat($("#DeuT").children().html());$("#TotalT").html("<strong>"+A+"</strong>");}else{var A = + <?php for($i=1;$i<12;$i++){ ?> parseFloat($("#"+I+"<?php echo $i; ?>").val())+<?php }?>parseFloat($("#"+I+"12").val());$("#"+I+"T").html("<strong>"+A+"</strong>");}}function bodyfuntion(){<?php for($i=1;$i<13;$i++){?>sumar(<?php echo $i; ?>);<?php }?>total("Col");total("MatK");total("Cou");total("Deu");total("Alm");total("Tot");};
+function verificarRut( Objeto ) // extre el rut de la casilla y lo verifica atraves del digito verificador(ultimo digito) si el rut es valido o no devuelve true o false
+{var tmpstr = "";$('#mensaje').html("");$('#mensaje2').html("");var intlargo = Objeto.value;if (intlargo.length> 0){crut = Objeto.value;largo = crut.length;if ( largo <2 ){$('#mensaje').html("<h2>El rut ingresado no es válido</h2>");$('#mensaje2').html("<small><h4>El rut ingresado no es válido</h4><small>");Objeto.focus();return false;}for ( i=0; i <crut.length ; i++ )if ( crut.charAt(i) != ' ' && crut.charAt(i) != '.' && crut.charAt(i) != '-' ){tmpstr = tmpstr + crut.charAt(i);}rut = tmpstr;crut=tmpstr;largo = crut.length;if ( largo> 2 )rut = crut.substring(0, largo - 1);		else rut = crut.charAt(0);dv = crut.charAt(largo-1);if ( rut == null || dv == null )return 0;var dvr = '0';suma = 0;mul  = 2;for (i= rut.length-1 ; i>= 0; i--){suma = suma + rut.charAt(i) * mul;if (mul == 7)mul = 2;else mul++;}res = suma % 11;if (res==1)dvr = 'k';else if (res==0)dvr = '0';else{dvi = 11-res;dvr = dvi + "";}if ( dvr != dv.toLowerCase() ){$('#mensaje').html("<h2>El rut ingresado no es válido</h2>");$('#mensaje2').html("<small><h4>El rut ingresado no es válido</h4></small>");Objeto.focus();return false;}return true;}}
+function sumar(I) //variable que suma la totalidad de las columnas del documento
+{ var A= parseFloat($("#Col"+I).val())+parseFloat($("#MatK"+I).val())+parseFloat($("#Cou"+I).val())+parseFloat($("#Alm"+I).val())+parseFloat($("#Deu"+I).val());$("#Total"+I).html("<strong>"+A+"</strong>");}function total(I){if(I == "Tot"){var A = parseFloat($("#ColT").children().html())+parseFloat($("#MatKT").children().html())+parseFloat($("#CouT").children().html())+parseFloat($("#AlmT").children().html())+parseFloat($("#DeuT").children().html());$("#TotalT").html("<strong>"+A+"</strong>");}else{var A = + <?php for($i=1;$i<12;$i++){ ?> parseFloat($("#"+I+"<?php echo $i; ?>").val())+<?php }?>parseFloat($("#"+I+"12").val());$("#"+I+"T").html("<strong>"+A+"</strong>");}}function bodyfuntion(){<?php for($i=1;$i<13;$i++){?>sumar(<?php echo $i; ?>);<?php }?>total("Col");total("MatK");total("Cou");total("Deu");total("Alm");total("Tot");$("#familia").val($("#modalPAPA").attr("inputApellidoP")+" "+$("#modalMAMA").attr("inputApellidoP"));}
 function MostrarP(I){
 $("#guardarP").attr("onClick","Guardar("+I+")")
 $('#myModalP').modal('show');
@@ -214,6 +165,10 @@ if (I == 3)
 {
 $("#tipoC").html("<center><h4>Ingrese Nombre</h4><br><input id='NombreC' placeholder='Nombre' type='number'><h4>Ingrese Valor</h4><br><input id='MontoC' placeholder='Valor' type='number'></center>");
 }
+}
+enviar()
+{
+alert("el documento se enviara");
 }
 </script>
 <?php include("modal.php"); ?>

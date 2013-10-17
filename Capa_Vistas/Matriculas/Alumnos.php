@@ -25,7 +25,7 @@
   for($i=1;$i<5;$i++)
   {?>
   <tr>
-  <td class="span"><input type="text" class="span1" id="<?php echo"rut".$i.""?>" placeholder="Rut"></td>
+  <td class="span"><input type="text" style="width:100px;" id="<?php echo"rut".$i.""?>" placeholder="Rut"></td>
   
     <td class="span2"><input type="text" class="span2" onFocus="verificarRut(rut<?php echo $i; ?>)" id="<?php echo"name".$i.""?>" placeholder="Nombre"></td>
     
