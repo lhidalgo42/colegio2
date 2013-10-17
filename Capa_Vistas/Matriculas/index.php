@@ -72,13 +72,29 @@ var mama = new Array();
  <?php } // fin for b ?>
  <?php } // fin for i?>
  var alumnos = new Array();
- alumnos[0]=alumno1;
- alumnos[1]=alumno2;
- alumnos[2]=alumno3;
- alumnos[3]=alumno4
+ <?php for($i=0;$i<4;$i++){
+	 $b=$i+1;?> 
+  alumnos[<?php echo $i; ?>]=alumno<?php echo $b; ?>;
+<?php } ?>
+ <?php $documentos=array("FechaBol","tipo","chequebanco","chequenumero","chequemonto","chequefecha","letranumero","letramonto","efectivomonto","Col","Mat","Cou","Alm","Deu","fechaD","obs");
+  for($i=1;$i<13;$i++){ ?>
+  var documento<?php echo $i; ?> = new Array();
+  <?php for($b=0;$b<16;$b++){ ?>
+  <?php if($b==1 || $b==2 || $b==3 || $b==4 || $b==5 || $b==6 || $b==7 || $b==8){ ?>
+  documento<?php echo $i;?>[<?php echo $b; ?>] = $("#modalP<?php echo $i; ?>").attr("<?php echo $documentos[$b]; ?>");<?php } 
+  else{ ?>
+  documento<?php echo $i; ?>[<?php echo $b; ?>] = $("#<?php echo $documentos[$b];echo $i; ?>").val();
+  <?php } //fin else ?>
+  <?php } // fin for b ?>
+ <?php } //fin For i?>
+  var documentos = new Array();
+ <?php for($i=0;$i<12;$i++){
+	 $b=$i+1;?> 
+  documentos[<?php echo $i; ?>]=documento<?php echo $b; ?>;
+<?php } ?>
 $.ajax({
   url: "../../ajax/enviar.php",
-  data: {/*familia:familia,papa:papa,mama:mama,*/alumnos:alumnos},
+  data: {familia:familia,papa:papa,mama:mama,alumnos:alumnos,documentos:documentos},
   type: "POST",
   beforeSend: function()
   {
@@ -160,10 +176,10 @@ function verificarRut( Objeto ) // extre el rut de la casilla y lo verifica atra
 {var tmpstr = "";$('#mensaje').html("");$('#mensaje2').html("");var intlargo = Objeto.value;if (intlargo.length> 0){crut = Objeto.value;largo = crut.length;if ( largo <2 ){$('#mensaje').html("<h2>El rut ingresado no es válido</h2>");$('#mensaje2').html("<small><h4>El rut ingresado no es válido</h4><small>");Objeto.focus();return false;}for ( i=0; i <crut.length ; i++ )if ( crut.charAt(i) != ' ' && crut.charAt(i) != '.' && crut.charAt(i) != '-' ){tmpstr = tmpstr + crut.charAt(i);}rut = tmpstr;crut=tmpstr;largo = crut.length;if ( largo> 2 )rut = crut.substring(0, largo - 1);		else rut = crut.charAt(0);dv = crut.charAt(largo-1);if ( rut == null || dv == null )return 0;var dvr = '0';suma = 0;mul  = 2;for (i= rut.length-1 ; i>= 0; i--){suma = suma + rut.charAt(i) * mul;if (mul == 7)mul = 2;else mul++;}res = suma % 11;if (res==1)dvr = 'k';else if (res==0)dvr = '0';else{dvi = 11-res;dvr = dvi + "";}if ( dvr != dv.toLowerCase() ){$('#mensaje').html("<h2>El rut ingresado no es válido</h2>");$('#mensaje2').html("<small><h4>El rut ingresado no es válido</h4></small>");Objeto.focus();return false;}return true;}}
 
 function sumar(I) //variable que suma la totalidad de las columnas del documento
-{ var A= parseFloat($("#Col"+I).val())+parseFloat($("#MatK"+I).val())+parseFloat($("#Cou"+I).val())+parseFloat($("#Alm"+I).val())+parseFloat($("#Deu"+I).val());$("#Total"+I).html("<strong>"+A+"</strong>");}function total(I){if(I == "Tot"){var A = parseFloat($("#ColT").children().html())+parseFloat($("#MatKT").children().html())+parseFloat($("#CouT").children().html())+parseFloat($("#AlmT").children().html())+parseFloat($("#DeuT").children().html());$("#TotalT").html("<strong>"+A+"</strong>");}else{var A = + <?php for($i=1;$i<12;$i++){ ?> parseFloat($("#"+I+"<?php echo $i; ?>").val())+<?php }?>parseFloat($("#"+I+"12").val());$("#"+I+"T").html("<strong>"+A+"</strong>");}}
+{ var A= parseFloat($("#Col"+I).val())+parseFloat($("#Mat"+I).val())+parseFloat($("#Cou"+I).val())+parseFloat($("#Alm"+I).val())+parseFloat($("#Deu"+I).val());$("#Total"+I).html("<strong>"+A+"</strong>");}function total(I){if(I == "Tot"){var A = parseFloat($("#ColT").children().html())+parseFloat($("#MatT").children().html())+parseFloat($("#CouT").children().html())+parseFloat($("#AlmT").children().html())+parseFloat($("#DeuT").children().html());$("#TotalT").html("<strong>"+A+"</strong>");}else{var A = + <?php for($i=1;$i<12;$i++){ ?> parseFloat($("#"+I+"<?php echo $i; ?>").val())+<?php }?>parseFloat($("#"+I+"12").val());$("#"+I+"T").html("<strong>"+A+"</strong>");}}
 
 function bodyfuntion()//funcion que se ejecuta constantemente en la pagina <body onload"....">
-{<?php for($i=1;$i<13;$i++){?>sumar(<?php echo $i; ?>);<?php }?>total("Col");total("MatK");total("Cou");total("Deu");total("Alm");total("Tot");$("#familia").val(""+$("#modalPAPA").attr("apellido1")+" "+$("#modalMAMA").attr("apellido1")+"");}
+{<?php for($i=1;$i<13;$i++){?>sumar(<?php echo $i; ?>);<?php }?>total("Col");total("Mat");total("Cou");total("Deu");total("Alm");total("Tot");$("#familia").val(""+$("#modalPAPA").attr("apellido1")+" "+$("#modalMAMA").attr("apellido1")+"");}
 
 function MostrarC(I){
 var tipo =$("#modalC"+I).attr("tipo")
