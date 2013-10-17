@@ -16,7 +16,7 @@ class Persona {
     public static function Insertar() {
         $datosCreacion = array(
             array('Nombre', $_POST['Nombre']),
-            array('Apelldio1', $_POST['Apellido1']),
+            array('Apellido1', $_POST['Apellido1']),
             array('Apellido2', $_POST['Apellido2']),
             array('Sexo', $_POST['Sexo']),
 			array('Clave', $_POST['Clave']),
