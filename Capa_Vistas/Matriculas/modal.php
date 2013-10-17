@@ -26,9 +26,9 @@
      <div class="modal-body">
               <center><h4>Seleccione</h4></center>
         <center><div class="btn-group" data-toggle="buttons-radio">
-  <button type="button" class="btn btn-primary" onClick="tipoC(1)" idval="Cheque">Clinica Alemana</button>
-  <button type="button" class="btn btn-primary" onClick="tipoC(2)" idval="Letra">Clinica Santa Maria</button>
-  <button type="button" class="btn btn-primary" onClick="tipoC(3)" idval="Efectivo">OTRA</button>
+  <button type="button" class="btn btn-primary" onClick="tipoC(1)" idval="CA">Clinica Alemana</button>
+  <button type="button" class="btn btn-primary" onClick="tipoC(2)" idval="CSM">Clinica Santa Maria</button>
+  <button type="button" class="btn btn-primary" onClick="tipoC(3)" idval="OTRA">OTRA</button>
 </div></center>
 <div id="tipoC">
 </div>  
@@ -105,13 +105,13 @@
   <div class="control-group">
     <label class="control-label" for="inputLugarTrabajo">Lugar de trabajo</label>
     <div class="controls">
-      <input type="password" id="inputLugarTrabajo" placeholder="Lugar de Trabajo" onFocus="verificarRut(inputRUT)">
+      <input type="text" id="inputLugarTrabajo" placeholder="Lugar de Trabajo" onFocus="verificarRut(inputRUT)">
     </div>
   </div>
   <div class="control-group">
     <label class="control-label" for="inputDireccionT">Direccion Trabajo</label>
     <div class="controls">
-      <input type="password" id="inputDireccionT" placeholder="Direccion Trabajo" onFocus="verificarRut(inputRUT)">
+      <input type="text" id="inputDireccionT" placeholder="Direccion Trabajo" onFocus="verificarRut(inputRUT)">
     </div>
   </div>
   <div class="control-group">

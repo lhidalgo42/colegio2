@@ -1,12 +1,12 @@
 <table  border="1" class="table table-bordered">
   <tr>
     <td><strong>Familia</strong></td>
-    -    <td><input type="text" id="familia" disabled class="span3"></td>
+     <td><input type="text" id="familia" disabled class="span3"></td>
     <td><strong>Apoderado Economico</strong></td>
     <td>
-  <div class="btn-group" id="AEconomico" idModal="" data-toggle="buttons-radio">
-  <button type="button" class="btn " onClick="clickButton(0">Mama</button>
- <button type="button" class="btn" onClick="clickButton(1)">Papa</button>
+  <div class="btn-group" id="AEconomico" data-toggle="buttons-radio">
+ <button type="button" class="btn" onClick="clickButton(0)">Papa</button>
+ <button type="button" class="btn" onClick="clickButton(1)">Mama</button>
 </div></td>
 
 
