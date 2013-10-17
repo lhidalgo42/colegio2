@@ -15,7 +15,7 @@
 		       background-image: url(img/bg_nav_left.png);
 			   background-repeat: no-repeat;	
 		}
-		</style>
+		</style>        
         <!-- le js -->
         <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
         <script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>

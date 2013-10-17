@@ -3,8 +3,7 @@
 /*
  * Descripcion: Archivo de configuracion de MySQL
  */
-$servidor = 'localhost';
-$nombre_usuario = 'edithorc';
-$contrasena = 'hmhs210659';
-$base_de_datos = 'edithorc_Colegio';
-
+$servidor = '186.105.152.243';
+$nombre_usuario = 'root';
+$contrasena = '';
+$base_de_datos = 'colegio';
