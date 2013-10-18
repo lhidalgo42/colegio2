@@ -117,12 +117,14 @@ class Query {
         	$query = CallQueryReturnID($queryString);
 			return $query;
 	}
+	/*
 	public static function efectivo($vence,$detalleDoc,$componenteMontoID,$total,$fechaDeposito,$comentario,$familiaID) {
         $queryString = "INSERT INTO cuotas (Vence, DetalleDoc, Componente_Monto_ID, Total, FechaDeposito, Comentario, Familia_ID) 
 						VALUES ('".$vence."', '".$detalleDoc."', '".$componenteMontoID."', '".$total."', '".$fechaDeposito."', '".$comentario."', '".$familiaID."')";
         	$query = CallQueryReturnID($queryString);
 			return $query;
 	}
+	*/
 	public static function R_ChequeCoutas($chequeID,$cuotaID) {
         $queryString = "INSERT INTO cheque_cuotas (Cheque_ID, Cuotas_ID) VALUES ('".$chequeID."', '".$cuotaID."');";
         $query = CallQuery($queryString);
