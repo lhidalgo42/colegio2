@@ -97,9 +97,12 @@
     </div>
   </div>
   <div class="control-group">
-    <label class="control-label" for="inputEmail">Email</label>
+    <label class="control-label" for="inputEmail">Direccion de Correo</label>    
     <div class="controls">
-      <input type="email" id="inputEmail" placeholder="Email" onFocus="verificarRut(inputRUT)">
+      <div class="input-prepend">
+        <span class="add-on"><i class="icon-envelope"></i></span>
+        <input type="email" id="inputEmail"  onFocus="verificarRut(inputRUT)">
+      </div>      
     </div>
   </div>
   <div class="control-group">

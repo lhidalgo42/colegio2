@@ -138,5 +138,11 @@ class Query {
         $query = CallQuery($queryString);
 	}
 	/** termino de la Seccion de Introducir Cuotas **/
+		public static function efectivo($nombre) {
+        $queryString = "INSERT INTO comunas (Nombre) VALUES ('".$nombre."')";
+        	$query = CallQueryReturnID($queryString);
+			return $query;
+	}
+	
    }
 ?>

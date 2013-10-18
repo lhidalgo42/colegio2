@@ -28,6 +28,9 @@ body {
                 font-weight:bold;
                 font-size:1em;	
 }
+input{
+text-transform:uppercase;	
+}
 </style>
 </head>
 
@@ -55,6 +58,11 @@ body {
 
 
 <script>
+$(function() {
+    $('input').keyup(function() {
+        this.value = this.value.toUpperCase();
+    });
+});
 function enviar()
 {
 var familia = new Array();
