@@ -81,7 +81,8 @@ var mama = new Array();
   var documento<?php echo $i; ?> = new Array();
   <?php for($b=0;$b<16;$b++){ ?>
   <?php if($b==1 || $b==2 || $b==3 || $b==4 || $b==5 || $b==6 || $b==7 || $b==8){ ?>
-  documento<?php echo $i;?>[<?php echo $b; ?>] = $("#modalP<?php echo $i; ?>").attr("<?php echo $documentos[$b]; ?>");<?php } 
+  documento<?php echo $i;?>[<?php echo $b; ?>] = $("#modalP<?php echo $i; ?>").attr("<?php echo $documentos[$b]; ?>");
+  <?php } 
   else{ ?>
   documento<?php echo $i; ?>[<?php echo $b; ?>] = $("#<?php echo $documentos[$b];echo $i; ?>").val();
   <?php } //fin else ?>
@@ -100,7 +101,7 @@ $.ajax({
   {
   },
   success: function( data ) {
-    alert(data);
+    $("#ayuda").html(data);
   }
 });
 } 
@@ -165,14 +166,15 @@ $('#myModalPapa').modal('show');
 	$("#montoM"+I).attr("valorMonto",valor)
   }
 }
-/* function beca(I){
+function beca(I){
 	var beca = parseFloat($("#1sem"+I).val());
 	$("#2sem"+I).val(beca);
+	/*
 	var monto = parseFloat($("#montoM"+I).attr("valorMonto"));
 	var total = ((100-beca)*monto)/100
 	$("#montoM"+I).val(total)	
-} */
-function verificarRut( Objeto ) // extre el rut de la casilla y lo verifica atraves del digito verificador(ultimo digito) si el rut es valido o no devuelve true o false
+ */}
+ function verificarRut( Objeto ) // extre el rut de la casilla y lo verifica atraves del digito verificador(ultimo digito) si el rut es valido o no devuelve true o false
 {var tmpstr = "";$('#mensaje').html("");$('#mensaje2').html("");var intlargo = Objeto.value;if (intlargo.length> 0){crut = Objeto.value;largo = crut.length;if ( largo <2 ){$('#mensaje').html("<h2>El rut ingresado no es válido</h2>");$('#mensaje2').html("<small><h4>El rut ingresado no es válido</h4><small>");Objeto.focus();return false;}for ( i=0; i <crut.length ; i++ )if ( crut.charAt(i) != ' ' && crut.charAt(i) != '.' && crut.charAt(i) != '-' ){tmpstr = tmpstr + crut.charAt(i);}rut = tmpstr;crut=tmpstr;largo = crut.length;if ( largo> 2 )rut = crut.substring(0, largo - 1);		else rut = crut.charAt(0);dv = crut.charAt(largo-1);if ( rut == null || dv == null )return 0;var dvr = '0';suma = 0;mul  = 2;for (i= rut.length-1 ; i>= 0; i--){suma = suma + rut.charAt(i) * mul;if (mul == 7)mul = 2;else mul++;}res = suma % 11;if (res==1)dvr = 'k';else if (res==0)dvr = '0';else{dvi = 11-res;dvr = dvi + "";}if ( dvr != dv.toLowerCase() ){$('#mensaje').html("<h2>El rut ingresado no es válido</h2>");$('#mensaje2').html("<small><h4>El rut ingresado no es válido</h4></small>");Objeto.focus();return false;}return true;}}
 
 function sumar(I) //variable que suma la totalidad de las columnas del documento
@@ -278,5 +280,6 @@ $("#tipoC").html("<center><h4>Ingrese Nombre</h4><br><input id='NombreC' placeho
 
 </script>
 <?php include("modal.php"); ?>
+<div id="ayuda"></div>
 </body>
 </html>

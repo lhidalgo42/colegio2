@@ -9,38 +9,34 @@
 	 *	int passUsuario
 	 * Output: int de estado 
 	 */
-
-	include_once(dirname(__FILE__).'/utilidades.php');
-    include_once(dirname(__FILE__).'/../Capa_Controladores/persona.php');
-	include_once(dirname(__FILE__).'/../Capa_Controladores/matriculas.php');
-	include_once(dirname(__FILE__).'/../Capa_Controladores/contabilidad.php');
-	include_once(dirname(__FILE__).'/../Capa_Controladores/admin.php');
+include("../datos/Querys.php");
+include_once('utilidades.php');
 	
 	session_start();
 	session_unset();        
          
 	$rut = validadorRUT($_POST['rut']);
 	$pass = $_POST['pass'];
-	if(!Persona::VerificarClave($rut,$pass)){
+	if(!Query::VerificarClave($rut,$pass)){
 		echo "0";
 	}
 	else{
 		$_SESSION['RUT'] = $rut;
 
-		$idMatriculas = Matriculas::Encontrar($rut);
+		$idMatriculas = Query::BuscarMatriculas("Persona_RUT = $rut");
 		if($idMatriculas){
 		$idMatriculas=$idMatriculas[0];}
                 if($idMatriculas != false){
                     $_SESSION['idMatriculas'] = $idMatriculas;
                 } else $_SESSION['idMatriculas'] = false;
 
-		$idContabilidad= Contabilidad::Encontrar($rut);
+		$idContabilidad= Query::BuscarContabilidad("Persona_RUT = $rut");
 		if($idContabilidad){
 		$idContabilidad=$idContabilidad[0];}
                 if($idContabilidad != false){
                     $_SESSION['idContabilidad'] = $idContabilidad;
                 } else $_SESSION['idContabilidad'] = false;
-        $idAdmin = Admin::Encontrar($rut);
+        $idAdmin = Query::BuscarAdmin("Persona_RUT = $rut");
 		if($idAdmin){
 		$idAdmin=$idAdmin[0];
 		}

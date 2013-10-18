@@ -79,9 +79,8 @@
                         data: postData,
                         type: 'post',
                         success: function(output) {	
-                                              
-                            if(output == 1) {
-                                window.location.href = "Capa_Vistas/decision.php";
+							if(output == 1) {	
+                                window.location.href = "vistas/decision.php";
                             }
                             else{
                                 $('#mensaje').html("<small><h4>Nombre de Usuario o constraseña incorrectos</h4></small>");
