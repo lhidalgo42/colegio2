@@ -10,9 +10,6 @@
  */
 
 include_once(dirname(__FILE__) . '/sessionCheck.php');
-include_once(dirname(__FILE__) . '/../Capa_Controladores/conta.php');
-include_once(dirname(__FILE__) . '/../Capa_Controladores/matriculas.php');
-
 iniciarCookie();
 verificarIP();
 

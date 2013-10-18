@@ -1,9 +1,13 @@
-<?php $campos=array(array("inputRUT","rut"),array("inputNombre","nombre"),array("inputApellidoP","apellido1"),array("inputApellidoM","apellido2"),array("inputFechaNac","fechaNac"),array("inputProfesion","profesion"),array("inputDireccion","direccion"),array("inputComuna","comuna"),array("inputEmail","email"),array("inputLugarTrabajo","lugarTrabajo"),array("inputDireccionT","direccionTrabajo"),array("inputTelefonos","telefonos")); ?>
+<?php 
+include '../../ajax/sessionCheck.php';
+iniciarCookie();
+verificarIP();
+$campos=array(array("inputRUT","rut"),array("inputNombre","nombre"),array("inputApellidoP","apellido1"),array("inputApellidoM","apellido2"),array("inputFechaNac","fechaNac"),array("inputProfesion","profesion"),array("inputDireccion","direccion"),array("inputComuna","comuna"),array("inputEmail","email"),array("inputLugarTrabajo","lugarTrabajo"),array("inputDireccionT","direccionTrabajo"),array("inputTelefonos","telefonos")); ?>
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>Documento sin título</title>
+<title>Matriculas</title>
 <link href="../../css/bootstrap-combined.min.css" rel="stylesheet">
 <script src="../../js/jquery.js"></script>
 <script src="../../js/bootstrap.js"></script>
@@ -280,6 +284,6 @@ $("#tipoC").html("<center><h4>Ingrese Nombre</h4><br><input id='NombreC' placeho
 
 </script>
 <?php include("modal.php"); ?>
-<div id="ayuda"></div>
+<div id="ayuda"><?php print_r($_SESSION); ?></div>
 </body>
 </html>
