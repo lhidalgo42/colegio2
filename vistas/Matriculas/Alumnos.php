@@ -34,19 +34,79 @@
     
     <td class="span1"><input type="number" class="span1" value="0" min="0" id="<?php echo"bolM".$i.""?>" placeholder="N° de Boleta"></td>
     
-    <td class="span1"><input type="number" class="span1" valorMonto="" value="0" min="0" id="<?php echo"montoM".$i.""?>" placeholder="Monto"></td>
+    <td class="span1"><div class="input-prepend">
+  <span class="add-on">$</span>
+<input type="number" style="width:50px;" valorMonto="" min="0" id="<?php echo"montoM".$i.""?>" placeholder="Monto"></div></td>
     
-    <td><input type="date" style="width:115px;" id="<?php echo"fechaM".$i.""?>" placeholder="Fecha"></td>
+    <td><div class="bfh-datepicker" data-format="d-m-y" data-date="18-10-2013">
+  <div class="input-prepend bfh-datepicker-toggle" data-toggle="bfh-datepicker">
+    <span class="add-on"><i class="icon-calendar"></i></span>
+    <input type="text" style="width:77px;"  id="<?php echo"fechaM".$i.""?>" placeholder="Fecha"  readonly>
+  </div>
+  <div class="bfh-datepicker-calendar">
+    <table class="calendar table table-bordered">
+      <thead>
+        <tr class="months-header">
+          <th class="month" colspan="4">
+            <a class="previous" href="#"><i class="icon-chevron-left"></i></a>
+            <span></span>
+            <a class="next" href="#"><i class="icon-chevron-right"></i></a>
+          </th>
+          <th class="year" colspan="3">
+            <a class="previous" href="#"><i class="icon-chevron-left"></i></a>
+            <span></span>
+            <a class="next" href="#"><i class="icon-chevron-right"></i></a>
+          </th>
+        </tr>
+        <tr class="days-header">
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+</div></td>
     
     <td><input type="number" style="width:30px;" class="span1" value="0" min="0" id="<?php echo"valeS".$i.""?>" placeholder="VALE N°"></td>
     
     <td><a id="modalC<?php echo $i; ?>" role="button" onClick="MostrarC(<?php echo $i; ?>)"class="btn" data-toggle="modal" tipo="" nombre="" valor="">Clinica</a></td>
     
-    <td><input type="date" style="width:115px;" id="<?php echo"fechaS".$i.""?>" placeholder="Fecha"></td>
+    <td><div class="bfh-datepicker" data-format="d-m-y" data-date="18-10-2013">
+  <div class="input-prepend bfh-datepicker-toggle" data-toggle="bfh-datepicker">
+    <span class="add-on"><i class="icon-calendar"></i></span>
+    <input type="text" style="width:77px;" id="<?php echo"fechaS".$i.""?>" placeholder="Fecha"  readonly>
+  </div>
+  <div class="bfh-datepicker-calendar">
+    <table class="calendar table table-bordered">
+      <thead>
+        <tr class="months-header">
+          <th class="month" colspan="4">
+            <a class="previous" href="#"><i class="icon-chevron-left"></i></a>
+            <span></span>
+            <a class="next" href="#"><i class="icon-chevron-right"></i></a>
+          </th>
+          <th class="year" colspan="3">
+            <a class="previous" href="#"><i class="icon-chevron-left"></i></a>
+            <span></span>
+            <a class="next" href="#"><i class="icon-chevron-right"></i></a>
+          </th>
+        </tr>
+        <tr class="days-header">
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+</div></td>
     
-    <td><input type="number" style="width:50px;" <?php /* onChange="beca(<?php echo $i; ?>)" */?> id="<?php echo"1sem".$i.""?>" placeholder="% Beca"></td>
+    <td><div class="input-prepend">
+  <span class="add-on">%</span>
+<input type="number" style="width:30px;" max="100" min="0" onChange="beca(<?php echo $i; ?>)" id="<?php echo"1sem".$i.""?>"></div></td>
     
-    <td><input type="number" style="width:50px;" id="<?php echo"2sem".$i.""?>" placeholder="% Beca"></td>
+    <td><div class="input-prepend">
+  <span class="add-on">%</span>
+<input type="number" style="width:30px;" max="100" min="0" id="<?php echo"2sem".$i.""?>" ></div></td>
     
   </tr>
   <?php 

@@ -8,10 +8,12 @@ $campos=array(array("inputRUT","rut"),array("inputNombre","nombre"),array("input
 <head>
 <meta charset="utf-8">
 <title>Matriculas</title>
-<link href="../../css/bootstrap-combined.min.css" rel="stylesheet">
-<script src="../../js/jquery.js"></script>
-<script src="../../js/bootstrap.js"></script>
+<link rel="stylesheet" href="../../css/bootstrap-combined.min.css">
+<link rel="stylesheet" href="../../css/bootstrap-formhelpers.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/bootstrap-formhelpers-datepicker.js"></script>
+<script src="../../js/bootstrap-formhelpers-datepicker.en_US.js"></script>
 <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
