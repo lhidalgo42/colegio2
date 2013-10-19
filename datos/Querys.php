@@ -138,11 +138,21 @@ class Query {
         $query = CallQuery($queryString);
 	}
 	/** termino de la Seccion de Introducir Cuotas **/
-		public static function efectivo($nombre) {
+	/** despliega las comunas para las personas en los modals de matricula */
+		public static function insertarComuna($nombre) {
         $queryString = "INSERT INTO comunas (Nombre) VALUES ('".$nombre."')";
         	$query = CallQueryReturnID($queryString);
 			return $query;
 	}
-	
+	    public static function MostrarComunas() {
+        $queryString = "SELECT * FROM comunas";
+        $result = CallQuery($queryString);
+        $resultArray = array();
+        while ($fila = $result->fetch_assoc()) {
+            $resultArray[] = $fila;
+        }
+        return $resultArray;
+    }
+	/** fin del despliege de las comunas **/
    }
 ?>

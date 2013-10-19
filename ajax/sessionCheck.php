@@ -6,7 +6,6 @@
 function iniciarCookie() {
     ini_set('session.cookie_httponly', true);
 }
-
 /* Function verificarIP
  * Destruye la sesion si es que hay intento de seguirla en otro lugar
  */
