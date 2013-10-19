@@ -16,8 +16,8 @@
   <tr>
     
     <td><center>Colegiatura</center></td>
-    <td ><center>Materiales</center></td>
-    <td ><center>Cuota de Incorporación</center></td>    
+    <td><center>Materiales</center></td>
+    <td><center>Cuota de Incorporación</center></td>    
     <td><center>Almuerzo</center></td>
     <td><center>Deuda Escolar 2013</center></td>
   </tr>
@@ -31,11 +31,11 @@
     <td><input style="width:115px;" type="date" id="FechaBol<?php echo $i; ?>"></td>
     <td style="width:100px;"><center><a id="modalP<?php echo $i; ?>" role="button" onClick="MostrarP(<?php echo $i; ?>)"class="btn" data-toggle="modal" tipo="" chequebanco="" chequenumero="" chequemonto="" chequefecha="" letranumero="" letramonto="" efectivomonto="">Seleccionar</a></center></td>
     <!-- suma desde aqui-->
-    <td><input type="number" style="width:80px;" min="0"  value="0" id="<?php echo"Col".$i.""?>"></td>
-    <td><input type="number" style="width:80px;" min="0" value="0" id="<?php echo"Mat".$i.""?>"></td>
-    <td style="width:90px;"><input type="number" style="width:90px;" min="0" value="0" id="<?php echo"Cou".$i.""?>"></td>
-    <td><input type="number" style="width:60px;" min="0" value="0" id="<?php echo"Alm".$i.""?>" ></td>
-    <td style="width:90px;"><input type="number" style="width:90px;" min="0" value="0"  id="<?php echo"Deu".$i.""?>"></td>
+    <td><input type="number" style="width:80px;" min="0"  value="0" id="<?php echo"Col".$i;?>"></td>
+    <td><input type="number" style="width:80px;" min="0" value="0" id="<?php echo"Mat".$i;?>"></td>
+    <td style="width:90px;"><input type="number" style="width:90px;" min="0" value="0" id="<?php echo"Cou".$i;?>"></td>
+    <td><input type="number" style="width:60px;" min="0" value="0" id="<?php echo"Alm".$i;?>" ></td>
+    <td style="width:90px;"><input type="number" style="width:90px;" min="0" value="0"  id="<?php echo"Deu".$i;?>"></td>
     <!-- hasta aqui -->
     <td style="width:80px;"><center><div id="<?php echo"Total".$i.""; ?>">0</div></center></td>
     <td><input type="date" style="width:115px;" id="<?php echo"fechaD".$i.""?>" disabled></td>

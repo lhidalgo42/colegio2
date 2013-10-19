@@ -10,6 +10,7 @@ $campos=array(array("inputRUT","rut"),array("inputNombre","nombre"),array("input
 <title>Matriculas</title>
 <link rel="stylesheet" href="../../css/bootstrap-combined.min.css">
 <link rel="stylesheet" href="../../css/bootstrap-formhelpers.css">
+<link rel="stylesheet" href="../../css/matricula.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="../../js/bootstrap.min.js"></script>
 <script src="../../js/bootstrap-formhelpers-datepicker.js"></script>
