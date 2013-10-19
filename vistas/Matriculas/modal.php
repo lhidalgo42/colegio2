@@ -75,7 +75,34 @@
   <div class="control-group">
     <label class="control-label" for="inputFechaNac">Fecha Nacimiento</label>
     <div class="controls">
-      <input type="date" id="inputFechaNac" placeholder="Fecha Nacimiento" onFocus="verificarRut(inputRUT)" required>
+    <div class="bfh-datepicker" data-format="d-m-y" data-date="18-10-1980">
+  <div class="input-prepend bfh-datepicker-toggle" data-toggle="bfh-datepicker">
+    <span class="add-on"><i class="icon-calendar"></i></span>
+    <input type="text"  id="inputFechaNac" placeholder="Fecha Nacimiento" onFocus="verificarRut(inputRUT)" readonly>
+  </div>
+  <div class="bfh-datepicker-calendar">
+    <table class="calendar table table-bordered">
+      <thead>
+        <tr class="months-header">
+          <th class="month" colspan="4">
+            <a class="previous" href="#"><i class="icon-chevron-left"></i></a>
+            <span></span>
+            <a class="next" href="#"><i class="icon-chevron-right"></i></a>
+          </th>
+          <th class="year" colspan="3">
+            <a class="previous" href="#"><i class="icon-chevron-left"></i></a>
+            <span></span>
+            <a class="next" href="#"><i class="icon-chevron-right"></i></a>
+          </th>
+        </tr>
+        <tr class="days-header">
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+</div>
     </div>
   </div>
   <div class="control-group">
@@ -121,7 +148,7 @@
     <label class="control-label" for="inputTelefonos">Telefonos</label>
     <small>Si es mas de uno, separarlos por coma</small>
     <div class="controls">
-      <input type="text" id="inputTelefonos" placeholder="Telefnonos" onFocus="verificarRut(inputRUT)">
+      <input type="text" id="inputTelefonos" placeholder="Telefonos" onFocus="verificarRut(inputRUT)">
     </div>
   </div>
         </center>               
@@ -129,5 +156,80 @@
     <div class="modal-footer">
         <a  class="btn btn-success" id="guardarPapa" onClick="GuardarPapa()">Guardar</a>
         <a href="#" data-dismiss="modal" id="cerrarPapa" class="btn" onClick="CerrarPapa()">Cerrar</a>
+    </div>
+</div>
+
+
+<div id="myModalNino" class="modal hide fade in" style="display: none;">
+    <div class="modal-header">
+        <a data-dismiss="modal" class="close">×</a>
+        <h4 id="tittlePapa">Complete los Datos del Alumno</h4>
+     </div>
+     <div class="modal-body" id="bodyNino">
+
+        <center>
+  <div class="control-group">
+    <label class="control-label" for="inputNombreN">Nombre</label>
+    <div class="controls">
+      <input type="text" id="inputNombreN" placeholder="Nombre">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputApellidoPN">Apellido Paterno</label>
+    <div class="controls">
+      <input type="text" id="inputApellidoPN" placeholder="Apellido Paterno" required>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputApellidoMN">Apellido Materno</label>
+    <div class="controls">
+      <input type="text" id="inputApellidoMN" placeholder="Apellido Materno" required>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputFechaNacN">Fecha Nacimiento</label>
+    <div class="controls">
+    <div class="bfh-datepicker" data-format="d-m-y" data-date="18-10-1980">
+  <div class="input-prepend bfh-datepicker-toggle" data-toggle="bfh-datepicker">
+    <span class="add-on"><i class="icon-calendar"></i></span>
+    <input type="text"  id="inputFechaNacN" placeholder="Fecha Nacimiento" readonly>
+  </div>
+  <div class="bfh-datepicker-calendar">
+    <table class="calendar table table-bordered">
+      <thead>
+        <tr class="months-header">
+          <th class="month" colspan="4">
+            <a class="previous" href="#"><i class="icon-chevron-left"></i></a>
+            <span></span>
+            <a class="next" href="#"><i class="icon-chevron-right"></i></a>
+          </th>
+          <th class="year" colspan="3">
+            <a class="previous" href="#"><i class="icon-chevron-left"></i></a>
+            <span></span>
+            <a class="next" href="#"><i class="icon-chevron-right"></i></a>
+          </th>
+        </tr>
+        <tr class="days-header">
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+</div>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputColegioPast">Colegio Anterior</label>
+    <div class="controls">
+      <input type="text" id="inputColegioPast" placeholder="Colegio Anterior" required>
+    </div>
+  </div>
+  
+        </center>               
+    </div>
+    <div class="modal-footer">
+        <a  class="btn btn-success" id="guardarNino" onClick="GuardarNino()">Guardar</a>
+        <a href="#" data-dismiss="modal" id="cerrarNino" class="btn" onClick="CerrarNino()">Cerrar</a>
     </div>
 </div>

@@ -1,4 +1,4 @@
-<table border="1" class="table table-bordered span9">
+<table border="1" class="table table-bordered">
 <thead>
   <tr>
     <td  colspan="2"><center><strong>NOMBRE DE LOS NIÑOS</strong></center></td>
@@ -10,14 +10,14 @@
   <tr>
   	<td><center>RUT</center></td>
     <td><center>Nombre</center></td>  
-    <td><center>N° de Boleta</center></td>
-    <td><center>MONTO</center></td>
-    <td><center>FECHA</center></td>
-    <td><center>VALE N°</center></td>
-    <td><center>MONTO</center></td>
-    <td><center>FECHA</center></td>
-    <td><center>1 SEMESTRE</center></td>
-    <td><center>2 SEMESTRE</center></td>
+    <td><center>N° Boleta</center></td>
+    <td><center>Monto</center></td>
+    <td><center>Fecha</center></td>
+    <td><center>N° Vale</center></td>
+    <td><center>Monto</center></td>
+    <td><center>Fecha</center></td>
+    <td><center>1 Semestre</center></td>
+    <td><center>2 Semestre</center></td>
   </tr>
   </thead>
   <?php 
@@ -25,9 +25,9 @@
   for($i=1;$i<5;$i++)
   {?>
   <tr>
-  <td class="span"><input type="text" style="width:100px;" id="<?php echo"rut".$i.""?>" placeholder="Rut"></td>
+  <td class="span"><input type="text" style="width:85px;" id="<?php echo"rut".$i.""?>" placeholder="Rut"></td>
   
-    <td class="span2"><input type="text" class="span2" onFocus="verificarRut(rut<?php echo $i; ?>)" id="<?php echo"name".$i.""?>" placeholder="Nombre"></td>
+    <td class="span2"><a id="modalNino<?php echo $i; ?>" role="button" onClick="MostrarNino(<?php echo $i; ?>)"class="btn" data-toggle="modal" nombre="" apellidoP="" apellidoM="" fechanac="" colegioanterior="">Nombre</a></td>
     
     <td class="span1"><select id="Curso<?php echo $i; ?>" onChange="curso(<?php echo $i; ?>)" class="input-small"><option></option>
     <?php for($e=0;$e<9;$e++){ ?><<option value="<?php echo $cursos[$e]; ?>"><?php echo $cursos[$e]; ?></option> <?php } ?></select></td>
