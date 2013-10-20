@@ -67,27 +67,12 @@ verificarIP();
             <form class="form-signin" >
                 <h2 class="form-signin-heading"><center>Ingresar</center>   </h2>
                 <h5 class="form-signin-heading"><center>Seleccione como desea ingresar</center>   </h5>
-
-        <?php
-            if ($_SESSION['idMatriculas'] != false){
-			echo'<a href="decision2.php?id=1" class="btn btn-large btn-block">Matricular</a>';
-               
-            }
-            if ($_SESSION['idContabilidad'] != false){
-               echo'<a href="Contabilidad/index.php" class="btn btn-large btn-block">Contabilidad</a>';
-            }
-			if ($_SESSION['idAdmin'] != false){
-				echo '<a href="Admin/index.php" class="btn btn-large btn-block">Administración</a>';
-			}
-        ?>
+				<a href="Matriculas/index.php" class="btn btn-large btn-block">Matricular Alumnos Nuevos</a>
+				<a href="Matriculas/index.php" class="btn btn-large btn-block" disabled>Matricular Alumnos Antiguos</a>
+                <a href="Matriculas/index.php" class="btn btn-large btn-block" disabled>Agregar Detalles alumnos Matriculados</a>
+                <a href="logout.php" class="btn btn-large btn-block btn-danger">Salir</a>
                 <div id="mensaje"></div> <!-- div para mostrar mensajes de error -->
             </form>
-
-
-
         </div> <!-- /container -->
-
-
-
-    </body>
+	</body>
 </html>
