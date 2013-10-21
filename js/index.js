@@ -83,7 +83,7 @@
                                 window.location.href = "vistas/decision.php";
                             }
                             else{
-                                $('#mensaje').html("<small><h4>Nombre de Usuario o constraseña incorrectos</h4></small>");
+                                $('#mensaje').html("<small><h4>usuario o Clave incorrecta</h4></small>");
                             }
                         }
                     });
