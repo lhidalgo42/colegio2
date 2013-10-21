@@ -19,8 +19,14 @@ function tipoP(I){
 function CerrarP(){
 	$("#myModalP").children(".modal-body").children().children(".btn-group").children(".active").removeClass("active");
 	$('#tipoP1').css('display','none');
+	$("#bancoCheque").val("");
+	$("#numeroCheque").val("");
+	$("#montoCheque").val("");		
 	$('#tipoP2').css('display','none');
+	$("#numeroLetra").val("");
+	$("#montoLetra").val("");
 	$('#tipoP3').css('display','none');
+	$("#montoEfectivo").val("");
 }
 function GuardarP(I){
 	$("#modalP"+I).html($("#myModalP").children(".modal-body").children().children(".btn-group").children(".active").html());
@@ -28,7 +34,6 @@ function GuardarP(I){
 	$("#modalP"+I).attr("chequebanco",$("#bancoCheque").val());
 	$("#modalP"+I).attr("chequenumero",$("#numeroCheque").val());
 	$("#modalP"+I).attr("chequemonto",$("#montoCheque").val());
-	$("#modalP"+I).attr("chequefecha",$("#fechaCheque").val());
 	$("#modalP"+I).attr("letranumero",$("#numeroLetra").val());
 	$("#modalP"+I).attr("letramonto",$("#montoLetra").val());
 	$("#modalP"+I).attr("efectivomonto",$("#montoEfectivo").val());
