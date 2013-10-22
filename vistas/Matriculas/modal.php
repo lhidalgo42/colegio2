@@ -134,7 +134,7 @@
   <div class="control-group">
     <label class="control-label" for="inputFechaNac">Fecha Nacimiento</label>
     <div class="controls">
-    <div class="bfh-datepicker" data-format="d-m-y" data-date="today">
+    <div class="bfh-datepicker" data-format="y-m-d" data-date="">
   <div class="input-prepend bfh-datepicker-toggle" data-toggle="bfh-datepicker">
     <span class="add-on"><i class="icon-calendar"></i></span>
     <input type="text"  id="inputFechaNac" placeholder="Fecha Nacimiento" onFocus="verificarRut(inputRUT)" readonly>
@@ -248,7 +248,7 @@
   <div class="control-group">
     <label class="control-label" for="inputFechaNacN">Fecha Nacimiento</label>
     <div class="controls">
-    <div class="bfh-datepicker" data-format="d-m-y" data-date="18-10-1980">
+    <div class="bfh-datepicker" data-format="y-m-d" data-date="">
   <div class="input-prepend bfh-datepicker-toggle" data-toggle="bfh-datepicker">
     <span class="add-on"><i class="icon-calendar"></i></span>
     <input type="text"  id="inputFechaNacN" placeholder="Fecha Nacimiento" readonly>

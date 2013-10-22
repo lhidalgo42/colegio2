@@ -13,30 +13,44 @@ include_once'utilidades.php';
 session_start();
    
  print_r($_POST); 
- // inserta la familia en la bbdd y te devuelve el id de esta
  if($_POST['familia'][0]!="" && $_POST['familia'][1]!=""){
- $idFamilia=Query::InsertarFamilia($_POST['familia'][0],$_SESSION['RUT']); 
- if($idFamilia)
- {
-	echo "Familia  ".$_POST['familia'][0]." insertada correctamente<br>";
- }
+$idFamilia=Query::InsertarFamilia($_POST['familia'][0],$_SESSION['RUT']); 
  }
  if($_POST['familia'][1]=="Mama")
  {$ae=0;} else {$ae=1;}
- // inserta los datos de los 2 papas 
-
  for($i=0;$i<2;$i++)
- { if($i==1){$a="papa";$s=1;}else{$a="mama";$s=0;}
- if($a=="mama" && $ae==0){$b=1;} else if($a=="papa" && $ae==1){$b=1;}else{$b=0;}
- $_POST[$a][0]=validadorRUT($_POST[$a][0]);
-$papa=Query::InsertarPapa( $_POST[$a][0], $_POST[$a][1], $_POST[$a][2], $_POST[$a][3],$s,$_POST[$a][4],$b,$_POST[$a][5],$idFamilia,$_POST[$a][6],$_POST[$a][7],$_POST[$a][8],$_POST[$a][9],$_POST[$a][10],$_POST[$a][11]);
+ {
+if($_POST['Papas'][$i][0]){
+ if($ae==$i){$s=1;} else{$s=0;}
+ $_POST['Papas'][$i][0]=validadorRUT($_POST['Papas'][$i][0]);
+$papa=Query::InsertarPapa( $_POST['Papas'][$i][0], $_POST['Papas'][$i][1], $_POST['Papas'][$i][2], $_POST['Papas'][$i][3],$i,$_POST['Papas'][$i][4],$s,$_POST['Papas'][$i][5],$idFamilia,$_POST['Papas'][$i][6],$_POST['Papas'][$i][7],$_POST['Papas'][$i][8],$_POST['Papas'][$i][9],$_POST['Papas'][$i][10],$_POST['Papas'][$i][11]);
  if($papa)
  {
-	echo "".$_POST[$a][1]." ".$_POST[$a][2]." ".$_POST[$a][3]." insertado de manera exitosa en la Base de Datos<br>";
- }
- }
- echo "fin del envio";
-
+	echo "".$_POST['Papas'][$i][1]." ".$_POST['Papas'][$i][2]." ".$_POST['Papas'][$i][3]." insertado de manera exitosa en la Base de Datos<br>";
+ } } }
  
- //[alumnos] => Array ( [0] => Array ( [0] => 11.111.111-1 [1] => Juanito Alcachofa [2] => 1° Basico [3] => 100 [4] => 200000 [5] => 2013-10-18 [6] => 30 [7] => CA [8] => Clinica Alemana [9] => 42000 [10] => 2013-10-18 [11] => 10 [12] => 10 ) [1] => Array ( [0] => 22.222.222-2 [1] => Pedro Blowme [2] => 7° Basico [3] => 200 [4] => 200000 [5] => 2013-10-20 [6] => 60 [7] => CSM [8] => Clinica Santa Maria [9] => 39000 [10] => 2013-10-20 [11] => 20 [12] => 20 )
+ for($i=0;$i<4;$i++){
+	 //sexo del nino
+	$_POST['alumnos'][$i][6]=1;
+	if($_POST['alumnos'][$i][0])
+	{
+ $pagoMatricula=Query::InsertarPagoMatricula($_POST['alumnos'][$i][8],$_POST['alumnos'][$i][9],$_POST['alumnos'][$i][10]);
+ $pagoSeguro=Query::InsertarPagoSeguroEscolar($_POST['alumnos'][$i][11],$_POST['alumnos'][$i][14],$_POST['alumnos'][$i][15],$_POST['alumnos'][$i][13]);
+ $nino=Query::InsertarNino($_POST['alumnos'][$i][0],$_POST['alumnos'][$i][1],$_POST['alumnos'][$i][2],$_POST['alumnos'][$i][3],$_POST['alumnos'][$i][6],$_POST['alumnos'][$i][4],$_POST['alumnos'][$i][7],$pagoMatricula,$pagoSeguro,$idFamilia,$_POST['alumnos'][$i][16],$_POST['alumnos'][$i][17],$_POST['alumnos'][$i][5]);
+	}
+ }
+$a=count($_POST['documentos']);
+echo $a;
+ for ($i=0; $i < count($_POST['documentos']);$i++){
+	 if($_POST['documentos'][$i][8]=="Cheque"){$tipo=1;}
+	 if($_POST['documentos'][$i][8]=="Letra"){$tipo=2;}
+	 if($_POST['documentos'][$i][8]=="Efectivo"){$tipo=3;}
+	 $documento=Query::InsertarDocumento($_POST['documentos'][$i][12],$idFamilia,$_POST['documentos'][$i][1],$_POST['documentos'][$i][2],$_POST['documentos'][$i][3],$_POST['documentos'][$i][4],$_POST['documentos'][$i][5],$_POST['documentos'][$i][7]);
+	 $pago=Query::InsertarPago($_POST['documentos'][$i][10],$_POST['documentos'][$i][11],$_POST['documentos'][$i][0],$_POST['documentos'][$i][9],$tipo);
+	 $relacion=Query::R_PagoDocumento($pago,$documento);
+	 if($relacion)
+	 {
+		 echo "pago $i Exitoso";
+	 }
+ }
  ?>

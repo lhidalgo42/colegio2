@@ -1,19 +1,24 @@
-<div class="span3"> NUMERO DE PAGOS</div>
+<div class="span2"> N° DE PAGOS</div>
 <div class="span4"> 
-	<input type="number" min="1" max="20" id="cuotas" maxlength="2" placeholder="0">
+	<input type="number" id="cuotas" maxlength="2" value="0">
+</div>
+<div class="span2"> N° DE PAGO Cuota Incorporación</div>
+<div class="span4"> 
+	<input type="number" id="cuotaInc" maxlength="2" value="0">
 </div>
 
 <table  width="100%" border="1" class="table table-bordered" id="tablaDocs">
 <thead>
   <tr>
-    <td colspan="12"><center><strong>DOCUMENTOS GIRADOS O ACEPTADOS POR EL APODERADO POR CUOTAS REGULARES MENSUALES</strong></center></td>
+    <td colspan="13"><center><strong>DOCUMENTOS GIRADOS O ACEPTADOS POR EL APODERADO POR CUOTAS REGULARES MENSUALES</strong></center></td>
   </tr>
   <tr>
+  	<td rowspan="2"><center>N° Boleta</center></td>
     <td rowspan="2"><center>Vencimiento</center></td>
     <td rowspan="2"><center>Cheque - Letra Mandado Tipo/Detalle Documento N°</center></td>
     <td colspan="5"><center><strong>COMPONENTES DEL MONTO (PESOS)</strong></center></td>
     <td rowspan="2"><center>
-    MONTO TOTAL POR DOC.
+    TOTAL
     </center></td>
     <td rowspan="2"><center>FECHA DE DEPOSITO</center></td>
     <td rowspan="2"><center>OBSERVACIONES</center></td>
@@ -27,19 +32,18 @@
     <td><center>Deuda Escolar 2013</center></td>
   </tr>
   </thead>
-  <tbody id="pagoCuotas">
-  </tbody>
-  <div class="clearfix"></div>
+  <tbody id="pagoCuotas"></tbody>
   <tfoot>
   <tr>
-  <td height="38" colspan="2"><center><strong>Totales :</strong></center></td>
+  <td height="38" colspan="3"><center><strong>Totales :</strong></center></td>
   <td><center><div id="ColT"></div></center></td>
   <td><center><div id="MatT"></div></center></td>
   <td><center><div id="CouT"></div></center></td>
   <td><center><div id="AlmT"></div></center></td>
   <td><center><div id="DeuT"></div></center></td>
   <td><center><div id="TotalT"></div></center></td>
-  </tfoot>
+</tr>
+</tfoot>
 </table><br>
 
 <button type="submit" class="btn btn-primary btn-block btn-large"><strong>Enviar</strong></button> 
