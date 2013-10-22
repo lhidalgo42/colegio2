@@ -2,7 +2,7 @@
 include '../../ajax/sessionCheck.php';
 iniciarCookie();
 verificarIP(); ?>
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -102,23 +102,26 @@ $nino=array(array("inputNombreN","nombre"),array("inputApellidoPN","apellidoP"),
 	 $b=$i+1;?> 
   alumnos[<?php echo $i; ?>]=alumno<?php echo $b; ?>;
 <?php } ?>
- <?php $documentos=array("FechaBol","tipo","chequebanco","chequenumero","chequemonto","chequefecha","letranumero","letramonto","efectivomonto","Col","Mat","Cou","Alm","Deu","fechaD","obs");
-  for($i=1;$i<13;$i++){ ?>
-  var documento<?php echo $i; ?> = new Array();
-  <?php for($b=0;$b<16;$b++){ ?>
-  <?php if($b==1 || $b==2 || $b==3 || $b==4 || $b==5 || $b==6 || $b==7 || $b==8){ ?>
-  documento<?php echo $i;?>[<?php echo $b; ?>] = $("#modalP<?php echo $i; ?>").attr("<?php echo $documentos[$b]; ?>");
-  <?php } 
-  else{ ?>
-  documento<?php echo $i; ?>[<?php echo $b; ?>] = $("#<?php echo $documentos[$b];echo $i; ?>").val();
-  <?php } //fin else ?>
-  <?php } // fin for b ?>
- <?php } //fin For i?>
-  var documentos = new Array();
- <?php for($i=0;$i<12;$i++){
-	 $b=$i+1;?> 
-  documentos[<?php echo $i; ?>]=documento<?php echo $b; ?>;
-<?php } ?>
+
+var cuotas = +$('#cuotas').val();
+var documentos = new Array();
+for(var i = 1; i < cuotas +1; i++){
+	documentos[i][0] = $('#FechaBol'+i).val();
+	documentos[i][1] = $('#Col'+i).val();
+	documentos[i][2] = $('#Mat'+i).val();
+	documentos[i][3] = $('#Cou'+i).val();
+	documentos[i][4] = $('#Alm'+i).val();
+	documentos[i][5] = $('#Deu'+i).val();
+	documentos[i][6] = $('#FechaD'+i).val();
+	documentos[i][7] = $('#obs'+i).val();
+	documentos[i][8] = $("#modalP"+i).attr("tipo");
+	documentos[i][9] = $("#modalP"+i).attr("banco");
+	documentos[i][10] = $("#modalP"+i).attr("numero");
+	documentos[i][11] = $("#modalP"+i).attr("monto");
+}
+
+
+
 $.ajax({
   url: "../../ajax/enviar.php",
   data: {familia:familia,papa:papa,mama:mama,alumnos:alumnos,documentos:documentos},

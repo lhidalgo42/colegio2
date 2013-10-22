@@ -1,6 +1,6 @@
 <div class="span3"> NUMERO DE PAGOS</div>
 <div class="span4"> 
-	<input type="number" min="1" max="20" id="cuotas" placeholder="0">
+	<input type="number" min="1" max="20" id="cuotas" maxlength="2" placeholder="0">
 </div>
 
 <table  width="100%" border="1" class="table table-bordered" id="tablaDocs">
