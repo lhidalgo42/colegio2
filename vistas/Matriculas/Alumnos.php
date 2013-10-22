@@ -32,7 +32,7 @@
     <td class="span1"><select id="Curso<?php echo $i; ?>" onChange="curso(<?php echo $i; ?>)" class="input-small"><option></option>
     <?php for($e=0;$e<9;$e++){ ?><<option value="<?php echo $cursos[$e]; ?>"><?php echo $cursos[$e]; ?></option> <?php } ?></select></td>
     
-    <td class="span1"><input type="number" class="span1" min="0" id="<?php echo"bolM".$i.""?>"  placeholder="N° Boleta"></td>
+    <td class="span1"><input type="number" class="span1" min="0" id="<?php echo"bolM".$i.""?>" value="0" ></td>
     
     <td class="span1"><div class="input-prepend">
   <span class="add-on">$</span>
@@ -67,7 +67,7 @@
   </div>
 </div></td>
     
-    <td><input type="number" style="width:30px;" class="span1" min="0" id="<?php echo"valeS".$i.""?>" placeholder="N° Vale"></td>
+    <td><input type="number" class="span1" min="0" id="<?php echo"valeS".$i.""?>" value="0"></td>
     
     <td><a id="modalC<?php echo $i; ?>" role="button" onClick="MostrarC(<?php echo $i; ?>)"class="btn" data-toggle="modal" tipo="" nombre="" valor="">Clinica</a></td>
     
@@ -102,11 +102,11 @@
     
     <td><div class="input-prepend">
   <span class="add-on">%</span>
-<input type="number" style="width:30px;" max="100" min="0" onChange="beca(<?php echo $i; ?>)" id="<?php echo"1sem".$i.""?>"></div></td>
+<input type="number" style="width:30px;" max="100" min="0" onChange="beca(<?php echo $i; ?>)" id="<?php echo"1sem".$i.""?>" value="0"></div></td>
     
     <td><div class="input-prepend">
   <span class="add-on">%</span>
-<input type="number" style="width:30px;" max="100" min="0" id="<?php echo"2sem".$i.""?>" ></div></td>
+<input type="number" style="width:30px;" max="100" min="0" id="<?php echo"2sem".$i.""?>" value="0"></div></td>
     
   </tr>
   <?php 
