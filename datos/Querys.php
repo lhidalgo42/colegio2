@@ -79,80 +79,11 @@ class Query {
         $queryString = "INSERT INTO almuerzos_nino (almuerzos_ID, nino_RUT) VALUES ('".$almuerzoID."', '".$ninoRut."')";
         $query = CallQuery($queryString);
 	}
-	/** Termino de Añadir la Familia a la Base de Datos **/
-	/** Comenzando la Parte de la Cuotas **/
-	public static function CuotaComponenteMonto($Colegiatura,$Materiales,$cuotaIncorporacion,$almuerzo,$deudas) {
-        $queryString = "INSERT INTO componente_monto (Colegiatura, Materiales, CuotaIncorporacion, Almuerzo, DeudaEscol20) 
-						VALUES ('".$Colegiatura."', '".$Materiales."', '".$cuotaIncorporacion."', '".$almuerzo."', '".$deudas."');";
-        	$query = CallQueryReturnID($queryString);
-			return $query;
+			public static function InsertarDocumento($cuota,$familiaID,$col,$mat,$cuoINC,$alm,$deu,$observaciones) {
+        $queryString = "INSERT INTO documentos (Cuota, familia_ID, Colegiatura, Materiales, Cuota_Inc, Almuerzo, Deuda, Vencimiento, Observaciones) VALUES ('".$cuota."', '".$familiaID."', '".$col."', '".$mat."', '".$cuotaINC."', '".$alm."', '".$deu."', 'NULL', '".$observaciones."');";
+			$query = CallQueryReturnID($queryString);
+			return $query; 
 	}
-	public static function chequeEstado($estado) {
-        $queryString = "INSERT INTO estado (Descripcion) 
-						VALUES ('".$estado."')";
-        	$query = CallQueryReturnID($queryString);
-			return $query;
-	}
-	public static function cheque($monto,$vencimiento,$estadoID,$bancoID) {
-        $queryString = "INSERT INTO cheque (Monto, Vencimiento, Estado_ID, Banco_ID) 
-						VALUES ('".$monto."', '".$vencimeinto."', '".$estadoID."', '".$bancoID."')";
-        	$query = CallQueryReturnID($queryString);
-			return $query;
-	}
-	public static function bancos($nombre,$descripcion) {
-        $queryString = "INSERT INTO bancos (Nombre, Descripcion) 
-						VALUES ('".$nombre."', '".$descripcion."')";
-        	$query = CallQueryReturnID($queryString);
-			return $query;
-	}
-	public static function letra($monto) {
-        $queryString = "INSERT INTO letra (Monto) 
-						VALUES ('".$monto."')";
-        	$query = CallQueryReturnID($queryString);
-			return $query;
-	}
-	public static function efectivo($monto) {
-        $queryString = "INSERT INTO efectivo (Monto) 
-						VALUES ('".$monto."')";
-        	$query = CallQueryReturnID($queryString);
-			return $query;
-	}
-	/*
-	public static function efectivo($vence,$detalleDoc,$componenteMontoID,$total,$fechaDeposito,$comentario,$familiaID) {
-        $queryString = "INSERT INTO cuotas (Vence, DetalleDoc, Componente_Monto_ID, Total, FechaDeposito, Comentario, Familia_ID) 
-						VALUES ('".$vence."', '".$detalleDoc."', '".$componenteMontoID."', '".$total."', '".$fechaDeposito."', '".$comentario."', '".$familiaID."')";
-        	$query = CallQueryReturnID($queryString);
-			return $query;
-	}
-	*/
-	public static function R_ChequeCoutas($chequeID,$cuotaID) {
-        $queryString = "INSERT INTO cheque_cuotas (Cheque_ID, Cuotas_ID) VALUES ('".$chequeID."', '".$cuotaID."');";
-        $query = CallQuery($queryString);
-	}
-	public static function R_EfectivoCuota($efectivoID,$cuotaID) {
-        $queryString = "INSERT INTO efectivo_cuotas (Efectivo_ID, cuotas_ID) VALUES ('".$efectivoID."', '".$cuotaID."');";
-        $query = CallQuery($queryString);
-	}
-	public static function R_LetraCuota($letraID,$cuotaID) {
-        $queryString = "INSERT INTO letra_cuotas (Letra_ID, Cuotas_ID) VALUES ('".$letraID."', '".$cuotaID."');";
-        $query = CallQuery($queryString);
-	}
-	/** termino de la Seccion de Introducir Cuotas **/
-	/** despliega las comunas para las personas en los modals de matricula */
-		public static function insertarComuna($nombre) {
-        $queryString = "INSERT INTO comunas (Nombre) VALUES ('".$nombre."')";
-        	$query = CallQueryReturnID($queryString);
-			return $query;
-	}
-	    public static function MostrarComunas() {
-        $queryString = "SELECT * FROM comunas";
-        $result = CallQuery($queryString);
-        $resultArray = array();
-        while ($fila = $result->fetch_assoc()) {
-            $resultArray[] = $fila;
-        }
-        return $resultArray;
-    }
 	/** fin del despliege de las comunas **/
    }
 ?>
