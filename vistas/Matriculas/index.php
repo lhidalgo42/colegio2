@@ -105,19 +105,21 @@ $nino=array(array("inputNombreN","nombre"),array("inputApellidoPN","apellidoP"),
 
 var cuotas = +$('#cuotas').val();
 var documentos = new Array();
-for(var i = 1; i < cuotas +1; i++){
-	documentos[i][0] = $('#FechaBol'+i).val();
-	documentos[i][1] = $('#Col'+i).val();
-	documentos[i][2] = $('#Mat'+i).val();
-	documentos[i][3] = $('#Cou'+i).val();
-	documentos[i][4] = $('#Alm'+i).val();
-	documentos[i][5] = $('#Deu'+i).val();
-	documentos[i][6] = $('#FechaD'+i).val();
-	documentos[i][7] = $('#obs'+i).val();
-	documentos[i][8] = $("#modalP"+i).attr("tipo");
-	documentos[i][9] = $("#modalP"+i).attr("banco");
-	documentos[i][10] = $("#modalP"+i).attr("numero");
-	documentos[i][11] = $("#modalP"+i).attr("monto");
+for(var i = 0;i < cuotas; i++){
+	var b = i + 1;
+	documentos[i] = new Array();
+	documentos[i][0] = $('#FechaBol'+b).val();
+	documentos[i][1] = $('#Col'+b).val();
+	documentos[i][2] = $('#Mat'+b).val();
+	documentos[i][3] = $('#Cou'+b).val();
+	documentos[i][4] = $('#Alm'+b).val();
+	documentos[i][5] = $('#Deu'+b).val();
+	documentos[i][6] = $('#FechaD'+b).val();
+	documentos[i][7] = $('#obs'+b).val();
+	documentos[i][8] = $("#modalP"+b).attr("tipo");
+	documentos[i][9] = $("#modalP"+b).attr("banco");
+	documentos[i][10] = $("#modalP"+b).attr("numero");
+	documentos[i][11] = $("#modalP"+b).attr("monto");
 }
 
 
@@ -139,7 +141,7 @@ $('#cuotas').keyup(function(){
 		if(cuotas >20){var cuotas = 20}	
 		$('#pagoCuotas').html("");
 		for(var i=1;i<cuotas+1;i++){
-			$('#pagoCuotas').append('<tr><td><input style="width:115px;" type="date" id="FechaBol'+i+'; ?>"></td><td style="width:100px;"><center><a id="modalP'+i+'" role="button" onClick="MostrarP('+i+')"class="btn" data-toggle="modal" tipo="" chequebanco="" chequenumero="" chequemonto="" chequefecha="" letranumero="" letramonto="" efectivomonto="">Seleccionar</a></center></td><!-- suma desde aqui--><td><input type="number" style="width:80px;" min="0"  value="0" id="Col'+i+'"></td><td><input type="number" style="width:80px;" min="0" value="0" id="Mat'+i+'"></td><td style="width:90px;"><input type="number" style="width:90px;" min="0" value="0" id="Cou'+i+'"></td><td><input type="number" style="width:60px;" min="0" value="0" id="Alm'+i+'" ></td><td style="width:90px;"><input type="number" style="width:90px;" min="0" value="0"  id="Deu'+i+'"></td><!-- hasta aqui --><td style="width:80px;"><center><div id="Total'+i+'">0</div></center></td><td><input type="date" style="width:115px;" id="fechaD'+i+'" disabled></td><td><input type="text" style="width:170px;" id="obs'+i+'"></td></tr>');
+			$('#pagoCuotas').append('<tr><td><input style="width:115px;" type="date" id="FechaBol'+i+'"></td><td style="width:100px;"><center><a id="modalP'+i+'" role="button" onClick="MostrarP('+i+')"class="btn" data-toggle="modal" tipo="" chequebanco="" chequenumero="" chequemonto="" chequefecha="" letranumero="" letramonto="" efectivomonto="">Seleccionar</a></center></td><!-- suma desde aqui--><td><input type="number" style="width:80px;" min="0"  value="0" id="Col'+i+'"></td><td><input type="number" style="width:80px;" min="0" value="0" id="Mat'+i+'"></td><td style="width:90px;"><input type="number" style="width:90px;" min="0" value="0" id="Cou'+i+'"></td><td><input type="number" style="width:60px;" min="0" value="0" id="Alm'+i+'" ></td><td style="width:90px;"><input type="number" style="width:90px;" min="0" value="0"  id="Deu'+i+'"></td><!-- hasta aqui --><td style="width:80px;"><center><div id="Total'+i+'">0</div></center></td><td><input type="date" style="width:115px;" id="fechaD'+i+'" disabled></td><td><input type="text" style="width:170px;" id="obs'+i+'"></td></tr>');
 		}				
 	})	
 </script>
