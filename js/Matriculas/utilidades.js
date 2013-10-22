@@ -136,9 +136,17 @@ function boleta(){
 	$("#bolM3").val(boleta);
 	$("#bolM4").val(boleta);
 }
-function vale(){
-	var vale = parseFloat($("#valeS1").val());
+
+$('#valeS1').keyup(function(){
+	var vale = $("#valeS1").val();
 	$("#valeS2").val(vale);
 	$("#valeS3").val(vale);
 	$("#valeS4").val(vale);
-}
+})
+
+$('#bolM1').keyup(function(){
+	var boleta = $('#bolM1').val();
+	$('#bolM2').val(boleta);
+	$('#bolM3').val(boleta);
+	$('#bolM4').val(boleta);
+})
