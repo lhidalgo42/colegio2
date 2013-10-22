@@ -80,29 +80,46 @@ function enviar()
 var familia = new Array();
 familia[0] = $("#familia").val();
 familia[1] = $("#AEconomico").children(".active").html()
-var papa = new Array();
-var mama = new Array();
-<?php $alumnos= array("rut","name","Curso","bolM","montoM","fechaM","valeS","tipo","nombre","valor","fechaS","1sem","2sem"); 
-$papa=array(array("inputRUT","rut"),array("inputNombre","nombre"),array("inputApellidoP","apellido1"),array("inputApellidoM","apellido2"),array("inputFechaNac","fechaNac"),array("inputProfesion","profesion"),array("inputDireccion","direccion"),array("inputComuna","comuna"),array("inputEmail","email"),array("inputLugarTrabajo","lugarTrabajo"),array("inputDireccionT","direccionTrabajo"),array("inputTelefonos","telefonos"));
-$nino=array(array("inputNombreN","nombre"),array("inputApellidoPN","apellidoP"),array("inputApellidoMN","apellidoM"),array("inputFechaNacN","fechanac"),array("inputColegioPast","colegioanterior")); ?>
-<?php for($i=0;$i<12;$i++){?> 
- papa[<?php echo $i; ?>] = $("#modalPAPA").attr("<?php echo $papa[$i][1]; ?>");
- mama[<?php echo $i; ?>] = $("#modalMAMA").attr("<?php echo $papa[$i][1]; ?>");<?php }?> 
- <?php for($i=1;$i<5;$i++){ ?>
- var alumno<?php echo $i; ?> = new Array();
- <?php for($b=0;$b<13;$b++){ ?>
- <?php if($b==7 || $b==8 || $b==9){ ?>
- alumno<?php echo $i;?>[<?php echo $b; ?>] = $("#modalC<?php echo $i; ?>").attr("<?php echo $alumnos[$b]; ?>");<?php } //fin if 
-  else { ?>
- alumno<?php echo $i;?>[<?php echo $b; ?>] = $("#<?php echo $alumnos[$b];echo $i; ?>").val();<?php } // fin else ?> 
- <?php } // fin for b ?>
- <?php } // fin for i?>
- var alumnos = new Array();
- <?php for($i=0;$i<4;$i++){
-	 $b=$i+1;?> 
-  alumnos[<?php echo $i; ?>]=alumno<?php echo $b; ?>;
-<?php } ?>
-
+var Papas = new Array();
+for (var i = 0; i < 2; i++){
+	 Papas[i] = new Array();
+	  if (i == 1){var Data = "PAPA";}
+	  if (i == 0){var Data = "MAMA";}
+	 Papas[i][0] = $("#modal"+Data).attr("rut");
+	 Papas[i][1] = $("#modal"+Data).attr("nombre");
+	 Papas[i][2] = $("#modal"+Data).attr("apellido1");
+	 Papas[i][3] = $("#modal"+Data).attr("apellido2");
+	 Papas[i][4] = $("#modal"+Data).attr("fechaNac"); 
+	 Papas[i][5] = $("#modal"+Data).attr("profesion");
+	 Papas[i][6] = $("#modal"+Data).attr("direccion");
+	 Papas[i][7] = $("#modal"+Data).attr("comuna");
+	 Papas[i][8] = $("#modal"+Data).attr("email");
+	 Papas[i][9] = $("#modal"+Data).attr("lugarTrabajo");
+	 Papas[i][10] = $("#modal"+Data).attr("direccionTrabajo");
+	 Papas[i][11] = $("#modal"+Data).attr("telefonos");  
+}
+  var alumnos = new Array();
+ for( var i = 0; i < 5; i++){
+   var b= i+1;
+   alumnos[i] = new Array();
+   alumnos[i][0] = $("#rut"+b).val(); 
+   alumnos[i][1] = $("#modalNino"+b).attr("nombre");
+   alumnos[i][2] = $("#modalNino"+b).attr("apellidop");
+   alumnos[i][3] = $("#modalNino"+b).attr("apellidom");
+   alumnos[i][4] = $("#modalNino"+b).attr("fechanac");
+   alumnos[i][5] = $("#modalNino"+b).attr("colegioanterior");
+   alumnos[i][7] = $("#Curso"+b).val(); 
+   alumnos[i][8] = $("#bolM"+b).val(); 
+   alumnos[i][9] = $("#montoM"+b).val(); 
+   alumnos[i][10] = $("#fechaM"+b).val(); 
+   alumnos[i][11] = $("#valeS"+b).val(); 
+   alumnos[i][12] = $("#modalC"+b).attr("tipo"); 
+   alumnos[i][13] = $("#modalC"+b).attr("nombre"); 
+   alumnos[i][14] = $("#modalC"+b).attr("valor"); 
+   alumnos[i][15] = $("#fechaS"+b).val(); 
+   alumnos[i][16] = $("#1sem"+b).val(); 
+   alumnos[i][17] = $("#2sem"+b).val(); 
+} 
 var cuotas = +$('#cuotas').val();
 var documentos = new Array();
 for(var i = 0;i < cuotas; i++){
@@ -121,12 +138,9 @@ for(var i = 0;i < cuotas; i++){
 	documentos[i][10] = $("#modalP"+b).attr("numero");
 	documentos[i][11] = $("#modalP"+b).attr("monto");
 }
-
-
-
 $.ajax({
   url: "../../ajax/enviar.php",
-  data: {familia:familia,papa:papa,mama:mama,alumnos:alumnos,documentos:documentos},
+  data: {familia:familia,Papas:Papas,alumnos:alumnos,documentos:documentos},
   type: "POST",
   beforeSend: function()
   {
