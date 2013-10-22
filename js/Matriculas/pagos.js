@@ -41,8 +41,7 @@ function GuardarP(I){
 	$("#modalP"+I).attr("numero",$("#numeroLetra").val());
 	$("#modalP"+I).attr("monto",$("#montoLetra").val());
 	}
-	else if ($("#myModalP").children(".modal-body").children().children(".btn-group").children(".active").attr("idval") == "Letra"){
-	Efectivo
+	else if ($("#myModalP").children(".modal-body").children().children(".btn-group").children(".active").attr("idval") == "Efectivo"){
 	$("#modalP"+I).attr("banco","");
 	$("#modalP"+I).attr("numero","");
 	$("#modalP"+I).attr("monto",$("#montoEfectivo").val());
