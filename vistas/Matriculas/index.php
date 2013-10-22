@@ -142,5 +142,10 @@ $('#cuotas').keyup(function(){
 </script>
 <?php include("modal.php"); ?>
 <div id="ayuda"><?php print_r($_SESSION); ?></div>
+<script>
+var f = new Date();
+var fecha = f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear();	
+$(".bfh-datepicker-toggle").children("input").val(fecha);
+</script>
 </body>
 </html>

@@ -32,13 +32,13 @@
     <td class="span1"><select id="Curso<?php echo $i; ?>" onChange="curso(<?php echo $i; ?>)" class="input-small"><option></option>
     <?php for($e=0;$e<9;$e++){ ?><<option value="<?php echo $cursos[$e]; ?>"><?php echo $cursos[$e]; ?></option> <?php } ?></select></td>
     
-    <td class="span1"><input type="number" class="span1" value="0" min="0" id="<?php echo"bolM".$i.""?>" placeholder="N° de Boleta"></td>
+    <td class="span1"><input type="number" class="span1" value="0" min="0" id="<?php echo"bolM".$i.""?>" <?php if($i==1){?> onKeyUp="boleta()" <?php } ?> placeholder="N° de Boleta"></td>
     
     <td class="span1"><div class="input-prepend">
   <span class="add-on">$</span>
 <input type="number" style="width:50px;" valorMonto="" min="0" id="<?php echo"montoM".$i.""?>" placeholder="Monto"></div></td>
     
-    <td><div class="bfh-datepicker" data-format="d-m-y" data-date="18-10-2013">
+    <td><div class="bfh-datepicker" data-format="d-m-y">
   <div class="input-prepend bfh-datepicker-toggle" data-toggle="bfh-datepicker">
     <span class="add-on"><i class="icon-calendar"></i></span>
     <input type="text" style="width:77px;"  id="<?php echo"fechaM".$i.""?>" placeholder="Fecha"  readonly>
@@ -67,11 +67,11 @@
   </div>
 </div></td>
     
-    <td><input type="number" style="width:30px;" class="span1" value="0" min="0" id="<?php echo"valeS".$i.""?>" placeholder="VALE N°"></td>
+    <td><input type="number" style="width:30px;" class="span1" value="0" min="0" <?php if($i==1){?> onKeyUp="vale()" <?php } ?> id="<?php echo"valeS".$i.""?>" placeholder="VALE N°"></td>
     
     <td><a id="modalC<?php echo $i; ?>" role="button" onClick="MostrarC(<?php echo $i; ?>)"class="btn" data-toggle="modal" tipo="" nombre="" valor="">Clinica</a></td>
     
-    <td><div class="bfh-datepicker" data-format="d-m-y" data-date="18-10-2013">
+    <td><div class="bfh-datepicker" data-format="d-m-y">
   <div class="input-prepend bfh-datepicker-toggle" data-toggle="bfh-datepicker">
     <span class="add-on"><i class="icon-calendar"></i></span>
     <input type="text" style="width:77px;" id="<?php echo"fechaS".$i.""?>" placeholder="Fecha"  readonly>

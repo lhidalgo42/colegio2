@@ -1,11 +1,11 @@
 function MostrarNino(I)
 {
 	$("#guardarNino").attr("onClick","GuardarNino("+I+")")
-	$("#inputNombreN").val($("#modalPAPA").attr("nombre"));
-	$("#inputApellidoPN").val($("#modalPAPA").attr("apellidoP"));
-	$("#inputApellidoMN").val($("#modalPAPA").attr("apellidoM"));
-	$("#inputFechaNacN").val($("#modalPAPA").attr("fechanac"));
-	$("#inputColegioPast").val($("#modalPAPA").attr("colegioanterior"));
+	$("#inputNombreN").val($("#modalNino").attr("nombre"));
+	$("#inputApellidoPN").val($("#modalNino").attr("apellidoP"));
+	$("#inputApellidoMN").val($("#modalNino").attr("apellidoM"));
+	$("#inputFechaNacN").val($("#modalNino").attr("fechanac"));
+	$("#inputColegioPast").val($("#modalNino").attr("colegioanterior"));
 	$('#myModalNino').modal('show');
 }
 function CerrarNino()

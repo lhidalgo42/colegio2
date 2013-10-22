@@ -130,3 +130,15 @@ function bodyfuntion()
 sumar();
 $("#familia").val(""+$("#modalPAPA").attr("apellido1")+" "+$("#modalMAMA").attr("apellido1")+"");
 }
+function boleta(){
+	var boleta = parseFloat($("#bolM1").val());
+	$("#bolM2").val(boleta);
+	$("#bolM3").val(boleta);
+	$("#bolM4").val(boleta);
+}
+function vale(){
+	var vale = parseFloat($("#valeS1").val());
+	$("#valeS2").val(vale);
+	$("#valeS3").val(vale);
+	$("#valeS4").val(vale);
+}

@@ -21,7 +21,6 @@
                 <option value='Atlas - Citibank'>Atlas - Citibank</option>
                 <option value='BancaFacil'>BancaFacil</option>
                 <option  value='Banco Bice'>Banco Bice</option>
-                <option value='Banco Central de Chile'>Banco Central de Chile</option>
                 <option value='Banco de Chile'>Banco de Chile</option>
                 <option  value='Banco de Crédito e Inversiones'>Banco de Crédito e Inversiones</option>
                 <option value='Banco del Desarrollo'>Banco del Desarrollo</option>
@@ -52,10 +51,6 @@
             <h4>Ingrese Monto</h4>
             <br>
             <input id='montoCheque' placeholder='MontoChque' type='number'>
-            <br>
-            <h4>Fecha de Vencimiento</h4>
-            <br>
-        <input type='date' id='fechaCheque' placeholder='Fecha de Vencimiento'>
     </center>
 </div>
 <div id="tipoP2" style="display: none;">
