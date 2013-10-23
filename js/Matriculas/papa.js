@@ -15,6 +15,8 @@ var Apellido = $("#inputApellidoP").val();
 		$("#modalMAMA").attr("fechaNac",$("#inputFechaNac").val());
 		$("#modalMAMA").attr("profesion",$("#inputProfesion").val());
 		$("#modalMAMA").attr("direccion",$("#inputDireccion").val());
+		if($("#modalPAPA").attr("direccion")==""){
+		$("#modalPAPA").attr("direccion",$("#inputDireccion").val());}
 		$("#modalMAMA").attr("comuna",$("#inputComuna").val());
 		$("#modalMAMA").attr("email",$("#inputEmail").val());
 		$("#modalMAMA").attr("lugarTrabajo",$("#inputLugarTrabajo").val());
@@ -34,6 +36,8 @@ var Apellido = $("#inputApellidoP").val();
 		$("#modalPAPA").attr("fechaNac",$("#inputFechaNac").val());
 		$("#modalPAPA").attr("profesion",$("#inputProfesion").val());
 		$("#modalPAPA").attr("direccion",$("#inputDireccion").val());
+		if($("#modalMAMA").attr("direccion")=="")
+		{$("#modalMAMA").attr("direccion",$("#inputDireccion").val());}
 		$("#modalPAPA").attr("comuna",$("#inputComuna").val());
 		$("#modalPAPA").attr("email",$("#inputEmail").val());
 		$("#modalPAPA").attr("lugarTrabajo",$("#inputLugarTrabajo").val());

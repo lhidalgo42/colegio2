@@ -132,36 +132,9 @@
     </div>
   </div>
   <div class="control-group">
-    <label class="control-label" for="inputFechaNac">Fecha Nacimiento</label>
-    <div class="controls">
-    <div class="bfh-datepicker" data-format="y-m-d" data-date="">
-  <div class="input-prepend bfh-datepicker-toggle" data-toggle="bfh-datepicker">
-    <span class="add-on"><i class="icon-calendar"></i></span>
-    <input type="text"  id="inputFechaNac" placeholder="Fecha Nacimiento" onFocus="verificarRut(inputRUT)" readonly>
-  </div>
-  <div class="bfh-datepicker-calendar">
-    <table class="calendar table table-bordered">
-      <thead>
-        <tr class="months-header">
-          <th class="month" colspan="4">
-            <a class="previous" href="#"><i class="icon-chevron-left"></i></a>
-            <span></span>
-            <a class="next" href="#"><i class="icon-chevron-right"></i></a>
-          </th>
-          <th class="year" colspan="3">
-            <a class="previous" href="#"><i class="icon-chevron-left"></i></a>
-            <span></span>
-            <a class="next" href="#"><i class="icon-chevron-right"></i></a>
-          </th>
-        </tr>
-        <tr class="days-header">
-        </tr>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
-  </div>
-</div>
+    <label class="control-label" for="inputFechaNac">Fecha Nacimiento</label>   
+	<div class="controls">
+        <input type="date"  id="inputFechaNac" placeholder="Fecha Nacimiento" onFocus="verificarRut(inputRUT)" requiered>
     </div>
   </div>
   <div class="control-group">
@@ -179,7 +152,63 @@
   <div class="control-group">
     <label class="control-label" for="inputComuna">Comuna</label>
     <div class="controls">
-      <input type="text" id="inputComuna" placeholder="Comuna" onFocus="verificarRut(inputRUT)" required>
+      <select id="inputComuna" onFocus="verificar(inputRUT)" required>
+        <option value=""></option>
+        <option value="1" >ALHUE</option>
+        <option value="2" >BUIN</option>
+        <option value="3" >CALERA DE TANGO</option>
+        <option value="4" >CERRILLOS</option>
+        <option value="5" >CERRO NAVIA</option>
+        <option value="6" >COLINA</option>
+        <option value="7" >CONCHALI</option>
+        <option value="8" >CURACAVI</option>
+        <option value="9" >EL BOSQUE</option>
+        <option value="10" >EL MONTE</option>
+        <option value="11" >ESTACION CENTRAL</option>
+        <option value="12" >HUECHURABA</option>
+        <option value="13" >INDEPENDENCIA</option>
+        <option value="14" >ISLA DE MAIPO</option>
+        <option value="15" >LA CISTERNA</option>
+        <option value="16" >LA FLORIDA</option>
+        <option value="17" >LA GRANJA</option>
+        <option value="18" >LA PINTANA</option>
+        <option value="19" >LA REINA</option>
+        <option value="20" >LAMPA</option>
+        <option value="21" >LAS CONDES</option>
+        <option value="22" >LO BARNECHEA</option>
+        <option value="23" >LO ESPEJO</option>
+        <option value="24" >LO PRADO</option>
+        <option value="25" >MACUL</option>
+        <option value="26" >MAIPU</option>
+        <option value="27" >MARIA PINTO</option>
+        <option value="28" >MELIPILLA</option>
+        <option value="29" >ÑUÑOA</option>
+        <option value="30" >PADRE HURTADO</option>
+        <option value="31" >PAINE</option>
+        <option value="32" >PEDRO AGUIRRE CERDA</option>
+        <option value="33" >PEÑAFLOR</option>
+        <option value="34" >PEÑALOLEN</option>
+        <option value="35" >PIRQUE</option>
+        <option value="36" >PROVIDENCIA</option>
+        <option value="37" >PUDAHUEL</option>
+        <option value="38" >PUENTE ALTO</option>
+        <option value="39" >QUILICURA</option>
+        <option value="40" >QUINTA NORMAL</option>
+        <option value="41" >RECOLETA</option>
+        <option value="42" >RENCA</option>
+        <option value="43" >SAN BERNARDO</option>
+        <option value="44" >SAN JOAQUIN</option>
+        <option value="45" >SAN JOSE DE MAIPO</option>
+        <option value="46" >SAN MIGUEL</option>
+        <option value="47" >SAN PEDRO</option>
+        <option value="48" >SAN RAMON</option>
+        <option value="49" >SANTIAGO CENTRO</option>
+        <option value="50" >SANTIAGO OESTE</option>
+        <option value="51" >SANTIAGO SUR</option>
+        <option value="52" >TALAGANTE</option>
+        <option value="53" >TIL-TIL</option>
+        <option value="54" >VITACURA</option>
+	</select>
     </div>
   </div>
   <div class="control-group">
@@ -248,34 +277,7 @@
   <div class="control-group">
     <label class="control-label" for="inputFechaNacN">Fecha Nacimiento</label>
     <div class="controls">
-    <div class="bfh-datepicker" data-format="y-m-d" data-date="">
-  <div class="input-prepend bfh-datepicker-toggle" data-toggle="bfh-datepicker">
-    <span class="add-on"><i class="icon-calendar"></i></span>
-    <input type="text"  id="inputFechaNacN" placeholder="Fecha Nacimiento" readonly>
-  </div>
-  <div class="bfh-datepicker-calendar">
-    <table class="calendar table table-bordered">
-      <thead>
-        <tr class="months-header">
-          <th class="month" colspan="4">
-            <a class="previous" href="#"><i class="icon-chevron-left"></i></a>
-            <span></span>
-            <a class="next" href="#"><i class="icon-chevron-right"></i></a>
-          </th>
-          <th class="year" colspan="3">
-            <a class="previous" href="#"><i class="icon-chevron-left"></i></a>
-            <span></span>
-            <a class="next" href="#"><i class="icon-chevron-right"></i></a>
-          </th>
-        </tr>
-        <tr class="days-header">
-        </tr>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
-  </div>
-</div>
+    <input type="date"  id="inputFechaNacN" placeholder="Fecha Nacimiento" requiered>
     </div>
   </div>
   <div class="control-group">

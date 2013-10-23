@@ -38,67 +38,16 @@
   <span class="add-on">$</span>
 <input type="number" style="width:50px;" valorMonto="" min="0" id="<?php echo"montoM".$i.""?>" placeholder="Monto"></div></td>
     
-    <td><div class="bfh-datepicker" data-format="d-m-y">
-  <div class="input-prepend bfh-datepicker-toggle" data-toggle="bfh-datepicker">
-    <span class="add-on"><i class="icon-calendar"></i></span>
-    <input type="text" style="width:77px;"  id="<?php echo"fechaM".$i.""?>" placeholder="Fecha"  readonly>
-  </div>
-  <div class="bfh-datepicker-calendar">
-    <table class="calendar table table-bordered">
-      <thead>
-        <tr class="months-header">
-          <th class="month" colspan="4">
-            <a class="previous" href="#"><i class="icon-chevron-left"></i></a>
-            <span></span>
-            <a class="next" href="#"><i class="icon-chevron-right"></i></a>
-          </th>
-          <th class="year" colspan="3">
-            <a class="previous" href="#"><i class="icon-chevron-left"></i></a>
-            <span></span>
-            <a class="next" href="#"><i class="icon-chevron-right"></i></a>
-          </th>
-        </tr>
-        <tr class="days-header">
-        </tr>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
-  </div>
-</div></td>
+    <td>
+    <input type="date" style="width:77px;"  id="<?php echo"fechaM".$i.""?>" placeholder="Fecha"  requiered></td>
     
     <td><input type="number" class="span1" min="0" id="<?php echo"valeS".$i.""?>" value="0"></td>
     
     <td><a id="modalC<?php echo $i; ?>" role="button" onClick="MostrarC(<?php echo $i; ?>)"class="btn" data-toggle="modal" tipo="" nombre="" valor="">Clinica</a></td>
     
-    <td><div class="bfh-datepicker" data-format="d-m-y">
-  <div class="input-prepend bfh-datepicker-toggle" data-toggle="bfh-datepicker">
-    <span class="add-on"><i class="icon-calendar"></i></span>
-    <input type="text" style="width:77px;" id="<?php echo"fechaS".$i.""?>" placeholder="Fecha"  readonly>
-  </div>
-  <div class="bfh-datepicker-calendar">
-    <table class="calendar table table-bordered">
-      <thead>
-        <tr class="months-header">
-          <th class="month" colspan="4">
-            <a class="previous" href="#"><i class="icon-chevron-left"></i></a>
-            <span></span>
-            <a class="next" href="#"><i class="icon-chevron-right"></i></a>
-          </th>
-          <th class="year" colspan="3">
-            <a class="previous" href="#"><i class="icon-chevron-left"></i></a>
-            <span></span>
-            <a class="next" href="#"><i class="icon-chevron-right"></i></a>
-          </th>
-        </tr>
-        <tr class="days-header">
-        </tr>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
-  </div>
-</div></td>
+    <td>
+    <input type="date" style="width:77px;" id="<?php echo"fechaS".$i.""?>" placeholder="Fecha"  requiered>
+	</td>
     
     <td><div class="input-prepend">
   <span class="add-on">%</span>

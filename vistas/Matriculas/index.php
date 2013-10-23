@@ -8,12 +8,10 @@ verificarIP(); ?>
 <meta charset="utf-8">
 <title>Matriculas</title>
 <link rel="stylesheet" href="../../css/bootstrap-combined.min.css">
-<link rel="stylesheet" href="../../css/bootstrap-formhelpers.css">
+<link rel="stylesheet" media="screen" type="text/css" href="../../css/datepicker.css" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/datepicker.js"></script>
 <script src="../../js/bootstrap.min.js"></script>
-<script src="../../js/bootstrap-formhelpers-datepicker.es_ES.js"></script>
-<script src="../../js/bootstrap-formhelpers-datepicker.js"></script>
-
 <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -81,6 +79,13 @@ $(function() {
 var f = new Date();
 var fecha = f.getFullYear() + "-" + (f.getMonth() +1) + "-" +f.getDate();	
 $(".bfh-datepicker-toggle").children("input").val(fecha);
+$('input[type="date"]').DatePicker({
+	flat: true,
+	date: '2008-07-31',
+	current: '2008-07-31',
+	calendars: 1,
+	starts: 1
+});
 </script>
 </body>
 </html>
