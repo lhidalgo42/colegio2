@@ -2,7 +2,10 @@
 <div class="span4"> 
 	<input type="number" id="cuotas" maxlength="2" value="0">
 </div>
-
+<div class="span2"> N° DE PAGO Cuota Incorporación</div>
+<div class="span4"> 
+	<input type="number" id="cuotaInc" maxlength="2" value="0">
+</div>
 
 <table  width="100%" border="1" class="table table-bordered" id="tablaDocs">
 <thead>
@@ -13,7 +16,7 @@
   	<td rowspan="2"><center>N° Boleta</center></td>
     <td rowspan="2"><center>Vencimiento</center></td>
     <td rowspan="2"><center>Cheque - Letra Mandado Tipo/Detalle Documento N°</center></td>
-    <td colspan="4"><center><strong>COMPONENTES DEL MONTO (PESOS)</strong></center></td>
+    <td colspan="5"><center><strong>COMPONENTES DEL MONTO (PESOS)</strong></center></td>
     <td rowspan="2"><center>
     TOTAL
     </center></td>
@@ -23,7 +26,8 @@
   <tr>
     
     <td><center>Colegiatura</center></td>
-    <td><center>Materiales</center></td> 
+    <td><center>Materiales</center></td>
+    <td><center>Cuota de Incorporación</center></td>    
     <td><center>Almuerzo</center></td>
     <td><center>Deuda Escolar 2013</center></td>
   </tr>
@@ -34,6 +38,7 @@
   <td height="38" colspan="3"><center><strong>Totales :</strong></center></td>
   <td><center><div id="ColT"></div></center></td>
   <td><center><div id="MatT"></div></center></td>
+  <td><center><div id="CouT"></div></center></td>
   <td><center><div id="AlmT"></div></center></td>
   <td><center><div id="DeuT"></div></center></td>
   <td><center><div id="TotalT"></div></center></td>
