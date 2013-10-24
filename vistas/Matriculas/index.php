@@ -8,9 +8,7 @@ verificarIP(); ?>
 <meta charset="utf-8">
 <title>Matriculas</title>
 <link rel="stylesheet" href="../../css/bootstrap-combined.min.css">
-<link rel="stylesheet" media="screen" type="text/css" href="../../css/datepicker.css" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript" src="../../js/datepicker.js"></script>
 <script src="../../js/bootstrap.min.js"></script>
 <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -46,46 +44,23 @@ $(function() {
 
 <body>
 <div class="container-fluid">
-<form method="post" action="javascript:enviar()">
+<form  action="javascript:enviar()">
 <!--Despliega Errores-->
  <p><center><span id="mensaje" class="alert-danger"></span></center></p><br>
-
-<div id="padres">
-<?php include("padres.php"); ?>
-
-</div>
-<!-- Datos de alumnos-->
-<div id="ninos"><center><?php include("Alumnos.php"); ?></center></div>
-<!-- fin datos alumnos-->
-<br>
-<br>
-<!-- inicio Documentos -->
-<div id="documentos"><?php include("Documentos.php"); ?></div>
-
+<div id="padres"><?php include'padres.php'; ?></div>
+<div class="clearfix"></div>
+<div id="ninos"><center><?php include'Alumnos.php'; ?></center></div>
+<div class="clearfix"></div>
+<div id="coutaIncorporacion"><?php include'cuotaInc.php'; ?></div>
+<div id="documentos"><?php include'Documentos.php'; ?></div>
 </form>
-
 </div>
-
 <script src="../../js/Matriculas/pagos.js"></script>
 <script src="../../js/Matriculas/clinicas.js"></script>
 <script src="../../js/Matriculas/papa.js"></script>
 <script src="../../js/Matriculas/nino.js"></script>
 <script src="../../js/Matriculas/utilidades.js"></script>
-<script>	
-</script>
 <?php include("modal.php"); ?>
 <div id="ayuda"><?php print_r($_SESSION); ?></div>
-<script>
-var f = new Date();
-var fecha = f.getFullYear() + "-" + (f.getMonth() +1) + "-" +f.getDate();	
-$(".bfh-datepicker-toggle").children("input").val(fecha);
-$('input[type="date"]').DatePicker({
-	flat: true,
-	date: '2008-07-31',
-	current: '2008-07-31',
-	calendars: 1,
-	starts: 1
-});
-</script>
 </body>
 </html>
