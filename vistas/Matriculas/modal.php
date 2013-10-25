@@ -17,32 +17,23 @@
         	<br>
             <select id='bancoCheque'>
                 <option></option>
-                <option value'ABN AMRO'>ABN AMRO</option>
-                <option value='Atlas - Citibank'>Atlas - Citibank</option>
-                <option value='BancaFacil'>BancaFacil</option>
-                <option  value='Banco Bice'>Banco Bice</option>
-                <option value='Banco de Chile'>Banco de Chile</option>
-                <option  value='Banco de Crédito e Inversiones'>Banco de Crédito e Inversiones</option>
-                <option value='Banco del Desarrollo'>Banco del Desarrollo</option>
-                <option value='Banco Edwards'>Banco Edwards</option>
-                <option value='Banco Falabella'>Banco Falabella</option>
-                <option value='Banco Internacional'>Banco Internacional</option>
-                <option value='Banco Nova'>Banco Nova</option>
-                <option Banco Penta>Banco Penta</option>
-                <option value='Banco Santander Santiago'>Banco Santander Santiago</option>
-                <option Banco Security>Banco Security</option>
-                <option value='BancoEstado'>BancoEstado</option>
-                <option value='BBVA'>BBVA</option>
-                <option value='Citibank N.A. Chile'>Citibank N.A. Chile</option>
-                <option value='Corpbanca'>Corpbanca</option>
-                <option value='Credichile'>Credichile</option>
-                <option value='Credit Suisse Consultas y Asesorias Limitada'>Credit Suisse Consultas y Asesorias Limitada</option>
-                <option value='Deutsche Bank'>Deutsche Bank</option>
-                <option value='ING Bank N.V.'>ING Bank N.V.</option>
-                <option value='Redbanc'>Redbanc</option>
-                <option value='Santander Banefe'>Santander Banefe</option>
-                <option value='Scotiabank'>Scotiabank</option>
-                <option value='UBS AG in Santiago de Chile'>UBS AG in Santiago de Chile</option>
+                <option value="1" >Banco Bci </option>
+                <option value="2" > Banco de Chile </option>
+                <option value="3" > Banco Estado </option>
+                <option value="4" > Banco Santander </option>
+                <option value="5" > Banco BICE </option>
+                <option value="6" > Banco BBVA </option>
+                <option value="7" > Banco CrediChile </option>
+                <option value="8" > Banco del Desarrollo </option>
+                <option value="9" > Banco Edwards Citi </option>
+                <option value="10" > Banco Falabella </option>
+                <option value="11" > Banco Itaú </option>
+                <option value="12" > Banco Paris </option>
+                <option value="13" > Banco Ripley </option>
+                <option value="14" > Banco Security </option>
+                <option value="15" > CorpBanca </option>
+                <option value="16" > Scotiabank </option>
+                <option value="17" > TBanc </option>
             </select>
             <h4>Ingrese Numero de Cheque</h4>
             <br>
@@ -89,9 +80,84 @@
   <button type="button" class="btn btn-primary" onClick="tipoC(1)" idval="CA">Clinica Alemana</button>
   <button type="button" class="btn btn-primary" onClick="tipoC(2)" idval="CSM">Clinica Santa Maria</button>
   <button type="button" class="btn btn-primary" onClick="tipoC(3)" idval="OTRA">OTRA</button>
-</div></center>
-<div id="tipoC" class="form-horizontal">
-</div>  
+</div></center><br>
+<br>
+
+        <center><div class="btn-group" data-toggle="buttons-radio">
+  <button type="button" class="btn btn-primary" onClick="tipoPC(1)" idval="Cheque">Cheque</button>
+  <button type="button" class="btn btn-primary" onClick="tipoPC(2)" idval="Letra">Letra</button>
+  <button type="button" class="btn btn-primary" onClick="tipoPC(3)" idval="Efectivo">Efectivo/Deposito</button>
+</div></center><br>
+<br>
+
+<div id="tipoC" class="form-horizontal"></div>
+<div class="form-horizontal">
+    <div id="tipoPC1" style="display: none;">
+        <center>
+        <div class="control-group">
+   		 <label class="control-label" for="bancoChequeC">Seleccione Banco del Chque</label>
+    		<div class="controls">
+            <select id='bancoChequeC'>
+                <option></option>
+                <option value="1" >Banco Bci </option>
+                <option value="2" > Banco de Chile </option>
+                <option value="3" > Banco Estado </option>
+                <option value="4" > Banco Santander </option>
+                <option value="5" > Banco BICE </option>
+                <option value="6" > Banco BBVA </option>
+                <option value="7" > Banco CrediChile </option>
+                <option value="8" > Banco del Desarrollo </option>
+                <option value="9" > Banco Edwards Citi </option>
+                <option value="10" > Banco Falabella </option>
+                <option value="11" > Banco Itaú </option>
+                <option value="12" > Banco Paris </option>
+                <option value="13" > Banco Ripley </option>
+                <option value="14" > Banco Security </option>
+                <option value="15" > CorpBanca </option>
+                <option value="16" > Scotiabank </option>
+                <option value="17" > TBanc </option>
+            </select>
+          </div>
+  		</div>
+         <div class="control-group">
+            <label class="control-label" for="numeroChequeC">Ingrese Numero de Cheque</label>
+            <div class="controls">
+              <input id='numeroChequeC' placeholder='N° Cheque' type='number'>
+            </div>
+          </div>
+           <div class="control-group">
+            <label class="control-label" for="montoChequeC">Ingrese Monto</label>
+            <div class="controls">
+       			<input id='montoChequeC' placeholder='Monto Chque' type='number'>
+            </div>
+          </div>
+    </center>
+</div>
+<div id="tipoPC2" style="display: none;">
+    <center>
+     <div class="control-group">
+    <label class="control-label" for="numeroLetraC">Ingrese Numero de Letra</label>
+     <div class="controls">
+      <input id='numeroLetraC' placeholder='N° Letra' type='number'>
+     </div>
+    </div>
+    <div class="control-group">
+    <label class="control-label" for="montoLetraC">Ingrese Monto</label>
+     <div class="controls">
+      <input id='montoLetraC' placeholder='Monto Letra' type='number'>
+     </div>
+    </div>
+   </center>
+</div>
+<div id="tipoPC3" style="display: none;">
+    <div class="control-group">
+    <label class="control-label" for="montoEfectivoC">Ingrese Monto</label>
+     <div class="controls">
+      <input id='montoEfectivoC' placeholder='Monto Efectivo' type='number'>
+     </div>
+    </div>
+</div>	
+</div>   
      </div>
     <div class="modal-footer">
         <a  class="btn btn-success" id="guardarC" onClick="GuardarC()">Guardar</a>
