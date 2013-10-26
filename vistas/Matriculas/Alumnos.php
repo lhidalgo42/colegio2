@@ -1,4 +1,4 @@
-<table border="1" class="table table-bordered">
+<table border="1" class="table table-bordered" id="tablaAlumnos">
 <thead>
   <tr>
     <td  colspan="2"><center><strong>NOMBRE DE LOS NIÑOS</strong></center></td>

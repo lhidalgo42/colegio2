@@ -29,33 +29,21 @@
 		$('#TotalT').html(totalReal);
 		$("#familia").val(""+$("#modalPAPA").attr("apellido1")+" "+$("#modalMAMA").attr("apellido1")+"");		
 	},500);
-	  	var actualizar = setInterval(function(){
-		var cuotas = +$('#cuotas').val();
+	
+	  	var actualizar2 = setInterval(function(){
+		var cuotas = +$('#cuotaInc').val();
 		var cuo = 0;
-		var totalC1 = 0;
-		var totalC2 = 0;
 		var totalCol = 0;
 		var	totalReal= 0;
 		for(var i=1; i< cuotas +1; i++)
 		{
-			total1 = 0;
-			total2 = 0;
-			col = +$('#Col'+i).val() + col;
-			mat = +$('#Mat'+i).val() + mat;
-			alm = +$('#Alm'+i).val() + alm;
-			deu = +$('#Deu'+i).val() + deu;
-			totalC1 = +$('#Col'+i).val() + +$('#Mat'+i).val();
-			totalC2 = +$('#Alm'+i).val() + +$('#Deu'+i).val();
-			totalCol = totalC1 + totalC2;
-			totalReal = totalCol + totalReal
-			$('#Total'+i).html(totalCol);	   
+			cuo = +$('#Col'+i).val() + cuo;
+			totalCuo = cuo;
+			totalReal = totalCuo + totalReal;
+			$('#TotalInc'+i).html(totalCuo);	   
 		}
-		$('#ColT').html(col);
-		$('#MatT').html(mat);
-		$('#AlmT').html(alm);
-		$('#DeuT').html(deu);
-		$('#TotalT').html(totalReal);
-		$("#familia").val(""+$("#modalPAPA").attr("apellido1")+" "+$("#modalMAMA").attr("apellido1")+"");		
+		$('#CuoTInc').html(cuo);
+		$('#TotalTInc').html(totalReal);		
 	},500);
 	
 function enviar(){
@@ -103,8 +91,9 @@ for (var i = 0; i < 2; i++){
    alumnos[i][17] = $("#2sem"+b).val(); 
 } 
 var cuotas = +$('#cuotas').val();
+var cuotasInc = +$('#cuotaInc').val();
 var documentos = new Array();
-for(var i = 0;i < cuotas; i++){
+for(var i = 0;i < cuotas + cuotasInc; i++){
 	var b = i + 1;
 	documentos[i] = new Array();
 	documentos[i][0] = $('#FechaBol'+b).val();
@@ -239,21 +228,22 @@ $('#bolM1').keyup(function(){
 	$('#bolM4').val(boleta);
 })
 function cambio2(){
-	  		var cuotas = parseFloat($("#cuotaInc").val());
-		for(var i=cuotasInc+1;i<cuotas+cuotasInc+1;i++){
-			$('#pagoCuotas').append('<tr><td><input style="width:115px;" type="number" id="Nbol'+i+'"></td><td><input style="width:115px;" type="date" id="FechaBol'+i+'"></td><td style="width:100px;"><center><a id="modalP'+i+'" role="button" onClick="MostrarP('+i+')"class="btn" data-toggle="modal" tipo="" banco="" numero="" monto="">Seleccionar</a></center></td><!-- suma desde aqui--><td style="width:90px;"><input type="number" style="width:90px;" min="0" value="0" id="Cou'+i+'"></td><!-- hasta aqui --><td style="width:80px;"><center><div id="Total'+i+'">0</div></center></td><td><input type="date" style="width:115px;" id="fechaD'+i+'" disabled></td><td><input type="text" style="width:170px;" id="obs'+i+'"></td></tr>');
+	  	var cuotas = parseFloat($("#cuotaInc").val());
+		if(cuotas >20){var cuotas = 20}	
+		$("#cuotaInc").change(cambio);
+		$('#pagoCuotasInc').html("");
+		for(var i=1;i<cuotas+1;i++){
+		$('#pagoCuotasInc').append('<tr><td><input style="width:115px;" type="number" id="Nbol'+i+'"></td><td><input style="width:115px;" type="date" id="FechaBol'+i+'"></td><td style="width:100px;"><center><a id="modalP'+i+'" role="button" onClick="MostrarP('+i+')"class="btn" data-toggle="modal" tipo="" banco="" numero="" monto="">Seleccionar</a></center></td><!-- suma desde aqui--><td style="width:90px;"><input type="number" style="width:90px;" min="0" value="0" id="Cou'+i+'"></td><!-- hasta aqui --><td style="width:80px;"><center><div id="TotalInc'+i+'">0</div></center></td><td><input type="date" style="width:115px;" id="fechaD'+i+'" disabled></td><td><input type="text" style="width:170px;" id="obs'+i+'"></td></tr>');
 		}		
 }
 function cambio(){
   		var cuotas = parseFloat($('#cuotas').val());
-		var cuotasInc = parseFloat($("#cuotaInc").val());
+		var cuotasINC = parseFloat($("#cuotaInc").val());
 		if(cuotas >20){var cuotas = 20}	
 		$('#pagoCuotas').html("");
-		for(var i=1;i<cuotas+1;i++){
+		for(var i=cuotasINC+1;i<cuotasINC+cuotas+1;i++){
 			$('#pagoCuotas').append('<tr><td><input style="width:115px;" type="number" id="Nbol'+i+'"></td><td><input style="width:115px;" type="date" id="FechaBol'+i+'"></td><td style="width:100px;"><center><a id="modalP'+i+'" role="button" onClick="MostrarP('+i+')"class="btn" data-toggle="modal" tipo="" banco="" numero="" monto="">Seleccionar</a></center></td><!-- suma desde aqui--><td><input type="number" style="width:80px;" min="0"  value="0" id="Col'+i+'" ></td><td><input type="number" style="width:80px;" min="0" value="0" id="Mat'+i+'"></td><td><input type="number" style="width:60px;" min="0" value="0" id="Alm'+i+'" ></td><td style="width:90px;"><input type="number" style="width:90px;" min="0" value="0"  id="Deu'+i+'"></td><!-- hasta aqui --><td style="width:80px;"><center><div id="Total'+i+'">0</div></center></td><td><input type="date" style="width:115px;" id="fechaD'+i+'" disabled></td><td><input type="text" style="width:170px;" id="obs'+i+'"></td></tr>');
-		}
-
-				
+		}		
 	}
-$('#cuotaInc').keyup(cambio)	
+$('#cuotaInc').keyup(cambio2)	
 $('#cuotas').keyup(cambio)

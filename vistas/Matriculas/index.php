@@ -60,6 +60,13 @@ $(function() {
 <script src="../../js/Matriculas/papa.js"></script>
 <script src="../../js/Matriculas/nino.js"></script>
 <script src="../../js/Matriculas/utilidades.js"></script>
+<script src="../../js/Matriculas/precios.js"></script>
+<script>
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var f=new Date();
+$("#hoy").html(f.getDate() + " de " + meses[f.getMonth()] + " del " + f.getFullYear());
+$( "input[type=date]" ).val(f.getYear()+"-"+f.getMonth()+"-"+f.getDate());
+</script>
 <?php include("modal.php"); ?>
 <div id="ayuda"><?php print_r($_SESSION); ?></div>
 </body>
