@@ -1,14 +1,13 @@
 <table border="1" class="table table-bordered" id="tablaAlumnos">
 <thead>
   <tr>
-    <td  colspan="2"><center><strong>NOMBRE DE LOS NIÑOS</strong></center></td>
+    <td rowspan="2"><center><strong>NOMBRE DE LOS NIÑOS</strong></center></td>
     <td rowspan="2"><center><strong>CURSO</strong></center></td>
     <td colspan="3"><center><strong>PAGO DE MATRICULA</strong></center></td>
     <td colspan="3"><center><strong>PAGO DE SEGURO ESCOLAR</strong></center></td>
     <td colspan="2"><center><strong>BECAS</strong></center></td>
   </tr>
-  <tr>
-    <td><center>Nombre</center></td>  
+  <tr> 
     <td><center>N° Boleta</center></td>
     <td><center>Monto</center></td>
     <td><center>Fecha</center></td>
@@ -20,7 +19,7 @@
   </tr>
   </thead>
   <?php 
-  $cursos=array("Kinder","1° Basico","2° Basico","3° Basico","4° Basico", "5° Basico","6° Basico","7° Basico","8° Basico");
+  $cursos=array("Kinder","1ro Basico","2do Basico","3ro Basico","4to Basico", "5to Basico","6to Basico","7mo Basico","8vo Basico");
   for($i=1;$i<5;$i++)
   {?>
   <tr>  

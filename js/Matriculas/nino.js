@@ -1,6 +1,7 @@
 function MostrarNino(I)
 {
 	$("#guardarNino").attr("onClick","GuardarNino("+I+")")
+	$("#inputRutN").val($("#modalNino"+I).attr("rut"));
 	$("#inputNombreN").val($("#modalNino"+I).attr("nombre"));
 	$("#inputApellidoPN").val($("#modalNino"+I).attr("apellidop"));
 	$("#inputApellidoMN").val($("#modalNino"+I).attr("apellidom"));
@@ -9,7 +10,7 @@ function MostrarNino(I)
 	$('#myModalNino').modal('show');
 }
 function CerrarNino()
-{
+{ 	$("#inputRutN").val('');
 	$("#inputNombreN").val('');
 	$("#inputApellidoPN").val('');
 	$("#inputApellidoMN").val('');
@@ -24,6 +25,7 @@ if(Nombre != "" || Apellido != "")
 {
 	$("#modalNino"+I).html(Nombre+" "+Apellido);
 }
+ $("#modalNino"+I).attr("rut",$("#inputRutN").val());
  $("#modalNino"+I).attr("nombre",$("#inputNombreN").val());
  $("#modalNino"+I).attr("apellidoP",$("#inputApellidoPN").val());
  $("#modalNino"+I).attr("apellidoM",$("#inputApellidoMN").val());

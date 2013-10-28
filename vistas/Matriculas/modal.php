@@ -90,14 +90,15 @@
 </div></center><br>
 <br>
 
-<div id="tipoC" class="form-horizontal"></div>
 <div class="form-horizontal">
+  <div id="tipoC"></div>
     <div id="tipoPC1" style="display: none;">
+
         <center>
         <div class="control-group">
    		 <label class="control-label" for="bancoChequeC">Seleccione Banco del Chque</label>
     		<div class="controls">
-            <select id='bancoChequeC'>
+            <select id='bancoChequeC' class="span2">
                 <option></option>
                 <option value="1" >Banco Bci </option>
                 <option value="2" > Banco de Chile </option>
@@ -146,8 +147,8 @@
      <div class="controls">
       <input id='montoLetraC' placeholder='Monto Letra' type='number'>
      </div>
-    </div>
-   </center>
+	</div>
+    </center>
 </div>
 <div id="tipoPC3" style="display: none;">
     <div class="control-group">

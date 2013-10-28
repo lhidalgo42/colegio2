@@ -40,20 +40,26 @@ var monto = new Array();
   for (var i = 0; i < length; i++){
 	var dato = $( "select[id*='Curso'] option:selected" )[i];
 	val.push($(dato).val());
+	var b =i+1;
   if(val[i]=="Kinder"){
    monto[i]=228800;
-   var beca = parseFloat($("#1sem"+i).val());
+   var beca = parseFloat($("#1sem"+b).val());
    monto[i]=monto[i]*(100-beca)/100;}
-  else if(val[i]=="1° Basico" || val[i]=="2° Basico"){
+  else if(val[i]=="1ro Basico" || val[i]=="2do Basico"){
    monto[i]=280800;
-   var beca = parseFloat($("#1sem"+i).val());
+   var beca = parseFloat($("#1sem"+b).val());
    monto[i]=monto[i]*(100-beca)/100;}
   else if(val[i]==""){
    monto[i]=0;}
   else{
    monto[i]=310000;
-   var beca = parseFloat($("#1sem"+i).val());
+   var beca = parseFloat($("#1sem"+b).val());
    monto[i]=monto[i]*(100-beca)/100;}
       total=total+monto[i]; 
- }//fin for
+ }
+ cuotas=$("#cuotas").val()
+ total=total/cuotas;
+ total=total*10
+  total=Math.round(total);
+  $("input[id*='Col']").val(total)
 },500);
