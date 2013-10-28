@@ -322,6 +322,12 @@
      <div class="modal-body form-horizontal" id="bodyNino">
 
         <center>
+   <div class="control-group">
+    <label class="control-label" for="inputNombreN">RUT</label>
+    <div class="controls">
+      <input type="text" id="inputRutN" placeholder="RUT">
+    </div>
+  </div>
   <div class="control-group">
     <label class="control-label" for="inputNombreN">Nombre</label>
     <div class="controls">
@@ -358,5 +364,78 @@
     <div class="modal-footer">
         <a  class="btn btn-success" id="guardarNino" onClick="GuardarNino()">Guardar</a>
         <a href="#" data-dismiss="modal" id="cerrarNino" class="btn" onClick="CerrarNino()">Cerrar</a>
+    </div>
+</div>
+
+
+
+<div id="myModalPM" class="modal hide fade in" style="display: none;">
+    <div class="modal-header">
+        <a data-dismiss="modal" class="close">×</a>
+        <h4>Cheque - Letra Mandado Tipo/Detalle Documento N°</h4>
+     </div>
+     <div class="modal-body">
+         <center><h4>Seleccione</h4></center>
+        <center><div class="btn-group" data-toggle="buttons-radio">
+  <button type="button" class="btn btn-primary" onClick="tipoPM(1)" idval="Cheque">Cheque</button>
+  <button type="button" class="btn btn-primary" onClick="tipoPM(2)" idval="Letra">Letra</button>
+  <button type="button" class="btn btn-primary" onClick="tipoPM(3)" idval="Efectivo">Efectivo/Deposito</button>
+</div></center>
+<div id="tipoPM" class="form-horizontal">
+    <div id="tipoPM1" style="display: none;">
+        <center>
+        	<h4>Seleccione Banco del Chque</h4>
+        	<br>
+            <select id='bancoChequePM'>
+                <option></option>
+                <option value="1" >Banco Bci </option>
+                <option value="2" > Banco de Chile </option>
+                <option value="3" > Banco Estado </option>
+                <option value="4" > Banco Santander </option>
+                <option value="5" > Banco BICE </option>
+                <option value="6" > Banco BBVA </option>
+                <option value="7" > Banco CrediChile </option>
+                <option value="8" > Banco del Desarrollo </option>
+                <option value="9" > Banco Edwards Citi </option>
+                <option value="10" > Banco Falabella </option>
+                <option value="11" > Banco Itaú </option>
+                <option value="12" > Banco Paris </option>
+                <option value="13" > Banco Ripley </option>
+                <option value="14" > Banco Security </option>
+                <option value="15" > CorpBanca </option>
+                <option value="16" > Scotiabank </option>
+                <option value="17" > TBanc </option>
+            </select>
+            <h4>Ingrese Numero de Cheque</h4>
+            <br>
+            <input id='numeroChequePM' placeholder='N° Cheque' type='number'>
+            <br>
+            <h4>Ingrese Monto</h4>
+            <br>
+            <input id='montoChequePM' placeholder='MontoChque' type='number'>
+    </center>
+</div>
+<div id="tipoPM2" style="display: none;">
+    <center>
+        <h4>Ingrese Numero de Letra</h4>
+        <br>
+        <input id='numeroLetraPM' placeholder='N° Letra' type='number'>
+        <h4>Ingrese Monto</h4>
+        <br>
+        <input id='montoLetraPM' placeholder='Monto' type='number'>
+    </center>
+</div>
+<div id="tipoPM3" style="display: none;">
+    <center>
+        <h4>Ingrese Monto</h4>
+        <br>
+        <input id='montoEfectivoPM' placeholder='Monto' type='number'>
+    </center>
+</div>	
+</div>               
+    </div>
+    <div class="modal-footer">
+        <a  class="btn btn-success" id="guardarPM" onClick="GuardarPM()">Guardar</a>
+        <a href="#" data-dismiss="modal" id="cerrarPM" class="btn" onClick="CerrarPM()">Cerrar</a>
     </div>
 </div>
