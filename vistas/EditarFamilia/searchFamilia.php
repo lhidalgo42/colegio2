@@ -27,9 +27,10 @@ while($results = mysql_fetch_array($familia)){
 			<div class='span4'>Familia $familia</div>
 			<div class='span4'>Sostenedor Economico: $sostenedor</div>
 			<div class='span4'><button class='editar btn btn-primary'>Editar</button></div>
-		</div>"
+		</div>";
 	echo $results['ID'];
 }
+
 
 //Cerrar Coneccion
 
