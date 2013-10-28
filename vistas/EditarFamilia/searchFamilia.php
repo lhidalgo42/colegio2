@@ -1,6 +1,6 @@
 <?php
 //Iniciar Coneccion Base de Datos
-include('dbconfig.php');
+include('../../datos/dbconfig.php');
 $mysqlCon = new mysqli($servidor,$nombre_usuario,$contrasena,$base_de_datos);
 $mysqlCon->set_charset("utf8");
 if($mysqlCon->errno) {
@@ -17,7 +17,7 @@ $familia = mysql_query("SELECT *
 						JOIN papas P 
 						ON F.id = P.familia_ID 
 						WHERE FAMILIA LIKE '%$keyword%'
-						AND P.Apoderado_Economico = 0");
+						AND P.Apoderado_Economico = 1");
 						
 while($results = mysql_fetch_array($familia)){
 	$id = $results['ID'];
@@ -27,10 +27,9 @@ while($results = mysql_fetch_array($familia)){
 			<div class='span4'>Familia $familia</div>
 			<div class='span4'>Sostenedor Economico: $sostenedor</div>
 			<div class='span4'><button class='editar btn btn-primary'>Editar</button></div>
-		</div>"
-	echo $results['ID'];
+		</div>";
 }
 
 //Cerrar Coneccion
-
+mysql_close($mysqlCon);
 ?>
