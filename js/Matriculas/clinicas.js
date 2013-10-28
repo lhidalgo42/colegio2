@@ -32,7 +32,9 @@ $("#tipoC").html("");
 if (I == 3)
 {
 $("#tipoC").html("<div class='control-group'><label class='control-label' for='NombreC'>Ingrese Nombre de la Clinica</label> <div class='controls'><input type='text' id='NombreC' placeholder='Nombre'></div></div>");
-         
+$("#montoEfectivoC").val("");
+$("#montoLetraC").val("");
+$("#montoChequeC").val("");    
 }
 }
 function MostrarC(I){

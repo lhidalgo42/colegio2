@@ -8,7 +8,6 @@
     <td colspan="2"><center><strong>BECAS</strong></center></td>
   </tr>
   <tr>
-  	<td><center>RUT</center></td>
     <td><center>Nombre</center></td>  
     <td><center>N° Boleta</center></td>
     <td><center>Monto</center></td>
@@ -24,9 +23,7 @@
   $cursos=array("Kinder","1° Basico","2° Basico","3° Basico","4° Basico", "5° Basico","6° Basico","7° Basico","8° Basico");
   for($i=1;$i<5;$i++)
   {?>
-  <tr>
-  <td class="span"><input type="text" style="width:85px;" id="<?php echo"rut".$i.""?>" placeholder="Rut"></td>
-  
+  <tr>  
     <td class="span2"><a id="modalNino<?php echo $i; ?>" role="button" onClick="MostrarNino(<?php echo $i; ?>)"class="btn" data-toggle="modal" nombre="" apellidoP="" apellidoM="" fechanac="" colegioanterior="">Nombre</a></td>
     
     <td class="span1">
@@ -35,7 +32,7 @@
     
     <td class="span1"><input type="number" class="span1" min="0" id="<?php echo"bolM".$i.""?>" value="0" ></td>
     
-    <td><a id="modalMatricula<?php echo $i; ?>" role="button" onClick="MostrarMatricula(<?php echo $i; ?>)"class="btn" data-toggle="modal" tipo="" banco="" numero="" monto="">Pago</a></td>
+    <td><a id="modalPM<?php echo $i; ?>" role="button" onClick="MostrarPM(<?php echo $i; ?>)"class="btn" data-toggle="modal" tipo="" banco="" numero="" monto="">Pago</a></td>
     
     <td>
     <input type="date" style="width:115px;"  id="<?php echo"fechaM".$i.""?>" placeholder="Fecha"  requiered></td>

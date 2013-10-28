@@ -28,7 +28,12 @@ while($results = mysql_fetch_array($familia)){
 			<div class='span4'>Sostenedor Economico: $sostenedor</div>
 			<div class='span4'><button class='editar btn btn-primary'>Editar</button></div>
 		</div>";
+<<<<<<< HEAD
+=======
+	echo $results['ID'];
+>>>>>>> 74e326a256718d2702e5cfb4702acc65c7ed6938
 }
+
 
 //Cerrar Coneccion
 mysql_close($mysqlCon);
