@@ -78,7 +78,7 @@ for (var i = 0; i < 2; i++){
  for( var i = 0; i < 4; i++){
    var b= i+1;
    alumnos[i] = new Array();
-   alumnos[i][0] = $("#rut"+b).val(); 
+   alumnos[i][0] = $("#modalNino"+b).attr("rut");; 
    alumnos[i][1] = $("#modalNino"+b).attr("nombre");
    alumnos[i][2] = $("#modalNino"+b).attr("apellidop");
    alumnos[i][3] = $("#modalNino"+b).attr("apellidom");
@@ -91,6 +91,9 @@ for (var i = 0; i < 2; i++){
    alumnos[i][11] = $("#valeS"+b).val(); 
    alumnos[i][12] = $("#modalC"+b).attr("tipo"); 
    alumnos[i][13] = $("#modalC"+b).attr("nombre"); 
+   alumnos[i][13] = $("#modalC"+b).attr("nombre"); 
+   alumnos[i][13] = $("#modalC"+b).attr("nombre"); 
+
    alumnos[i][14] = $("#modalC"+b).attr("valor"); 
    alumnos[i][15] = $("#fechaS"+b).val(); 
    alumnos[i][16] = $("#1sem"+b).val(); 
@@ -98,8 +101,9 @@ for (var i = 0; i < 2; i++){
 } 
 var cuotas = +$('#cuotas').val();
 var cuotasInc = +$('#cuotaInc').val();
+var cuotasAlm = +$("#almuerzoCuotas").val();
 var documentos = new Array();
-for(var i = 0;i < cuotas + cuotasInc; i++){
+for(var i = 0;i < cuotas + cuotasInc + cuotasAlm; i++){
 	var b = i + 1;
 	documentos[i] = new Array();
 	documentos[i][0] = $('#FechaBol'+b).val();
@@ -234,12 +238,14 @@ $('#bolM1').keyup(function(){
 	$('#bolM4').val(boleta);
 })
 function cambio3(){
-	  	var cuotas = +$("#almuerzoCuotas").val();
+	  	var cuotasAlm = parseFloat($("#almuerzoCuotas").val());
+		var cuotas = parseFloat($('#cuotas').val());
+		var cuotasINC = parseFloat($("#cuotaInc").val());
 		if(cuotas >20){var cuotas = 20}	
 		$("#cuotaAlm").change(cambio);
 		$('#pagoCuotasAlm').html("");
-		for(var i=1;i<cuotas+1;i++){
-		$('#pagoCuotasAlm').append('<tr><td><input style="width:115px;" type="number" id="NbolAlm'+i+'"></td><td><input style="width:115px;" type="date" id="FechaBol'+i+'"></td><td style="width:100px;"><center><a id="modalP'+i+'" role="button" onClick="MostrarP('+i+')"class="btn" data-toggle="modal" tipo="" banco="" numero="" monto="">Seleccionar</a></center></td><!-- suma desde aqui--><td style="width:90px;"><input type="number" class="cAlm" style="width:90px;" min="0" value="0" id="Alm'+i+'"></td><!-- hasta aqui --><td><center><input type="date" style="width:115px;" id="fechaD'+i+'" disabled></center></td><td><input type="text" style="width:170px;" id="obs'+i+'"></td></tr>');
+		for(var i=1+cuotas+cuotasINC;i<cuotas+cuotasINC+cuotasAlm+1;i++){
+		$('#pagoCuotasAlm').append('<tr><td><input style="width:115px;" type="number" id="Nbol'+i+'"></td><td><input style="width:115px;" type="date" id="FechaBol'+i+'"></td><td style="width:100px;"><center><a id="modalP'+i+'" role="button" onClick="MostrarP('+i+')"class="btn" data-toggle="modal" tipo="" banco="" numero="" monto="">Seleccionar</a></center></td><!-- suma desde aqui--><td style="width:90px;"><input type="number" class="cAlm" style="width:90px;" min="0" value="0" id="Alm'+i+'"></td><!-- hasta aqui --><td><center><input type="date" style="width:115px;" id="fechaD'+i+'" disabled></center></td><td><input type="text" style="width:170px;" id="obs'+i+'"></td></tr>');
 		}		
 }
 function cambio2(){
