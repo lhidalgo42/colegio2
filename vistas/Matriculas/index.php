@@ -32,6 +32,16 @@ text-transform:uppercase;
 .modal{
 width: 600px;	
 }
+
+.pago{
+	display: none;
+	margin-top: 10px;
+}
+
+.pagosContainer{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
 </style>
 <script type="text/css">
 $(function() {
@@ -51,9 +61,18 @@ $(function() {
 <div class="clearfix"></div>
 <div id="ninos"><center><?php include'Alumnos.php'; ?></center></div>
 <div class="clearfix"></div>
-<div id="coutaIncorporacion"><?php include'cuotaInc.php'; ?></div>
-<div id="documentos"><?php include'Documentos.php'; ?></div>
-<div id="almuerzos"><?php include'Almuerzos.php'; ?></div>
+<div id="coutaIncorporacion" class="pagosContainer">
+	<div><button id="cIncBtn" class="btn btn-block btn-large"><strong>PAGAR CUOTA INCORPORACION</strong></button></div>
+	<div id="cInc" class="pago"><?php include'cuotaInc.php'; ?></div>
+</div>
+<div id="documentos" class="pagosContainer">
+	<div><button id="cDocBtn" class="btn btn-block btn-large"><strong>PAGAR DOCUMENTOS</strong></button></div>
+	<div id="cDoc" class="pago"><?php include'Documentos.php'; ?></div>
+</div>
+<div id="almuerzos" class="pagosContainer">
+	<div><button id="cAlmBtn" class="btn btn-block btn-large"><strong>PAGAR ALMUERZOS</strong></button></div>
+	<div id="cAlm" class="pago"><?php include'Almuerzos.php'; ?></div>
+</div>
 </form>
 </div>
 <script src="../../js/Matriculas/pagos.js"></script>
@@ -69,6 +88,9 @@ $("#hoy").html(f.getDate() + " de " + meses[f.getMonth()] + " del " + f.getFullY
 $( "input[type=date]" ).val(f.getYear()+"-"+f.getMonth()+"-"+f.getDate());
 $(".fixedDateClinica").val(f.getFullYear()+"-03-15");
 $(".fixedDateMatricula").val(f.getFullYear()+"-01-07");
+$("#cIncBtn").click(function() { $("#cInc").slideToggle() });
+$("#cDocBtn").click(function() { $("#cDoc").slideToggle() });
+$("#cAlmBtn").click(function() { $("#cAlm").slideToggle() });
 </script>
 <?php include("modal.php"); ?>
 <div id="ayuda"><?php print_r($_SESSION); ?></div>
