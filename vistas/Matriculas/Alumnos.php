@@ -34,14 +34,14 @@
     <td><a id="modalPM<?php echo $i; ?>" role="button" onClick="MostrarPM(<?php echo $i; ?>)"class="btn" data-toggle="modal" tipo="" banco="" numero="" monto="">Pago</a></td>
     
     <td>
-    <input type="date" style="width:115px;"  id="<?php echo"fechaM".$i.""?>" placeholder="Fecha"  requiered></td>
+    <input type="date" style="width:115px;" class="fixedDateMatricula" id="<?php echo"fechaM".$i.""?>" placeholder="Fecha"  requiered></td>
     
     <td><input type="number" class="span1" min="0" id="<?php echo"valeS".$i.""?>" value="0"></td>
     
     <td><a id="modalC<?php echo $i; ?>" role="button" onClick="MostrarC(<?php echo $i; ?>)"class="btn" data-toggle="modal" tipoc="" nombre="" tipop="" banco="" numero="" monto="">Clinica</a></td>
     
     <td>
-    <input type="date" style="width:115px;" id="<?php echo"fechaS".$i.""?>" placeholder="Fecha"  requiered>
+    <input type="date" style="width:115px;" class="fixedDateClinica" id="<?php echo"fechaS".$i.""?>" placeholder="Fecha"  requiered>
 	</td>
     
     <td><div class="input-prepend">

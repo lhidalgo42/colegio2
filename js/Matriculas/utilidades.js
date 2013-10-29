@@ -1,8 +1,16 @@
+$(".cAlm").keyup(function(){
+	var total = 0;
+	var cuotas = +$("#almuerzoCuotas").val();
+	for(var i=1; i<cuotas+1; i++){
+		total = +$("#Alm"+i).val() + total;
+	}
+	$("#CouTAlm").html(total);
+});
+  	
   	var actualizar = setInterval(function(){
 		var cuotas = +$('#cuotas').val();
 		var col = 0;
 		var mat = 0;
-		var alm = 0;
 		var deu = 0;
 		var totalC1 = 0;
 		var totalC2 = 0;
@@ -14,17 +22,15 @@
 			total2 = 0;
 			col = +$('#Col'+i).val() + col;
 			mat = +$('#Mat'+i).val() + mat;
-			alm = +$('#Alm'+i).val() + alm;
 			deu = +$('#Deu'+i).val() + deu;
 			totalC1 = +$('#Col'+i).val() + +$('#Mat'+i).val();
-			totalC2 = +$('#Alm'+i).val() + +$('#Deu'+i).val();
+			totalC2 = +$('#Deu'+i).val();
 			totalCol = totalC1 + totalC2;
 			totalReal = totalCol + totalReal
 			$('#Total'+i).html(totalCol);	   
 		}
 		$('#ColT').html(col);
 		$('#MatT').html(mat);
-		$('#AlmT').html(alm);
 		$('#DeuT').html(deu);
 		$('#TotalT').html(totalReal);
 		$("#familia").val(""+$("#modalPAPA").attr("apellido1")+" "+$("#modalMAMA").attr("apellido1")+"");		
@@ -227,6 +233,15 @@ $('#bolM1').keyup(function(){
 	$('#bolM3').val(boleta);
 	$('#bolM4').val(boleta);
 })
+function cambio3(){
+	  	var cuotas = +$("#almuerzoCuotas").val();
+		if(cuotas >20){var cuotas = 20}	
+		$("#cuotaAlm").change(cambio);
+		$('#pagoCuotasAlm').html("");
+		for(var i=1;i<cuotas+1;i++){
+		$('#pagoCuotasAlm').append('<tr><td><input style="width:115px;" type="number" id="Nbol'+i+'"></td><td><input style="width:115px;" type="date" id="FechaBol'+i+'"></td><td style="width:100px;"><center><a id="modalP'+i+'" role="button" onClick="MostrarP('+i+')"class="btn" data-toggle="modal" tipo="" banco="" numero="" monto="">Seleccionar</a></center></td><!-- suma desde aqui--><td style="width:90px;"><input type="number" class="cAlm" style="width:90px;" min="0" value="0" id="Alm'+i+'"></td><!-- hasta aqui --><td><center><input type="date" style="width:115px;" id="fechaD'+i+'" disabled></center></td><td><input type="text" style="width:170px;" id="obs'+i+'"></td></tr>');
+		}		
+}
 function cambio2(){
 	  	var cuotas = parseFloat($("#cuotaInc").val());
 		if(cuotas >20){var cuotas = 20}	
@@ -242,8 +257,9 @@ function cambio(){
 		if(cuotas >20){var cuotas = 20}	
 		$('#pagoCuotas').html("");
 		for(var i=cuotasINC+1;i<cuotasINC+cuotas+1;i++){
-			$('#pagoCuotas').append('<tr><td><input style="width:115px;" type="number" id="Nbol'+i+'"></td><td><input style="width:115px;" type="date" id="FechaBol'+i+'"></td><td style="width:100px;"><center><a id="modalP'+i+'" role="button" onClick="MostrarP('+i+')"class="btn" data-toggle="modal" tipo="" banco="" numero="" monto="">Seleccionar</a></center></td><!-- suma desde aqui--><td><input type="number" style="width:80px;" min="0"  value="0" id="Col'+i+'" ></td><td><input type="number" style="width:80px;" min="0" value="0" id="Mat'+i+'"></td><td><input type="number" style="width:60px;" min="0" value="0" id="Alm'+i+'" ></td><td style="width:90px;"><input type="number" style="width:90px;" min="0" value="0"  id="Deu'+i+'"></td><!-- hasta aqui --><td style="width:80px;"><center><div id="Total'+i+'">0</div></center></td><td><input type="date" style="width:115px;" id="fechaD'+i+'" disabled></td><td><input type="text" style="width:170px;" id="obs'+i+'"></td></tr>');
+			$('#pagoCuotas').append('<tr><td><input style="width:115px;" type="number" id="Nbol'+i+'"></td><td><input style="width:115px;" type="date" id="FechaBol'+i+'"></td><td style="width:100px;"><center><a id="modalP'+i+'" role="button" onClick="MostrarP('+i+')"class="btn" data-toggle="modal" tipo="" banco="" numero="" monto="">Seleccionar</a></center></td><!-- suma desde aqui--><td><input type="number" style="width:80px;" min="0"  value="0" id="Col'+i+'" ></td><td><input type="number" style="width:80px;" min="0" value="0" id="Mat'+i+'"></td><td style="width:90px;"><input type="number" style="width:90px;" min="0" value="0"  id="Deu'+i+'"></td><!-- hasta aqui --><td style="width:80px;"><center><div id="Total'+i+'">0</div></center></td><td><input type="date" style="width:115px;" id="fechaD'+i+'" disabled></td><td><input type="text" style="width:170px;" id="obs'+i+'"></td></tr>');
 		}		
 	}
-$('#cuotaInc').keyup(cambio2)	
+$('#almuerzoCuotas').keyup(cambio3);
+$('#cuotaInc').keyup(cambio2)
 $('#cuotas').keyup(cambio)

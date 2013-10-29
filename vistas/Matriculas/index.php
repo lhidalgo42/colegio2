@@ -51,6 +51,7 @@ $(function() {
 <div class="clearfix"></div>
 <div id="ninos"><center><?php include'Alumnos.php'; ?></center></div>
 <div class="clearfix"></div>
+<div id="almuerzos"><?php include'Almuerzos.php'; ?></div>
 <div id="coutaIncorporacion"><?php include'cuotaInc.php'; ?></div>
 <div id="documentos"><?php include'Documentos.php'; ?></div>
 </form>
@@ -66,6 +67,8 @@ var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio",
 var f=new Date();
 $("#hoy").html(f.getDate() + " de " + meses[f.getMonth()] + " del " + f.getFullYear());
 $( "input[type=date]" ).val(f.getYear()+"-"+f.getMonth()+"-"+f.getDate());
+$(".fixedDateClinica").val(f.getFullYear()+"-03-15");
+$(".fixedDateMatricula").val(f.getFullYear()+"-01-07");
 </script>
 <?php include("modal.php"); ?>
 <div id="ayuda"><?php print_r($_SESSION); ?></div>
