@@ -1,7 +1,7 @@
 <div class="span2"> N° DE PAGO Cuota Incorporación</div>
 <div class="span4"> 
 	<input type="number" id="cuotaInc" maxlength="2" value="0">
-</div><div class="span1" id="valor">0 UF</div><div class="span2" id="uf" uf="23160.71"> Valor UF 23.160,71 </div><div class="2"id="hoy"></div>
+</div><div class="span1" id="valor">0 UF</div><div class="span2" id="uf" uf="23.179,35"> Valor UF 23.179,35	 </div><div class="2"id="hoy"></div>
 <table  width="100%" border="1" class="table table-bordered" id="tablaCuotaINC">
 <thead>
   <tr>

@@ -85,13 +85,21 @@ class Query {
 			echo $queryString;
 			return $query; 
 	}
-		public static function InsertarPago($ID,$monto,$fecha,$banco,$tipo) {
-        $queryString = "INSERT INTO pago (ID, Monto, Fecha, Banco, tipo_ID) VALUES ('".$ID."','".$monto."', '".$fecha."', '".$banco."', '".$tipo."');";
+		public static function InsertarPago($numero,$monto,$fecha,$banco,$tipo) {
+        $queryString = "INSERT INTO pago (Numero, Monto, Fecha, Banco, tipo_ID) VALUES ('".$numero."','".$monto."', '".$fecha."', '".$banco."', '".$tipo."');";
 			$query = CallQueryReturnID($queryString);
 			return $query; 
 	}
 			public static function R_PagoDocumento($pagoID,$documentoID) {
         $queryString = "INSERT INTO pago_has_documentos (pago_ID, documentos_ID) VALUES ('".$pagoID."', '".$documentoID."');";
+			$query = CallQuery($queryString);
+	}
+				public static function R_PagoMatricula($pagoID,$PagoMatriculaID) {
+        $queryString = "INSERT INTO pago_matricula_has_pago (pago_matricula_ID, pago_ID) VALUES ('".$PagoMatriculaID."','".$pagoID."');";
+			$query = CallQuery($queryString);
+	}
+				public static function R_PagoSeguro($pagoID,$PagoSeguroID) {
+        $queryString = "INSERT INTO pago_seguro_escolar_has_pago (pago_seguro_escolar_ID, pago_ID) VALUES ('".$PagoSeguroID."','".$pagoID."');";
 			$query = CallQuery($queryString);
 	}
 

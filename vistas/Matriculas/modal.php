@@ -17,23 +17,23 @@
         	<br>
             <select id='bancoCheque'>
                 <option></option>
-                <option value="1" >Banco Bci </option>
-                <option value="2" > Banco de Chile </option>
-                <option value="3" > Banco Estado </option>
-                <option value="4" > Banco Santander </option>
-                <option value="5" > Banco BICE </option>
-                <option value="6" > Banco BBVA </option>
-                <option value="7" > Banco CrediChile </option>
-                <option value="8" > Banco del Desarrollo </option>
-                <option value="9" > Banco Edwards Citi </option>
-                <option value="10" > Banco Falabella </option>
-                <option value="11" > Banco Itaú </option>
-                <option value="12" > Banco Paris </option>
-                <option value="13" > Banco Ripley </option>
-                <option value="14" > Banco Security </option>
-                <option value="15" > CorpBanca </option>
-                <option value="16" > Scotiabank </option>
-                <option value="17" > TBanc </option>
+                <option value="1" >Bci </option>
+                <option value="2" >Chile </option>
+                <option value="3" >Estado </option>
+                <option value="4" >Santander </option>
+                <option value="5" >BICE </option>
+                <option value="6" >BBVA </option>
+                <option value="7" >CrediChile </option>
+                <option value="8" >Desarrollo </option>
+                <option value="9" >Edwards Citi </option>
+                <option value="10" >Falabella </option>
+                <option value="11" >Itaú </option>
+                <option value="12" >Paris </option>
+                <option value="13" >Ripley </option>
+                <option value="14" >Security </option>
+                <option value="15" >CorpBanca </option>
+                <option value="16" >Scotiabank </option>
+                <option value="17" >TBanc </option>
             </select>
             <h4>Ingrese Numero de Cheque</h4>
             <br>
@@ -76,14 +76,14 @@
      </div>
      <div class="modal-body">
               <center><h4>Seleccione</h4></center>
-        <center><div class="btn-group" data-toggle="buttons-radio">
+        <center><div class="btn-group" data-toggle="buttons-radio" id="tipoc">
   <button type="button" class="btn btn-primary" onClick="tipoC(1)" idval="CA">Clinica Alemana</button>
   <button type="button" class="btn btn-primary" onClick="tipoC(2)" idval="CSM">Clinica Santa Maria</button>
   <button type="button" class="btn btn-primary" onClick="tipoC(3)" idval="OTRA">OTRA</button>
 </div></center><br>
 <br>
 
-        <center><div class="btn-group" data-toggle="buttons-radio">
+        <center><div class="btn-group" data-toggle="buttons-radio" id="tipop">
   <button type="button" class="btn btn-primary" onClick="tipoPC(1)" idval="Cheque">Cheque</button>
   <button type="button" class="btn btn-primary" onClick="tipoPC(2)" idval="Letra">Letra</button>
   <button type="button" class="btn btn-primary" onClick="tipoPC(3)" idval="Efectivo">Efectivo/Deposito</button>
@@ -100,23 +100,23 @@
     		<div class="controls">
             <select id='bancoChequeC' class="span2">
                 <option></option>
-                <option value="1" >Banco Bci </option>
-                <option value="2" > Banco de Chile </option>
-                <option value="3" > Banco Estado </option>
-                <option value="4" > Banco Santander </option>
-                <option value="5" > Banco BICE </option>
-                <option value="6" > Banco BBVA </option>
-                <option value="7" > Banco CrediChile </option>
-                <option value="8" > Banco del Desarrollo </option>
-                <option value="9" > Banco Edwards Citi </option>
-                <option value="10" > Banco Falabella </option>
-                <option value="11" > Banco Itaú </option>
-                <option value="12" > Banco Paris </option>
-                <option value="13" > Banco Ripley </option>
-                <option value="14" > Banco Security </option>
-                <option value="15" > CorpBanca </option>
-                <option value="16" > Scotiabank </option>
-                <option value="17" > TBanc </option>
+                <option value="1" >Bci </option>
+                <option value="2" >Chile </option>
+                <option value="3" >Estado </option>
+                <option value="4" >Santander </option>
+                <option value="5" >BICE </option>
+                <option value="6" >BBVA </option>
+                <option value="7" >CrediChile </option>
+                <option value="8" >Desarrollo </option>
+                <option value="9" >Edwards Citi </option>
+                <option value="10" >Falabella </option>
+                <option value="11" >Itaú </option>
+                <option value="12" >Paris </option>
+                <option value="13" >Ripley </option>
+                <option value="14" >Security </option>
+                <option value="15" >CorpBanca </option>
+                <option value="16" >Scotiabank </option>
+                <option value="17" >TBanc </option>
             </select>
           </div>
   		</div>
@@ -321,7 +321,7 @@
         <h4 id="tittlePapa">Complete los Datos del Alumno</h4>
      </div>
      <div class="modal-body form-horizontal" id="bodyNino">
-     <center><h3><strong>Alumerzos</strong></h3></center>
+    <!-- <center><h3><strong>Alumerzos</strong></h3></center>
 <center><div class="btn-group" data-toggle="buttons-checkbox">
   <button type="button" class="btn btn-primary" idval="AL">Lunes</button>
   <button type="button" class="btn btn-primary" idval="AMA">Martes</button>
@@ -330,7 +330,7 @@
   <button type="button" class="btn btn-primary" idval="AV">Viernes</button>
 </div>
 </center><br>
-<br>
+<br>-->
 
         <center>
    <div class="control-group">
@@ -361,8 +361,8 @@
      <label class="control-label" for="SelectSexoMN">Sexo</label>
      <div class="controls">
          <div class="btn-group" id="SelectSexoMN" data-toggle="buttons-radio">
-         <button type="button" class="btn">Niño</button>
-         <button type="button" class="btn">Niña</button>
+         <button type="button" class="btn" idval="1">Niño</button>
+         <button type="button" class="btn" idval="0">Niña</button>
         </div>
     </div>
 </div>
@@ -408,23 +408,23 @@
         	<br>
             <select id='bancoChequePM'>
                 <option></option>
-                <option value="1" >Banco Bci </option>
-                <option value="2" > Banco de Chile </option>
-                <option value="3" > Banco Estado </option>
-                <option value="4" > Banco Santander </option>
-                <option value="5" > Banco BICE </option>
-                <option value="6" > Banco BBVA </option>
-                <option value="7" > Banco CrediChile </option>
-                <option value="8" > Banco del Desarrollo </option>
-                <option value="9" > Banco Edwards Citi </option>
-                <option value="10" > Banco Falabella </option>
-                <option value="11" > Banco Itaú </option>
-                <option value="12" > Banco Paris </option>
-                <option value="13" > Banco Ripley </option>
-                <option value="14" > Banco Security </option>
-                <option value="15" > CorpBanca </option>
-                <option value="16" > Scotiabank </option>
-                <option value="17" > TBanc </option>
+                <option value="1" >Bci </option>
+                <option value="2" >Chile </option>
+                <option value="3" >Estado </option>
+                <option value="4" >Santander </option>
+                <option value="5" >BICE </option>
+                <option value="6" >BBVA </option>
+                <option value="7" >CrediChile </option>
+                <option value="8" >Desarrollo </option>
+                <option value="9" >Edwards Citi </option>
+                <option value="10" >Falabella </option>
+                <option value="11" >Itaú </option>
+                <option value="12" >Paris </option>
+                <option value="13" >Ripley </option>
+                <option value="14" >Security </option>
+                <option value="15" >CorpBanca </option>
+                <option value="16" >Scotiabank </option>
+                <option value="17" >TBanc </option>
             </select>
             <h4>Ingrese Numero de Cheque</h4>
             <br>

@@ -1,5 +1,7 @@
 function MostrarNino(I)
-{
+{	
+	var tipo =$("#modalNino"+I).attr("sexo")
+	$("#SelectSexoMN").children("button[idval='"+tipo+"']").addClass("active");
 	$("#guardarNino").attr("onClick","GuardarNino("+I+")")
 	$("#inputRutN").val($("#modalNino"+I).attr("rut"));
 	$("#inputNombreN").val($("#modalNino"+I).attr("nombre"));
@@ -16,6 +18,7 @@ function CerrarNino()
 	$("#inputApellidoMN").val('');
 	$("#inputFechaNacN").val('');
 	$("#inputCPast").val('');
+	$("#SelectSexoMN").children(".active").removeClass("active");
 }
 function GuardarNino(I)
 {
@@ -25,18 +28,20 @@ if(Nombre != "" || Apellido != "")
 {
 	$("#modalNino"+I).html(Nombre+" "+Apellido);
 }
- $("#modalNino"+I).attr("al",$("#bodyNino").children().children(".btn-group").children("button[idval='AL']").hasClass("active"));
- $("#modalNino"+I).attr("ama",$("#bodyNino").children().children(".btn-group").children("button[idval='AMA']").hasClass("active"));
- $("#modalNino"+I).attr("ami",$("#bodyNino").children().children(".btn-group").children("button[idval='AMI']").hasClass("active"));
- $("#modalNino"+I).attr("aj",$("#bodyNino").children().children(".btn-group").children("button[idval='AJ']").hasClass("active"));
- $("#modalNino"+I).attr("av",$("#bodyNino").children().children(".btn-group").children("button[idval='AV']").hasClass("active"));
+ //$("#modalNino"+I).attr("almuerzo",$("#bodyNino").children().children(".btn-group").children("button[idval='AL']").hasClass("active"));
+// $("#modalNino"+I).attr("ama",$("#bodyNino").children().children(".btn-group").children("button[idval='AMA']").hasClass("active"));
+ //$("#modalNino"+I).attr("ami",$("#bodyNino").children().children(".btn-group").children("button[idval='AMI']").hasClass("active"));
+// $("#modalNino"+I).attr("aj",$("#bodyNino").children().children(".btn-group").children("button[idval='AJ']").hasClass("active"));
+ //$("#modalNino"+I).attr("av",$("#bodyNino").children().children(".btn-group").children("button[idval='AV']").hasClass("active"));
  $("#modalNino"+I).attr("rut",$("#inputRutN").val());
  $("#modalNino"+I).attr("nombre",$("#inputNombreN").val());
  $("#modalNino"+I).attr("apellidoP",$("#inputApellidoPN").val());
  $("#modalNino"+I).attr("apellidoM",$("#inputApellidoMN").val());
  $("#modalNino"+I).attr("fechanac",$("#inputFechaNacN").val());
  $("#modalNino"+I).attr("colegioanterior",$("#inputCPast").val());
+ $("#modalNino"+I).attr("sexo",$("#SelectSexoMN").children(".active").attr("idval"));
 $('#myModalNino').modal('hide');
+ CerrarNino()
 }
 function tipoPM(I){
 	if(I == 1){
@@ -69,18 +74,18 @@ function CerrarPM(){
 }
 function GuardarPM(I){
 	$("#modalPM"+I).html($("#mymodalPM").children(".modal-body").children().children(".btn-group").children(".active").html());
-	$("#modalPM"+I).attr("tipo",$("#mymodalPM").children(".modal-body").children().children(".btn-group").children(".active").attr("idval"));
-	if($("#mymodalPM").children(".modal-body").children().children(".btn-group").children(".active").attr("idval") == "Cheque"){
+	$("#modalPM"+I).attr("tipo",$("#myModalPM").children(".modal-body").children().children(".btn-group").children(".active").attr("idval"));
+	if($("#myModalPM").children(".modal-body").children().children(".btn-group").children(".active").attr("idval") == "Cheque"){
 	$("#modalPM"+I).attr("banco",$("#bancoChequePM").val());
 	$("#modalPM"+I).attr("numero",$("#numeroChequePM").val());
 	$("#modalPM"+I).attr("monto",$("#montoChequePM").val());
 	}
-	else if ($("#mymodalPM").children(".modal-body").children().children(".btn-group").children(".active").attr("idval") == "Letra"){
+	else if ($("#myModalPM").children(".modal-body").children().children(".btn-group").children(".active").attr("idval") == "Letra"){
 	$("#modalPM"+I).attr("banco","");
 	$("#modalPM"+I).attr("numero",$("#numeroLetraPM").val());
 	$("#modalPM"+I).attr("monto",$("#montoLetraPM").val());
 	}
-	else if ($("#mymodalPM").children(".modal-body").children().children(".btn-group").children(".active").attr("idval") == "Efectivo"){
+	else if ($("#myModalPM").children(".modal-body").children().children(".btn-group").children(".active").attr("idval") == "Efectivo"){
 	$("#modalPM"+I).attr("banco","");
 	$("#modalPM"+I).attr("numero","");
 	$("#modalPM"+I).attr("monto",$("#montoEfectivoPM").val());
@@ -93,18 +98,18 @@ var tipo =$("#modalPM"+I).attr("tipo")
 $("#myModalPM").children(".modal-body").children().children(".btn-group").children("button[idval='"+tipo+"']").addClass("active");
 if(tipo == "Cheque"){
 	tipoPM(1);
-	$("#bancoCheque").val($("#modalPM"+I).attr("banco"));
-	$("#numeroCheque").val($("#modalPM"+I).attr("numero"));
-	$("#montoCheque").val($("#modalPM"+I).attr("monto"));
+	$("#bancoChequePM").val($("#modalPM"+I).attr("banco"));
+	$("#numeroChequePM").val($("#modalPM"+I).attr("numero"));
+	$("#montoChequePM").val($("#modalPM"+I).attr("monto"));
 }
 if(tipo == "Letra"){
 	tipoPM(2);
-	$("#numeroLetra").val($("#modalPM"+I).attr("numero"));
-	$("#montoLetra").val($("#modalPM"+I).attr("monto"));		
+	$("#numeroLetraPM").val($("#modalPM"+I).attr("numero"));
+	$("#montoLetraPM").val($("#modalPM"+I).attr("monto"));		
 	}
 if(tipo == "Efectivo"){
 	tipoPM(3);
-	$("#montoEfectivo").val($("#modalPM"+I).attr("efectivo"));
+	$("#montoEfectivoPM").val($("#modalPM"+I).attr("efectivo"));
 	}
 $("#guardarPM").attr("onClick","GuardarPM("+I+")")
 $('#myModalPM').modal('show');

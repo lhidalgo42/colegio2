@@ -38,36 +38,60 @@ $("#montoChequeC").val("");
 }
 }
 function MostrarC(I){
-var tipo =$("#modalC"+I).attr("tipo")
+var tipo =$("#modalC"+I).attr("tipoc")
 $("#myModalC").children(".modal-body").children("center:last").children(".btn-group").children("button[idval='"+tipo+"']").addClass("active"); 
 if(tipo == "OTRA"){
-$("#tipoC").html("<center><h4>Ingrese Nombre</h4><br><input id='NombreC' value='"+$("#modalC"+I).attr("nombre")+"' placeholder='Nombre' type='text'><h4>Ingrese Valor</h4><br><input id='MontoC' placeholder='Valor' value='"+$("#modalC"+I).attr("valor")+"' type='number'></center>");}
+$("#tipoC").html("<div class='control-group'><label class='control-label' for='NombreC'>Ingrese Nombre de la Clinica</label> <div class='controls'><input type='text' id='NombreC' value='"+$("#modalC"+I).attr("nombre")+"' placeholder='Nombre'></div></div>");}
 $("#guardarC").attr("onClick","GuardarC("+I+")")
 $('#myModalC').modal('show');
 }
 function GuardarC(I){
-var A = $("#myModalC").children(".modal-body").children().children(".btn-group").children(".active").html();
-$("#modalC"+I).attr("tipo",$("#myModalC").children(".modal-body").children().children(".btn-group").children(".active").attr("idval"));
-if($("#myModalC").children(".modal-body").children().children(".btn-group").children(".active").attr("idval")=="OTRA")
+var A = $("#tipoc").children(".active").html();
+$("#modalC"+I).attr("tipoc",$("#tipoc").children(".active").attr("idval"));
+var B = $("#tipop").children(".active").html();
+$("#modalC"+I).attr("tipop",$("#tipop").children(".active").attr("idval"));
+
+if($("#tipoc").children(".active").attr("idval")=="OTRA")
 {
 var A = $("#NombreC").val();
 $("#modalC"+I).attr("nombre",$("#NombreC").val());
-$("#modalC"+I).attr("valor",$("#MontoC").val());
 }
-else if($("#myModalC").children(".modal-body").children().children(".btn-group").children(".active").attr("idval")=="CA")
+else if($("#tipoc").children(".active").attr("idval")=="CA")
 {
 $("#modalC"+I).attr("nombre",A);
-$("#modalC"+I).attr("valor",42000);
 }
-else if($("#myModalC").children(".modal-body").children().children(".btn-group").children(".active").attr("idval")=="CSM"){
+else if($("#tipoc").children(".active").attr("idval")=="CSM"){
 $("#modalC"+I).attr("nombre",A);
-$("#modalC"+I).attr("valor",39000);	
 }
+if($("#tipop").children(".active").attr("idval") == "Cheque"){
+	$("#modalC"+I).attr("banco",$("#bancoChequeC").val());
+	$("#modalC"+I).attr("numero",$("#numeroChequeC").val());
+	$("#modalC"+I).attr("monto",$("#montoChequeC").val());
+	}
+	else if ($("#tipop").children(".active").attr("idval") == "Letra"){
+	$("#modalC"+I).attr("banco","");
+	$("#modalC"+I).attr("numero",$("#numeroLetraC").val());
+	$("#modalC"+I).attr("monto",$("#montoLetraC").val());
+	}
+	else if ($("#tipop").children(".active").attr("idval") == "Efectivo"){
+	$("#modalC"+I).attr("banco","");
+	$("#modalC"+I).attr("numero","");
+	$("#modalC"+I).attr("monto",$("#montoEfectivoC").val());
+	}
 $("#modalC"+I).html(A);
 CerrarC()
 $('#myModalC').modal('hide');
 }
 function CerrarC(){
-$("#myModalC").children(".modal-body").children().children(".btn-group").children(".active").removeClass("active");
-$("#tipoC").html("");	
+	$("#myModalC").children(".modal-body").children().children(".btn-group").children(".active").removeClass("active");
+	$('#tipoPC1').css('display','none');
+	$("#bancoChequeC").val("");
+	$("#numeroChequeC").val("");
+	$("#montoChequeC").val("");		
+	$('#tipoPC2').css('display','none');
+	$("#numeroLetraC").val("");
+	$("#montoLetraC").val("");
+	$('#tipoPC3').css('display','none');
+	$("#montoEfectivoC").val("");
+	$("#tipoC").html("");
 }
