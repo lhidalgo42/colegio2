@@ -79,8 +79,8 @@ class Query {
         $queryString = "INSERT INTO almuerzos_nino (almuerzos_ID, nino_RUT) VALUES ('".$almuerzoID."', '".$ninoRut."')";
         $query = CallQuery($queryString);
 	}
-		public static function InsertarDocumento($cuota,$familiaID,$col,$mat,$cuoINC,$alm,$deu,$observaciones) {
-        $queryString = "INSERT INTO documentos (ID, Cuota, familia_ID, Colegiatura, Materiales, Cuota_Inc, Almuerzo, Deuda, Vencimiento, Observaciones) VALUES ('".$cuota."', '".$familiaID."', '".$col."', '".$mat."', '".$cuoINC."', '".$alm."', '".$deu."', 'NULL', '".$observaciones."');";
+		public static function InsertarDocumento($nboleta,$familiaID,$col,$mat,$cuoINC,$alm,$deu,$observaciones) {
+        $queryString = "INSERT INTO documentos (Numero, familia_ID, Colegiatura, Materiales, Cuota_Inc, Almuerzo, Deuda, Vencimiento, Observaciones) VALUES ('".$nboleta."', '".$familiaID."', '".$col."', '".$mat."', '".$cuoINC."', '".$alm."', '".$deu."', 'NULL', '".$observaciones."');";
 			$query = CallQueryReturnID($queryString);
 			echo $queryString;
 			return $query; 
