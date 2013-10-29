@@ -51,9 +51,9 @@ $(function() {
 <div class="clearfix"></div>
 <div id="ninos"><center><?php include'Alumnos.php'; ?></center></div>
 <div class="clearfix"></div>
-<div id="almuerzos"><?php include'Almuerzos.php'; ?></div>
 <div id="coutaIncorporacion"><?php include'cuotaInc.php'; ?></div>
 <div id="documentos"><?php include'Documentos.php'; ?></div>
+<div id="almuerzos"><?php include'Almuerzos.php'; ?></div>
 </form>
 </div>
 <script src="../../js/Matriculas/pagos.js"></script>
