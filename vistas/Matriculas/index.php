@@ -86,8 +86,9 @@ var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio",
 var f=new Date();
 $("#hoy").html(f.getDate() + " de " + meses[f.getMonth()] + " del " + f.getFullYear());
 $( "input[type=date]" ).val(f.getYear()+"-"+f.getMonth()+"-"+f.getDate());
-$(".fixedDateClinica").val(f.getFullYear()+"-03-15");
-$(".fixedDateMatricula").val(f.getFullYear()+"-01-07");
+var fechaPago = f.getFullYear() + 1;
+$(".fixedDateClinica").val(fechaPago+"-03-15");
+$(".fixedDateMatricula").val(fechaPago+"-01-07");
 $("#cIncBtn").click(function() { $("#cInc").slideToggle() });
 $("#cDocBtn").click(function() { $("#cDoc").slideToggle() });
 $("#cAlmBtn").click(function() { $("#cAlm").slideToggle() });
