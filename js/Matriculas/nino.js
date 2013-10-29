@@ -6,7 +6,7 @@ function MostrarNino(I)
 	$("#inputApellidoPN").val($("#modalNino"+I).attr("apellidop"));
 	$("#inputApellidoMN").val($("#modalNino"+I).attr("apellidom"));
 	$("#inputFechaNacN").val($("#modalNino"+I).attr("fechanac"));
-	$("#inputColegioPast").val($("#modalNino"+I).attr("colegioanterior"));
+	$("#inputCPast").val($("#modalNino"+I).attr("colegioanterior"));
 	$('#myModalNino').modal('show');
 }
 function CerrarNino()
@@ -15,7 +15,7 @@ function CerrarNino()
 	$("#inputApellidoPN").val('');
 	$("#inputApellidoMN").val('');
 	$("#inputFechaNacN").val('');
-	$("#inputColegioPast").val('');
+	$("#inputCPast").val('');
 }
 function GuardarNino(I)
 {
@@ -25,12 +25,17 @@ if(Nombre != "" || Apellido != "")
 {
 	$("#modalNino"+I).html(Nombre+" "+Apellido);
 }
+ $("#modalNino"+I).attr("al",$("#bodyNino").children().children(".btn-group").children("button[idval='AL']").hasClass("active"));
+ $("#modalNino"+I).attr("ama",$("#bodyNino").children().children(".btn-group").children("button[idval='AMA']").hasClass("active"));
+ $("#modalNino"+I).attr("ami",$("#bodyNino").children().children(".btn-group").children("button[idval='AMI']").hasClass("active"));
+ $("#modalNino"+I).attr("aj",$("#bodyNino").children().children(".btn-group").children("button[idval='AJ']").hasClass("active"));
+ $("#modalNino"+I).attr("av",$("#bodyNino").children().children(".btn-group").children("button[idval='AV']").hasClass("active"));
  $("#modalNino"+I).attr("rut",$("#inputRutN").val());
  $("#modalNino"+I).attr("nombre",$("#inputNombreN").val());
  $("#modalNino"+I).attr("apellidoP",$("#inputApellidoPN").val());
  $("#modalNino"+I).attr("apellidoM",$("#inputApellidoMN").val());
  $("#modalNino"+I).attr("fechanac",$("#inputFechaNacN").val());
- $("#modalNino"+I).attr("colegioanterior",$("#inputColegioPast").val());
+ $("#modalNino"+I).attr("colegioanterior",$("#inputCPast").val());
 $('#myModalNino').modal('hide');
 }
 function tipoPM(I){

@@ -321,6 +321,16 @@
         <h4 id="tittlePapa">Complete los Datos del Alumno</h4>
      </div>
      <div class="modal-body form-horizontal" id="bodyNino">
+     <center><h3><strong>Alumerzos</strong></h3></center>
+<center><div class="btn-group" data-toggle="buttons-checkbox">
+  <button type="button" class="btn btn-primary" idval="AL">Lunes</button>
+  <button type="button" class="btn btn-primary" idval="AMA">Martes</button>
+  <button type="button" class="btn btn-primary"id val="AMI">Miercoles</button>
+  <button type="button" class="btn btn-primary" idval="AJ">Jueves</button>
+  <button type="button" class="btn btn-primary" idval="AV">Viernes</button>
+</div>
+</center><br>
+<br>
 
         <center>
    <div class="control-group">
@@ -347,6 +357,15 @@
       <input type="text" id="inputApellidoMN" placeholder="Apellido Materno" required>
     </div>
   </div>
+    <div class="control-group">
+     <label class="control-label" for="SelectSexoMN">Sexo</label>
+     <div class="controls">
+         <div class="btn-group" id="SelectSexoMN" data-toggle="buttons-radio">
+         <button type="button" class="btn">Niño</button>
+         <button type="button" class="btn">Niña</button>
+        </div>
+    </div>
+</div>
   <div class="control-group">
     <label class="control-label" for="inputFechaNacN">Fecha Nacimiento</label>
     <div class="controls">
@@ -354,9 +373,9 @@
     </div>
   </div>
   <div class="control-group">
-    <label class="control-label" for="inputColegioPast">Colegio Anterior</label>
+    <label class="control-label" for="inputCPast">Colegio Anterior</label>
     <div class="controls">
-      <input type="text" id="inputColegioPast" placeholder="Colegio Anterior" required>
+      <input type="text" id="inputCPast" placeholder="Colegio Anterior" required>
     </div>
   </div>
   

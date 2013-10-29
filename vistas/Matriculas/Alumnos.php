@@ -23,7 +23,7 @@
   for($i=1;$i<5;$i++)
   {?>
   <tr>  
-    <td class="span2"><a id="modalNino<?php echo $i; ?>" role="button" onClick="MostrarNino(<?php echo $i; ?>)"class="btn" data-toggle="modal" nombre="" apellidoP="" apellidoM="" fechanac="" colegioanterior="">Nombre</a></td>
+    <td class="span2"><a id="modalNino<?php echo $i; ?>" role="button" onClick="MostrarNino(<?php echo $i; ?>)"class="btn" data-toggle="modal" nombre="" apellidoP="" apellidoM="" fechanac="" colegioanterior="" AL="" AMA="" AMI="" AJ="" AV="">Nombre</a></td>
     
     <td class="span1">
 <select id="Curso<?php echo $i; ?>" onChange="curso(<?php echo $i; ?>)" class="input-small"><option></option>
