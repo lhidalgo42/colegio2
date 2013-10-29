@@ -28,5 +28,3 @@
 </tr>
 </tfoot>
 </table>
-
-<button type="submit" class="btn btn-primary btn-block btn-large"><strong>Enviar</strong></button> 

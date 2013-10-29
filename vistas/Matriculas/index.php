@@ -62,17 +62,18 @@ $(function() {
 <div id="ninos"><center><?php include'Alumnos.php'; ?></center></div>
 <div class="clearfix"></div>
 <div id="coutaIncorporacion" class="pagosContainer">
-	<div><button id="cIncBtn" class="btn btn-block btn-large"><strong>PAGAR CUOTA INCORPORACION</strong></button></div>
+	<div><input type="button" id="cIncBtn" class="btn btn-block btn-large" value="PAGAR CUOTA INCORPORACION"></div>
 	<div id="cInc" class="pago"><?php include'cuotaInc.php'; ?></div>
 </div>
 <div id="documentos" class="pagosContainer">
-	<div><button id="cDocBtn" class="btn btn-block btn-large"><strong>PAGAR DOCUMENTOS</strong></button></div>
+	<div><input type="button" id="cDocBtn" value="PAGAR DOCUMENTOS" class="btn btn-block btn-large"></div>
 	<div id="cDoc" class="pago"><?php include'Documentos.php'; ?></div>
 </div>
 <div id="almuerzos" class="pagosContainer">
-	<div><button id="cAlmBtn" class="btn btn-block btn-large"><strong>PAGAR ALMUERZOS</strong></button></div>
+	<div><input type="button" id="cAlmBtn" class="btn btn-block btn-large" value="PAGAR ALMUERZOS"></div>
 	<div id="cAlm" class="pago"><?php include'Almuerzos.php'; ?></div>
 </div>
+<button type="submit" class="btn btn-primary btn-block btn-large"><strong>Enviar</strong></button> 
 </form>
 </div>
 <script src="../../js/Matriculas/pagos.js"></script>
