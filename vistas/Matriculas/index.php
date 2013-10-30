@@ -93,6 +93,7 @@ $(".fixedDateMatricula").val(fechaPago+"-01-07");
 $("#cIncBtn").click(function() { $("#cInc").slideToggle() });
 $("#cDocBtn").click(function() { $("#cDoc").slideToggle() });
 $("#cAlmBtn").click(function() { $("#cAlm").slideToggle() });
+$("#Nbol1").keyup(copiarNbol);
 </script>
 <?php include("modal.php"); ?>
 <div id="ayuda"><?php print_r($_SESSION); ?></div>

@@ -27,6 +27,7 @@ function CerrarP(){
 	$("#montoLetra").val("");
 	$('#tipoP3').css('display','none');
 	$("#montoEfectivo").val("");
+	$("#copiar").css('display','none');
 }
 function GuardarP(I){
 	$("#modalP"+I).html($("#myModalP").children(".modal-body").children().children(".btn-group").children(".active").html());
@@ -67,6 +68,38 @@ if(tipo == "Efectivo"){
 	tipoP(3);
 	$("#montoEfectivo").val($("#modalP"+I).attr("efectivo"));
 	}
+if(I != 1)
+{
+	var A=I-1;
+$("#copiar").children("button").attr("onClick","copiar("+A+")")
+$("#copiar").css('display','block');	
+}
 $("#guardarP").attr("onClick","GuardarP("+I+")")
 $('#myModalP').modal('show');
+}
+function copiar(I){
+	A=I+1;
+var tipo = $("#modalP"+I).attr("tipo");	
+$("#myModalP").children(".modal-body").children().children(".btn-group").children("button[idval='"+tipo+"']").addClass("active");
+if(tipo == "Cheque"){
+	tipoP(1);
+	$("#bancoCheque").val($("#modalP"+I).attr("banco"));
+	$("#modalP"+A).attr("banco",$("#modalP"+I).attr("banco"))
+	$("#numeroCheque").val(+$("#modalP"+I).attr("numero")+1);
+	$("#modalP"+A).attr("banco",+$("#modalP"+I).attr("numero")+1)
+	$("#montoCheque").val($("#modalP"+I).attr("monto"));
+	$("#modalP"+A).attr("banco",$("#modalP"+I).attr("monto"))
+}
+if(tipo == "Letra"){
+	tipoP(2);
+	$("#numeroLetra").val(+$("#modalP"+I).attr("numero")+1);
+	$("#modalP"+A).attr("banco",+$("#modalP"+I).attr("numero")+1)
+	$("#montoLetra").val($("#modalP"+I).attr("monto"));	
+	$("#modalP"+A).attr("banco",$("#modalP"+I).attr("monto"))	
+	}
+if(tipo == "Efectivo"){
+	tipoP(3);
+	$("#montoEfectivo").val($("#modalP"+I).attr("efectivo"));
+	$("#modalP"+A).attr("banco",$("#modalP"+I).attr("efectivo"))
+	}
 }

@@ -4,6 +4,9 @@
         <h4>Cheque - Letra Mandado Tipo/Detalle Documento N°</h4>
      </div>
      <div class="modal-body">
+		<div id="copiar" class="pull-right" style="display:none;"><button type="button" class="btn" onClick="copiar()">Copiar datos anteriores</button></div><br>
+<br>
+
          <center><h4>Seleccione</h4></center>
         <center><div class="btn-group" data-toggle="buttons-radio">
   <button type="button" class="btn btn-primary" onClick="tipoP(1)" idval="Cheque">Cheque</button>
@@ -395,6 +398,13 @@
         <h4>Cheque - Letra Mandado Tipo/Detalle Documento N°</h4>
      </div>
      <div class="modal-body">
+    <center><div class="pagination">
+  <ul>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+  </ul>
+</div></center>
          <center><h4>Seleccione</h4></center>
         <center><div class="btn-group" data-toggle="buttons-radio">
   <button type="button" class="btn btn-primary" onClick="tipoPM(1)" idval="Cheque">Cheque</button>
