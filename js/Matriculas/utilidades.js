@@ -6,7 +6,7 @@ $(".cAlm").keyup(function(){
 	}
 	$("#CouTAlm").html(total);
 });
-  	
+  /**	
   	var actualizar = setInterval(function(){
 		var cuotas = +$('#cuotas').val();
 		var col = 0;
@@ -51,7 +51,7 @@ $(".cAlm").keyup(function(){
 		$('#CuoTInc').html(cuo);
 		$('#TotalTInc').html(totalReal);		
 	},500);
-	
+	**/
 function enviar(){
 var familia = new Array();
 familia[0] = $("#familia").val();
