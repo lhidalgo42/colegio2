@@ -1,5 +1,6 @@
 <?php 
 include '../../ajax/sessionCheck.php';
+include '../../datos/Select.php';
 iniciarCookie();
 verificarIP(); ?>
 <!DOCTYPE html>
@@ -54,7 +55,7 @@ $(function() {
 
 <body>
 <div class="container-fluid">
-<form  action="javascript:enviar()">
+<form  action="javascript:siguente()">
 <!--Despliega Errores-->
  <p><center><span id="mensaje" class="alert-danger"></span></center></p><br>
 <div id="padres"><?php include'padres.php'; ?></div>
@@ -73,7 +74,7 @@ $(function() {
 	<div><input type="button" id="cAlmBtn" class="btn btn-block btn-large" value="PAGAR ALMUERZOS"></div>
 	<div id="cAlm" class="pago"><?php include'Almuerzos.php'; ?></div>
 </div>
-<button type="submit" class="btn btn-primary btn-block btn-large"><strong>Enviar</strong></button> 
+<button type="submit" class="btn btn-success btn-block btn-large"><strong>Siguente</strong></button> 
 </form>
 </div>
 <script src="../../js/Matriculas/pagos.js"></script>
@@ -93,7 +94,6 @@ $(".fixedDateMatricula").val(fechaPago+"-01-07");
 $("#cIncBtn").click(function() { $("#cInc").slideToggle() });
 $("#cDocBtn").click(function() { $("#cDoc").slideToggle() });
 $("#cAlmBtn").click(function() { $("#cAlm").slideToggle() });
-$("#Nbol1").keyup(copiarNbol);
 </script>
 <?php include("modal.php"); ?>
 <div id="ayuda"><?php print_r($_SESSION); ?></div>

@@ -4,9 +4,10 @@ var actualizar3 = setInterval(function(){
  var c= 0;
  var length = $( "select[id*='Curso'] option:selected" ).length;
   for (var i = 0; i < length; i++){
+	  var b = i+1;
 	var dato = $( "select[id*='Curso'] option:selected" )[i];
 	val.push($(dato).val());
-  if(val[i]=="Kinder" || val[i]==""){
+  if(val[i]=="Kinder" || val[i]=="" || $("#modalNino"+b).attr("nuevo")==1){
   c++;	
   }//fin if
  }//fin for

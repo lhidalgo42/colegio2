@@ -1,4 +1,4 @@
-<div class="span2"> N° DE PAGOS</div>
+<div class="span2"> N° DE PAGOS (1-20)</div>
 <div class="span4"> 
 	<input type="number" id="cuotas" maxlength="2" value="0">
 </div>

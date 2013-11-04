@@ -22,6 +22,7 @@ var Apellido = $("#inputApellidoP").val();
 		$("#modalMAMA").attr("lugarTrabajo",$("#inputLugarTrabajo").val());
 		$("#modalMAMA").attr("direccionTrabajo",$("#inputDireccionT").val());
 		$("#modalMAMA").attr("telefonos",$("#inputTelefonos").val());
+		$("a[id*='modalNino']").attr("apellidom",$("#inputApellidoP").val());
 	}
 	if(I==1)
 	{
@@ -43,6 +44,7 @@ var Apellido = $("#inputApellidoP").val();
 		$("#modalPAPA").attr("lugarTrabajo",$("#inputLugarTrabajo").val());
 		$("#modalPAPA").attr("direccionTrabajo",$("#inputDireccionT").val());
 		$("#modalPAPA").attr("telefonos",$("#inputTelefonos").val());
+		$("a[id*='modalNino']").attr("apellidop",$("#inputApellidoP").val());
 	}
 	CerrarPapa();
 	$('#myModalPapa').modal('hide');
