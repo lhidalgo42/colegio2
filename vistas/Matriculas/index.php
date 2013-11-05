@@ -55,7 +55,7 @@ $(function() {
 
 <body>
 <div class="container-fluid">
-<form  action="javascript:siguente()">
+<form  action="javascript:preguntar()">
 <!--Despliega Errores-->
  <p><center><span id="mensaje" class="alert-danger"></span></center></p><br>
 <div id="padres"><?php include'padres.php'; ?></div>
@@ -94,8 +94,15 @@ $(".fixedDateMatricula").val(fechaPago+"-01-07");
 $("#cIncBtn").click(function() { $("#cInc").slideToggle() });
 $("#cDocBtn").click(function() { $("#cDoc").slideToggle() });
 $("#cAlmBtn").click(function() { $("#cAlm").slideToggle() });
+function preguntar(){ 
+ confirmar=confirm("¿Esta seguro que desea continuar?"); 
+if (confirmar){
+siguente()
+}
+} 
+</script> 
 </script>
 <?php include("modal.php"); ?>
-<div id="ayuda"><?php print_r($_SESSION); ?></div>
+<div id="ayuda"></div>
 </body>
 </html>

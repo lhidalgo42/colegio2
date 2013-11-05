@@ -56,4 +56,11 @@
   <?php 
   }
   ?>
+  <tfoot>
+      <tr>
+      <td colspan="2"></td><td>Total</td><td>Valor</td>
+      <td colspan="1"></td><td>Total</td><td>Valor</td>
+      <td colspan="3"></td>
+      </tr>
+  </tfoot>
 </table>
