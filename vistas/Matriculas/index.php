@@ -44,7 +44,7 @@ width: 600px;
 	margin-bottom: 10px;
 }
 </style>
-<script type="text/css">
+<script>
 $(function() {
     $('input').keyup(function() {
         this.value = this.value.toUpperCase();
@@ -52,15 +52,14 @@ $(function() {
 });
 </script>
 </head>
-
 <body>
 <div class="container-fluid">
 <form  action="javascript:preguntar()">
 <!--Despliega Errores-->
- <p><center><span id="mensaje" class="alert-danger"></span></center></p><br>
+ <p><span id="mensaje" class="alert-danger"></span></p><br>
 <div id="padres"><?php include'padres.php'; ?></div>
 <div class="clearfix"></div>
-<div id="ninos"><center><?php include'Alumnos.php'; ?></center></div>
+<div id="ninos"><?php include'Alumnos.php'; ?></div>
 <div class="clearfix"></div>
 <div id="coutaIncorporacion" class="pagosContainer">
 	<div><input type="button" id="cIncBtn" class="btn btn-block btn-large" value="PAGAR CUOTA INCORPORACION"></div>
@@ -100,9 +99,8 @@ if (confirmar){
 siguente()
 }
 } 
-</script> 
 </script>
 <?php include("modal.php"); ?>
-<div id="ayuda"></div>
+
 </body>
-</html>
+</html >;

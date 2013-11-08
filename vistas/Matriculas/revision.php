@@ -31,12 +31,15 @@ $(function() {
 </head>
 
 <body id="cuerpo">
-<?php print_r($_SESSION['envio']);
+<?php //print_r($_SESSION['envio']);
 $data=$_SESSION['envio']; ?>
     <div class="container-fluid">
+               <br>
         <br>
-        <br>
+
         <div class="span12" id="panel_superior">
+            <div class="span2 pull-left"><button type="button" class="btn btn-info" id="print"><i class="icon-print"></i><strong>Imprimir</strong></button></div>
+
             <div class="pull-right span4">
             <table class="table  table-bordered">
                 <tr>
@@ -146,24 +149,25 @@ $data=$_SESSION['envio']; ?>
                   </tr>
                   </thead>
                   <tbody>
-                  <?php 
+                  <?php
+                  $a=0;
+                  $b=0;
+                  $c=0;
+                  $d=0;
+                  $e=0;
 				  if($data['documentos'][$i][1]=="")$data['documentos'][$i][1]=0;
 				  if($data['documentos'][$i][2]=="")$data['documentos'][$i][2]=0;
 				  if($data['documentos'][$i][3]=="")$data['documentos'][$i][3]=0;
 				  if($data['documentos'][$i][4]=="")$data['documentos'][$i][4]=0;
 				  if($data['documentos'][$i][5]=="")$data['documentos'][$i][5]=0;
 				  $g=count($data['documentos']);
-				  $a=0;
-				  $b=0;
-				  $c=0;
-				  $d=0;
-				  $e=0;
 				  for($i=0;$i<$g;$i++){ 
 				  if($data['documentos'][$i][1]=="")$data['documentos'][$i][1]=0;
 				  if($data['documentos'][$i][2]=="")$data['documentos'][$i][2]=0;
 				  if($data['documentos'][$i][3]=="")$data['documentos'][$i][3]=0;
 				  if($data['documentos'][$i][4]=="")$data['documentos'][$i][4]=0;
 				  if($data['documentos'][$i][5]=="")$data['documentos'][$i][5]=0;
+                      if($data['documentos'][$i][9])
 				  $data['documentos'][$i][9]=Select::BuscarBanco($data['documentos'][$i][9]);
 				  $a=$a+$data['documentos'][$i][1];
 				  $b=$b+$data['documentos'][$i][2];
@@ -187,6 +191,7 @@ $data=$_SESSION['envio']; ?>
                   </tr>
                   <?php
                   }
+
 				  $t=$a+$b+$c+$d+$e;
                   ?> </tbody>
                   <tfoot>
@@ -204,7 +209,7 @@ $data=$_SESSION['envio']; ?>
         <div class="clearfix"></div>
         <div class="span12" style="text-align:center;">
             <button onClick="history.go(-1)" class="btn btn-danger btn-large span5">Volver y Corregir Datos</button>
-           <button onClick="enviar()" class="btn btn-success btn-large span5">Terminar</button>
+           <button onClick="preguntar()" class="btn btn-success btn-large span5">Terminar</button>
            </div>
        </div>
     </div>
@@ -218,7 +223,14 @@ $.ajax({
 	$("#ayuda").html(data);
 	
   }
-});} 
-	</script>
+});}
+        function preguntar(){
+            confirmar=confirm("¿Esta seguro que desea continuar?");
+            if (confirmar){
+                enviar()
+                window.location.href = "../../vistas/decision2.php";
+            }
+        }
+    </script>
 </body>
 </html>

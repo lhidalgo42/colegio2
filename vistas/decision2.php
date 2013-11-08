@@ -68,8 +68,8 @@ verificarIP();
                 <h2 class="form-signin-heading"><center>Ingresar</center>   </h2>
                 <h5 class="form-signin-heading"><center>Seleccione como desea ingresar</center>   </h5>
 				<a href="Matriculas/index.php" class="btn btn-large btn-block">Matricular Alumnos Nuevos</a>
-				<a href="Matriculas/index.php" class="btn btn-large btn-block" disabled>Matricular Alumnos Antiguos</a>
-                <a href="EditarFamilia/index.php" class="btn btn-large btn-block">Agregar Detalles alumnos Matriculados</a>
+				<a href="#" class="btn btn-large btn-block" disabled>Matricular Alumnos Antiguos</a>
+                <a href="#" class="btn btn-large btn-block" disabled>Agregar Detalles alumnos Matriculados</a>
                 <a href="logout.php" class="btn btn-large btn-block btn-danger">Salir</a>
                 <div id="mensaje"></div> <!-- div para mostrar mensajes de error -->
             </form>
