@@ -21,7 +21,7 @@ $lugarT = $_REQUEST['lugarT'];
 $direccionT = $_REQUEST['direccionT'];
 $telefonos = $_REQUEST['telefonos'];
 
-$update = mysql_query("UPDATE PAPAS 
+$update = mysql_query("UPDATE papas
 						SET 
 							FechaNac='$fechaNac', 
 							Profesion= '$profesion',

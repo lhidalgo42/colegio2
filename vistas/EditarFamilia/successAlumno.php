@@ -18,7 +18,7 @@ $curso = $_REQUEST['curso'];
 $colegioAnt = $_REQUEST['colegioAnt'];
 
 
-$update = mysql_query("UPDATE NINO 
+$update = mysql_query("UPDATE nino
 						SET 
 							FechaNac='$fechaNac',
 							Curso= '$curso',

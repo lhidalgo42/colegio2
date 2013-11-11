@@ -14,8 +14,8 @@ $db_selected = mysql_select_db($base_de_datos);
 
 $id = $_REQUEST['id'];
 
-$papasSQL = mysql_query("SELECT * FROM PAPAS WHERE FAMILIA_ID = '$id'");
-$estudiantesSQL = mysql_query("SELECT * FROM NINO WHERE FAMILIA_ID = '$id'");
+$papasSQL = mysql_query("SELECT * FROM papas WHERE Familia_ID = '$id'");
+$estudiantesSQL = mysql_query("SELECT * FROM nino WHERE Familia_ID = '$id'");
 
 //Generar Resultados y Contadores
 	
