@@ -72,9 +72,6 @@ $(function() {
 		</div>
 	</div>
 	<div class="familiaID"><input type="hidden" id="familiaID" value="<?php echo $id?>"></div>
-	<div id="dialog" title="Basic dialog">
-		<p>Actualizando Informacion</p>
-	</div>
 <script src="../../js/EditarFamilia/functions.js"></script>
 </body>
 </html>
