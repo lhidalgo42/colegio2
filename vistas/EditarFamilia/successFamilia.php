@@ -14,7 +14,6 @@ $db_selected = mysql_select_db($base_de_datos);
 
 $rut = $_REQUEST['rut'];
 $fechaNac = $_REQUEST['fechaNac'];
-$fechaIns = $_REQUEST['fechaIns'];
 $profesion = $_REQUEST['profesion'];
 $direccion = $_REQUEST['direccion'];
 $email = $_REQUEST['email'];
@@ -25,7 +24,6 @@ $telefonos = $_REQUEST['telefonos'];
 $update = mysql_query("UPDATE PAPAS 
 						SET 
 							FechaNac='$fechaNac', 
-							FechaIns= '$fechaIns',
 							Profesion= '$profesion',
 							Direccion= '$direccion',
 							Email= '$email',

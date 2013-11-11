@@ -31,7 +31,6 @@ while($results = mysql_fetch_array($papasSQL)){
 	$apellido1 = $results['Apellido1'];
 	$apellido2 = $results['Apellido2'];
 	$fechaNacimiento = $results['FechaNac'];
-	$fechaInscripcion = $results['FechaIns'];
 	$apoderadoEcono = $results['Apoderado_Economico'];
 	$profesion = $results['Profesion'];
 	$direccion = $results['Direccion'];
@@ -61,10 +60,6 @@ while($results = mysql_fetch_array($papasSQL)){
 			<div>
 				<div class='span3'>Fecha de Nacimiento:</div>
 				<div class='span4'><input type='text' id='fechaN$i' value='$fechaNacimiento'></div>
-			</div>
-			<div>
-				<div class='span3'>Fecha de Inscripcion:</div>
-				<div class='span4'><input type='text' id='fechaI$i' value='$fechaInscripcion'></div>
 			</div>
 			<div>
 				<div class='span3'>Profesion:</div>
@@ -111,7 +106,6 @@ while($results = mysql_fetch_array($estudiantesSQL)){
 	$apellido1 = $results['Apellido1'];
 	$apellido2 = $results['Apellido2'];
 	$fechaNacimiento = $results['FechaNac'];
-	$fechaInscripcion = $results['FechaIns'];
 	$curso = $results['Curso'];
 	$colegioAnterior = $results['Colegio_anterior'];
 	
@@ -133,12 +127,24 @@ while($results = mysql_fetch_array($estudiantesSQL)){
 				<div class='span4'><input type='text' id='fechaN$i' value='$fechaNacimiento'></div>
 			</div>
 			<div>
-				<div class='span3'>Fecha de Inscripcion:</div>
-				<div class='span4'><input type='text' id='fechaI$i' value='$fechaInscripcion'></div>
-			</div>
-			<div>
 				<div class='span3'>Curso:</div>
-				<div class='span4'><input type='text' id='curso$i' value='$curso'></div>
+				<div class='span4'>
+					<select id='curso$i'>
+						<option value='Kinder'>Kinder</option>
+						<option value='1ro Basico'>1ro Basico</option>
+						<option value='2do Basico'>2do Basico</option>
+						<option value='3ro Basico'>3ro Basico</option>
+						<option value='4to Basico'>4to Basico</option>
+						<option value='5to Basico'>5to Basico</option>
+						<option value='6to Basico'>6to Basico</option>
+						<option value='7mo Basico'>7mo Basico</option>
+						<option value='8vo Basico'>8vo Basico</option>
+						<option value='1ro Medio'>1ro Medio</option>
+						<option value='2do Medio'>2do Medio</option>
+						<option value='3ro Medio'>3ro Medio</option>
+						<option value='4to Medio'>4to Medio</option>
+					</select>
+				</div>
 			</div>
 			<div>
 				<div class='span3'>Colegio Anterior:</div>
@@ -150,7 +156,8 @@ while($results = mysql_fetch_array($estudiantesSQL)){
 					<button id='submitAlumno$i' class='submitAlumno btn btn-primary' helper_id='$rut' helper_c='$i'>Enviar</button><br><br>
 				</div>
 			</div>
-		</div>";
+		</div>
+		<script>$('#curso$i').val($curso)</script>";
 }
 
 echo $apoderadoEcono;

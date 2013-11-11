@@ -14,15 +14,13 @@ $db_selected = mysql_select_db($base_de_datos);
 
 $rut = $_REQUEST['rut'];
 $fechaNac = $_REQUEST['fechaNac'];
-$fechaIns = $_REQUEST['fechaIns'];
 $curso = $_REQUEST['curso'];
 $colegioAnt = $_REQUEST['colegioAnt'];
 
 
 $update = mysql_query("UPDATE NINO 
 						SET 
-							FechaNac='$fechaNac', 
-							FechaIns= '$fechaIns',
+							FechaNac='$fechaNac',
 							Curso= '$curso',
 							Colegio_anterior= '$colegioAnt'
 						WHERE RUT=$rut");

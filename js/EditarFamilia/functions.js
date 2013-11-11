@@ -40,7 +40,6 @@ $(".submitApoderado").click(function(){
 		data: {
 			rut: rut,
 			fechaNac: fechaNac,
-			fechaIns: fechaIns,
 			profesion: profesion,
 			direccion: direccion,
 			email: email,
@@ -79,7 +78,6 @@ $(".submitAlumno").click(function(){
 		data: {
 			rut: rut,
 			fechaNac: fechaNac,
-			fechaIns: fechaIns,
 			curso: curso,
 			colegioAnt: colegioAnt
 			},
