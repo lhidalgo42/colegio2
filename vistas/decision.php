@@ -70,7 +70,7 @@ verificarIP();
 
         <?php
             if ($_SESSION['idMatriculas'] != false){
-			echo'<a href="decision2.php?id=1" class="btn btn-large btn-block">Matricular</a>';
+			echo'<a href="decision2.php" class="btn btn-large btn-block">Matricular</a>';
                
             }
             if ($_SESSION['idContabilidad'] != false){
@@ -85,9 +85,6 @@ verificarIP();
 
 
 
-        </div> <!-- /container -->
-
-
-
+        </div>
     </body>
 </html>

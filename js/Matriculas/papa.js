@@ -1,5 +1,4 @@
-function GuardarPapa(I)
-{
+function GuardarPapa(I){
 var Nombre = $("#inputNombre").val();
 var Apellido = $("#inputApellidoP").val();
 	if(I==0)
@@ -49,8 +48,7 @@ var Apellido = $("#inputApellidoP").val();
 	CerrarPapa();
 	$('#myModalPapa').modal('hide');
 }	
-function MostrarPadre(I)
-{
+function MostrarPadre(I){
 	$("#guardarPapa").attr("onClick","GuardarPapa("+I+")");
 	if(I==0)
 	{
@@ -86,8 +84,7 @@ function MostrarPadre(I)
 	}
 		$('#myModalPapa').modal('show');
 }
-function CerrarPapa()
-{
+function CerrarPapa(){
 $("#inputRUT").val('');
 $("#inputNombre").val('');
 $("#inputApellidoP").val('');

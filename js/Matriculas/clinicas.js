@@ -29,12 +29,11 @@ $("#montoLetraC").val(39000);
 $("#montoChequeC").val(39000);
 $("#tipoC").html("");
 }
-if (I == 3)
-{
+if (I == 3){
 $("#tipoC").html("<div class='control-group'><label class='control-label' for='NombreC'>Ingrese Nombre de la Clinica</label> <div class='controls'><input type='text' id='NombreC' placeholder='Nombre'></div></div>");
 $("#montoEfectivoC").val("");
 $("#montoLetraC").val("");
-$("#montoChequeC").val("");    
+$("#montoChequeC").val("");
 }
 }
 function MostrarC(I){
@@ -83,15 +82,15 @@ CerrarC()
 $('#myModalC').modal('hide');
 }
 function CerrarC(){
-	$("#myModalC").children(".modal-body").children().children(".btn-group").children(".active").removeClass("active");
-	$('#tipoPC1').css('display','none');
-	$("#bancoChequeC").val("");
-	$("#numeroChequeC").val("");
-	$("#montoChequeC").val("");		
-	$('#tipoPC2').css('display','none');
-	$("#numeroLetraC").val("");
-	$("#montoLetraC").val("");
-	$('#tipoPC3').css('display','none');
-	$("#montoEfectivoC").val("");
-	$("#tipoC").html("");
+    $("#myModalC").children(".modal-body").children().children(".btn-group").children(".active").removeClass("active");
+    $('#tipoPC1').css('display','none');
+    $("#bancoChequeC").val("");
+    $("#numeroChequeC").val("");
+    $("#montoChequeC").val("");
+    $('#tipoPC2').css('display','none');
+    $("#numeroLetraC").val("");
+    $("#montoLetraC").val("");
+    $('#tipoPC3').css('display','none');
+    $("#montoEfectivoC").val("");
+    $("#tipoC").html("");
 }

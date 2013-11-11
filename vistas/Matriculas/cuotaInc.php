@@ -5,7 +5,7 @@
 	
 	$data2=Select::BuscarUF(date('Y-m-d'));
 	$data=str_replace(".",",",$data2['Valor'])?>
-</div><div class="span1" id="valor">0 UF</div><div class="span2" id="uf" iduf="<?php echo $data2['ID']; ?>" uf="<?php echo $data2['Valor']; ?>"> Valor UF <?php echo"".substr($data, 0, 2-strlen($data)).".".substr($data, 2, 6).""; ?> </div><div class="2"id="hoy"></div>
+</div><div class="span1" id="valor">0 UF</div><div class="span2" id="uf" iduf="<?php echo $data2['ID']; ?>" uf="<?php echo $data2['Valor']; ?>"> Valor UF <?php echo"".substr($data, 0, 2-strlen($data)).".".substr($data, 2, 6).""; ?> </div><div class="2" id="hoy"></div>
 <table  width="100%" border="1" class="table table-bordered" id="tablaCuotaINC">
 <thead>
   <tr>

@@ -4,7 +4,7 @@ class Query {
 /* verifica la Clave del Login */
     public static function VerificarClave($rut, $pass) {
         $pass = md5($pass);
-        $queryString = "SELECT * FROM persona WHERE RUT = '$rut' AND Clave = '$pass';";
+        $queryString = "SELECT * FROM persona WHERE RUT = '".$rut."' AND Clave = '".$pass."';";
         if (CallQuery($queryString)->num_rows != 1) {
             return false;
         }
@@ -45,6 +45,37 @@ class Query {
             $resultArray[] = $fila;
         }
         return $resultArray;
+    }
+    public static function BuscarPagoEntre($fecha1,$fecha2) {
+        $queryString = "SELECT *
+                        FROM pago
+                        WHERE Fecha
+                        BETWEEN  '".$fecha1."'
+                        AND  '".$fecha2."'";
+        $result = CallQuery($queryString);
+        $resultArray = array();
+        while ($fila = $result->fetch_assoc()) {
+            $resultArray[] = $fila;
+        }
+        return $resultArray;
+    }
+    public static function BuscarUFDate($fecha) {
+        $queryString = "SELECT *
+                        FROM  uf
+                        WHERE  Fecha =  '".$fecha."'";
+        if (CallQuery($queryString)->num_rows != 1) {
+            return false;
+        }
+        else
+            return true;
+    }
+    public static function BuscarUF() {
+        $queryString = 'SELECT *
+                        FROM uf
+                        ORDER BY Fecha DESC';
+        $result = CallQuery($queryString);
+        $fila = $result->fetch_assoc();
+        return $fila;
     }
    }
 ?>

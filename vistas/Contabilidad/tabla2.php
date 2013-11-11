@@ -43,35 +43,89 @@ verificarIP(); ?>
 				margin-bottom: 10px;
 			}
 		</style>
-		<script type="text/css">
-		$(function() {
-			$('input').keyup(function() {
-				this.value = this.value.toUpperCase();
-			});
-		});
-		</script>
 	</head>
 	<body>
-    <table class="table table-condensed">
-    	<tr>
-        <td><h3>Buscar Pagos por Fecha</h3></td>
-        <td><select class="input-large" id="mes" name="mes">
-        <option>Sleccione un Mes</option>
-        <option value="1">Enero</option>
-        <option value="2">Febrero</option>
-        <option value="3">Marzo</option>
-        <option value="4">Abril</option>
-        <option value="5">Mayo</option>
-        <option value="6">Junio</option>
-        <option value="7">Julio</option>
-        <option value="8">Agosto</option>
-        <option value="9">Septiembre</option>
-        <option value="10">Octubre</option>
-        <option value="11">Noviembre</option>
-        <option value="12">Diciembre</option>
-        </select></td>
-        </tr>
-    </table>
 
+    <div style="padding-top:115px; " class="container-fluid">
+        <div class="span6">
+            <h3>Buscar Pagos por Fecha</h3>
+        </div>
+        <div class="span3">
+            <select class="span3" id="anio" name="mes">
+                <option>Seleccione un Año</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+            </select>
+            </div>
+        <div class="span3">
+        <select class="span3" id="mes" name="mes">
+            <option>Seleccione un Mes</option>
+            <option value="1">Enero</option>
+            <option value="2">Febrero</option>
+            <option value="3">Marzo</option>
+            <option value="4">Abril</option>
+            <option value="5">Mayo</option>
+            <option value="6">Junio</option>
+            <option value="7">Julio</option>
+            <option value="8">Agosto</option>
+            <option value="9">Septiembre</option>
+            <option value="10">Octubre</option>
+            <option value="11">Noviembre</option>
+            <option value="12">Diciembre</option>
+        </select>
+        </div>
+<div class="clearfix"></div>
+    <div id="data">
+
+    </div>
+  </div>
+
+    <script>
+        var mes = $("#mes").val();
+        var anio = $("#anio").val();
+
+    if(mes != "" && anio != "")
+    {
+    $("#mes").change(function() {
+
+        $.ajax({
+            async:false,
+            dataType:"html",
+            type: 'POST',
+            url: "../../ajax/ajaxPago.php",
+            data: {mes:mes,anio:anio},
+            success:  function(respuesta){
+                $("#data").html(respuesta);
+            },
+            beforeSend:function(){
+                $("#data").html("<img src='../../img/ajax-loading.gif'>")
+            },
+            error:function(objXMLHttpRequest){
+                $("#data").html(objXMLHttpRequest)
+            }
+        });
+    });
+        $("#anio").change(function() {
+
+            $.ajax({
+                async:false,
+                dataType:"html",
+                type: 'POST',
+                url: "../../ajax/ajaxPago.php",
+                data: {mes:mes,anio:anio},
+                success:  function(respuesta){
+                    $("#data").html(respuesta);
+                },
+                beforeSend:function(){
+                    $("#data").html("<img src='../../img/ajax-loading.gif'>")
+                },
+                error:function(objXMLHttpRequest){
+                    $("#data").html(objXMLHttpRequest)
+                }
+            });
+        });
+    }
+    </script>
 	</body>
 </html>

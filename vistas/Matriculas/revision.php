@@ -208,7 +208,7 @@ $data=$_SESSION['envio']; ?>
         </div>
         <div class="clearfix"></div>
         <div class="span12" style="text-align:center;">
-            <button onClick="history.go(-1)" class="btn btn-danger btn-large span5">Volver y Corregir Datos</button>
+            <button onClick='window.location.href = "edit.php";' class="btn btn-danger btn-large span5">Volver y Corregir Datos</button>
            <button onClick="preguntar()" class="btn btn-success btn-large span5">Terminar</button>
            </div>
        </div>

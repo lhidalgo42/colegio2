@@ -39,8 +39,8 @@ class Insert {
 			$query = CallQueryReturnID($queryString);
 			return $query; 
 	}
-		public static function Pago($numero,$monto,$fecha,$banco,$tipo) {
-        $queryString = "INSERT INTO pago (Numero, Monto, Fecha, Bancos_ID, tipo_ID,Fecha_Ins) VALUES ('".$numero."','".$monto."', '".$fecha."', '".$banco."', '".$tipo."',NOW());";
+		public static function Pago($numero,$monto,$fecha,$banco,$tipo,$rutPapa) {
+        $queryString = "INSERT INTO pago (Numero, Monto, Fecha, Bancos_ID, tipo_ID,Fecha_Ins,papas_RUT) VALUES ('".$numero."','".$monto."', '".$fecha."', '".$banco."', '".$tipo."',NOW(), '".$rutPapa."');";
 			$query = CallQueryReturnID($queryString);
 			return $query; 
 	}
@@ -56,6 +56,11 @@ class Insert {
         $queryString = "INSERT INTO pago_seguro_escolar_has_pago (pago_seguro_escolar_ID, pago_ID) VALUES ('".$PagoSeguroID."','".$pagoID."');";
 			$query = CallQuery($queryString);
 	}
+    public static function UF($valor,$fecha) {
+        $queryString = "INSERT INTO uf (Valor ,Fecha) VALUES ('".$valor."',  '".$fecha."')";
+        $query = CallQueryReturnID($queryString);
+        return $query;
+    }
 
    }
 ?>

@@ -182,7 +182,7 @@
       <input type="text" id="inputRUT" placeholder="Rut" required>
     </div>
   </div>
-   <p><center><span id="mensaje2" class="alert-danger"></span></center></p>
+  <span id="mensaje2" class="alert-danger"></span>
   <div class="control-group">
     <label class="control-label" for="inputNombre">Nombre</label>
     <div class="controls">

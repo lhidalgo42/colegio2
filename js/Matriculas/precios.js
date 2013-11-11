@@ -1,4 +1,3 @@
-// JavaScript Document	
 var actualizar3 = setInterval(function(){
  var val = new Array();
  var c= 0;
@@ -34,6 +33,7 @@ var actualizar3 = setInterval(function(){
  var val = new Array();
 var total = 0;
 var totalMat = 0;
+    var cuotas=$("#cuotas").val()
 var monto = new Array();
 var mat = new Array();
  var length = $( "select[id*='Curso'] option:selected" ).length;
@@ -66,9 +66,7 @@ var mat = new Array();
    monto[i]=monto[i]*(100-beca)/100;}
    total=total+monto[i];
    totalMat =totalMat+mat[i];
-	
- }
- cuotas=$("#cuotas").val()
+  }
  total=total*10/cuotas;
  totalMat = totalMat/cuotas;
   total=Math.round(total);

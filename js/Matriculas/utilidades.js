@@ -6,7 +6,8 @@ $(".cAlm").keyup(function(){
     }
     $("#CouTAlm").html(total);
 });
-var actualizar = setInterval(function(){
+
+ $("input").keyup(function(){
     var cuotas = +$('#cuotas').val();
     var cuotasInc = +$("#cuotaInc").val();
     var col = 0;
@@ -34,9 +35,8 @@ var actualizar = setInterval(function(){
     $('#DeuT').html(deu);
     $('#TotalT').html(totalReal);
     $("#familia").val(""+$("#modalPAPA").attr("apellido1")+" "+$("#modalMAMA").attr("apellido1")+"");
-},500);
-
-var actualizar2 = setInterval(function(){
+});
+$("input").keyup(function(){
     var cuotas = +$('#cuotaInc').val();
     var cuo = 0;
     var totalCol = 0;
@@ -50,7 +50,7 @@ var actualizar2 = setInterval(function(){
     }
     $('#CuoTInc').html(cuo);
     $('#TotalTInc').html(totalReal);
-},500);
+});
 function siguente(){
     var familia = new Array();
     familia[0] = $("#familia").val();
@@ -149,7 +149,6 @@ function enviar(){
             $("#ayuda").html(data);
         }
     });}
-
 function curso(I){
     var curso = $('#Curso'+I).val();
     if(curso == "Kinder"){
@@ -165,13 +164,15 @@ function curso(I){
         $("#modalPM"+I).attr("monto",valor)
     }
 }
-
 function beca(I){
     var beca = parseFloat($("#1sem"+I).val());
     $("#2sem"+I).val(beca);
+    function fail(){
+        $('#mensaje').html("<h2>El rut ingresado no es válido</h2>");
+        $('#mensaje2').html("<small><h4>El rut ingresado no es válido</h4><small>");
+    }
 }
-function verificarRut( Objeto )
-{
+function verificarRut( Objeto ){
     var tmpstr = "";
     $('#mensaje').html("");
     $('#mensaje2').html("");
@@ -182,8 +183,7 @@ function verificarRut( Objeto )
         largo = crut.length;
         if ( largo <2 )
         {
-            $('#mensaje').html("<h2>El rut ingresado no es válido</h2>");
-            $('#mensaje2').html("<small><h4>El rut ingresado no es válido</h4><small>");
+               fail()
             Objeto.focus();
             return false;
         }
@@ -245,7 +245,6 @@ $('#valeS1').keyup(function(){
     $("#valeS3").val(vale);
     $("#valeS4").val(vale);
 })
-
 $('#bolM1').keyup(function(){
     var boleta = $('#bolM1').val();
     $('#bolM2').val(boleta);

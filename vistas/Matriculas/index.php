@@ -18,7 +18,8 @@ verificarIP(); ?>
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button,
 input[type=date]::-webkit-inner-spin-button,
-input[type=date]::-webkit-outer-spin-button {
+input[type=date]::-webkit-outer-spin-button,
+input[type=date]::-webkit-writing-mode{
     -webkit-appearance: none;
     margin: 0;
 }
@@ -44,13 +45,13 @@ width: 600px;
 	margin-bottom: 10px;
 }
 </style>
-<script>
+<!-- <script>
 $(function() {
     $('input').keyup(function() {
         this.value = this.value.toUpperCase();
     });
 });
-</script>
+</script> -->
 </head>
 <body>
 <div class="container-fluid">
@@ -76,17 +77,20 @@ $(function() {
 <button type="submit" class="btn btn-success btn-block btn-large"><strong>Siguente</strong></button> 
 </form>
 </div>
+
 <script src="../../js/Matriculas/pagos.js"></script>
 <script src="../../js/Matriculas/clinicas.js"></script>
 <script src="../../js/Matriculas/papa.js"></script>
 <script src="../../js/Matriculas/nino.js"></script>
 <script src="../../js/Matriculas/utilidades.js"></script>
 <script src="../../js/Matriculas/precios.js"></script>
+<script src="../../js/Matriculas/validacion.js"></script>
+
 <script>
+
 var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
 var f=new Date();
 $("#hoy").html(f.getDate() + " de " + meses[f.getMonth()] + " del " + f.getFullYear());
-$( "input[type=date]" ).val(f.getYear()+"-"+f.getMonth()+"-"+f.getDate());
 var fechaPago = f.getFullYear() + 1;
 $(".fixedDateClinica").val(fechaPago+"-03-15");
 $(".fixedDateMatricula").val(fechaPago+"-01-07");
@@ -98,9 +102,77 @@ function preguntar(){
 if (confirmar){
 siguente()
 }
-} 
+}
+$(document).ready(function(){
+    $("input").change(
+        function(){
+            var id = $(this.id)
+            alert(id)
+            $("#ayuda").html(id)
+
+
+        }
+        );
+});
+
 </script>
 <?php include("modal.php"); ?>
+<?php include_once"../../datos/Querys.php";
+if(!Query::BuscarUFDate(date('Y-m-d'))){ ?>
+    <script>
+        $(document).ready(function() {
+            $("#modalUF").modal('show');
+        });
+    </script>
+<?php } ?>
+<div id="modalUF" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Valores UF</h3>
+    </div>
+    <div class="modal-body">
+        <form action="javascript:GUF()"
+        <h4>El valor de la UF se encuentra desactualizado .</h4>
+        <p>Ingrese el valor de la UF del Dia de Hoy .</p>
+       <a href="#"><input type="text" placeholder="ej 12345.67" id="valuf" class="input-large" pattern=".{7,10}" ></a>
+        <p><small>Valores los puede encontrar en</small> <a href="http://www.sii.cl/pagina/valores/uf/uf2013.htm#contenido" target="_blank" onClick="window.open(this.href, this.target, 'width=870,height=700'); return false;">SII Valores UF</a></p>
+       </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal">Cerrar</button>
+        <button class="btn btn-primary" type="submit">Guardar Cambios</button>
+        </form>
+    </div>
+</div>
+<script>
+    function GUF(){
+        var UF = $("#valuf").val();
+        $.ajax({
+            url: "../../ajax/uf.php",
+            data: {UF:UF},
+            type: "POST",
+            success: function(data) {
+            if(data==1){
+                alert('Cambios Guardados Correctamente');
+                $('#modalUF').modal('hide');
+            }
+            else{
+                $("#modalUF").html("Ha Ocurrido un Error");
+                location.reload();
 
+
+            }
+        }
+        });
+    }
+    $(function () {
+        $('#valuf').popover({
+            title: 'Ultimo Valor Conocido',
+            <?php $ufpasada=Query::BuscarUF();?>
+            content: '<?php echo "".$ufpasada['Valor']." - ".$ufpasada['Fecha'].""; ?>',
+            placement: 'right'
+        });
+    });
+
+</script>
 </body>
 </html >;

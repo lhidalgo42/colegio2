@@ -1,5 +1,4 @@
-function MostrarNino(I)
-{	
+function MostrarNino(I){
 	var tipo =$("#modalNino"+I).attr("sexo")
 	$("#SelectSexoMN").children("button[idval='"+tipo+"']").addClass("active");
 	$("#guardarNino").attr("onClick","GuardarNino("+I+")")
@@ -11,8 +10,8 @@ function MostrarNino(I)
 	$("#inputCPast").val($("#modalNino"+I).attr("colegioanterior"));
 	$('#myModalNino').modal('show');
 }
-function CerrarNino()
-{ 	$("#inputRutN").val('');
+function CerrarNino(){
+    $("#inputRutN").val('');
 	$("#inputNombreN").val('');
 	$("#inputApellidoPN").val('');
 	$("#inputApellidoMN").val('');
@@ -20,8 +19,7 @@ function CerrarNino()
 	$("#inputCPast").val('');
 	$("#SelectSexoMN").children(".active").removeClass("active");
 }
-function GuardarNino(I)
-{
+function GuardarNino(I){
 var Nombre = $("#inputNombreN").val();
 var Apellido = $("#inputApellidoPN").val();
 if(Nombre != "" || Apellido != "")
