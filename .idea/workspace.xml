@@ -54,7 +54,7 @@
       <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vistas/Matriculas/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="163" column="9" selection-start="5463" selection-end="5463" vertical-scroll-proportion="0.41491395" vertical-offset="2554" max-vertical-offset="3111">
+            <state line="109" column="43" selection-start="3545" selection-end="3545" vertical-scroll-proportion="0.5449331" vertical-offset="1568" max-vertical-offset="2924">
               <folding>
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -857,7 +857,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vistas/Matriculas/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="163" column="9" selection-start="5463" selection-end="5463" vertical-scroll-proportion="0.41491395" vertical-offset="2554" max-vertical-offset="3111">
+        <state line="109" column="43" selection-start="3545" selection-end="3545" vertical-scroll-proportion="0.5449331" vertical-offset="1568" max-vertical-offset="2924">
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>

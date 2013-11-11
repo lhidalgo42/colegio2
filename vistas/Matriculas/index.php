@@ -103,17 +103,6 @@ if (confirmar){
 siguente()
 }
 }
-$(document).ready(function(){
-    $("input").change(
-        function(){
-            var id = $(this.id)
-            alert(id)
-            $("#ayuda").html(id)
-
-
-        }
-        );
-});
 
 </script>
 <?php include("modal.php"); ?>
