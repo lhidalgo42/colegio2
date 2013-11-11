@@ -59,7 +59,7 @@ while($results = mysql_fetch_array($papasSQL)){
 		<div class='apoderadoInfo $rut'>
 			<div>
 				<div class='span3'>Fecha de Nacimiento:</div>
-				<div class='span4'><input type='text' id='fechaN$i' value='$fechaNacimiento'></div>
+				<div class='span4'><input type='date' id='fechaN$i' value='$fechaNacimiento'></div>
 			</div>
 			<div>
 				<div class='span3'>Profesion:</div>
@@ -71,7 +71,7 @@ while($results = mysql_fetch_array($papasSQL)){
 			</div>
 			<div>
 				<div class='span3'>Email:</div>
-				<div class='span4'><input type='text' id='email$i' value='$email'></div>
+				<div class='span4'><input type='email' id='email$i' value='$email'></div>
 			</div>
 			<div>
 				<div class='span3'>Lugar de Trabajo:</div>
@@ -83,7 +83,7 @@ while($results = mysql_fetch_array($papasSQL)){
 			</div>
 			<div>
 				<div class='span3'>Telefonos:</div>
-				<div class='span4'><input type='text' id='telefonos$i' value='$telefonos'></div>
+				<div class='span4'><input type='number' id='telefonos$i' value='$telefonos'></div>
 			</div>
 			<div class='bottom'>
 				<div class='span3'></div>
@@ -124,7 +124,7 @@ while($results = mysql_fetch_array($estudiantesSQL)){
 		<div class='alumnoInfo $rut'>
 			<div>
 				<div class='span3'>Fecha de Nacimiento:</div>
-				<div class='span4'><input type='text' id='fechaN$i' value='$fechaNacimiento'></div>
+				<div class='span4'><input type='date' id='fechaN$i' value='$fechaNacimiento'></div>
 			</div>
 			<div>
 				<div class='span3'>Curso:</div>
@@ -139,10 +139,6 @@ while($results = mysql_fetch_array($estudiantesSQL)){
 						<option value='6to Basico'>6to Basico</option>
 						<option value='7mo Basico'>7mo Basico</option>
 						<option value='8vo Basico'>8vo Basico</option>
-						<option value='1ro Medio'>1ro Medio</option>
-						<option value='2do Medio'>2do Medio</option>
-						<option value='3ro Medio'>3ro Medio</option>
-						<option value='4to Medio'>4to Medio</option>
 					</select>
 				</div>
 			</div>
