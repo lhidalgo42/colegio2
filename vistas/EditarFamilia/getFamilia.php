@@ -113,7 +113,7 @@ while($results = mysql_fetch_array($estudiantesSQL)){
 	$fechaNacimiento = $results['FechaNac'];
 	$fechaInscripcion = $results['FechaIns'];
 	$curso = $results['Curso'];
-	$colegioAnterior = $results['Colegio_Anterior'];
+	$colegioAnterior = $results['Colegio_anterior'];
 	
 	//Cambiar a mayusculas
 	$nombre = strtoupper($nombre);
