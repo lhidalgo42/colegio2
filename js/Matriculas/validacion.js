@@ -1,5 +1,6 @@
 
 function validacion (){
-    var id = $(this).attr("id");
+    var $this = $(this);
+    var id = $this.attr("id");
 alert(id);
 }
