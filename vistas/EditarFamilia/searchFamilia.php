@@ -1,40 +1,38 @@
 <?php
 //Iniciar Coneccion Base de Datos
 include('../../datos/dbconfig.php');
-$mysqlCon = new mysqli($servidor,$nombre_usuario,$contrasena,$base_de_datos);
-$mysqlCon->set_charset("utf8");
-if($mysqlCon->errno) {
-	printf("Conexion fallida: %s\n", $mysqli->connect_error);
-	exit();
-}
+
+$con = mysql_connect($servidor, $nombre_usuario, $contrasena);
+if (!$con)
+  {
+  die('Could not connect: ' . mysql_error());
+  }
+
+$db_selected = mysql_select_db($base_de_datos);
 
 //Buscar Datos
 
 $keyword = $_REQUEST['keyword'];
 
-$familia = mysql_query("SELECT * 
-						FROM familia F 
-						JOIN papas P 
-						ON F.id = P.familia_ID 
-						WHERE FAMILIA LIKE '%$keyword%'
-						AND P.Apoderado_Economico = 1");
-						
-while($results = mysql_fetch_array($familia)){
+$familiaSQL = mysql_query("SELECT DISTINCT ID, FAMILIA FROM FAMILIA F JOIN PAPAS P ON F.ID = P.FAMILIA_ID WHERE FAMILIA LIKE '%$keyword%'");
+
+//Mostrar Resultados
+
+echo "<table class='table table-striped'>";
+
+while($results = mysql_fetch_array($familiaSQL)){
 	$id = $results['ID'];
-	$familia = $results['Familia'];
-	$sostenedor = $results['Nombre']." ".$results['Apellido1']." ".$results['Apellido2'];
-	echo "<div class='result'>
-			<div class='span4'>Familia $familia</div>
-			<div class='span4'>Sostenedor Economico: $sostenedor</div>
-			<div class='span4'><button class='editar btn btn-primary'>Editar</button></div>
-		</div>";
-<<<<<<< HEAD
-=======
-	echo $results['ID'];
->>>>>>> 74e326a256718d2702e5cfb4702acc65c7ed6938
+	$familia = $results['FAMILIA'];
+	$familiaUpper = strtoupper($familia);
+	echo "<tr>
+			<td class='span4'>FAMILIA $familiaUpper</td>
+			<td class='span1'><button id='$id' class='editar btn btn-primary'>Editar</button></td>
+		</tr>";
 }
 
+echo "</table>";
+echo "<script src='../../js/EditarFamilia/functions.js'></script>";
 
 //Cerrar Coneccion
-mysql_close($mysqlCon);
+mysql_close($con);
 ?>

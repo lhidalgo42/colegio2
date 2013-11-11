@@ -39,11 +39,18 @@ width: 600px;
 
 .table{
 	margin-top: 30px;
+	margin-bottom: 15px;
 }
 
 .alumnoInfo, .apoderadoInfo{
 	display: none;
 }
+
+.familiaID{
+	margin-bottom: 30px;
+}
+
+
 </style>
 <script type="text/css">
 $(function() {
@@ -61,11 +68,13 @@ $(function() {
 			<div class="span2"><input type="text" id="searchBar" name="keyword"></div>
 		</div>
 		<div class="results">
-			<div class="span8 offset2" id="results"></div>
+			<div class="span8 offset2" id="results"><?php include "getFamilia.php"; ?></div>
 		</div>
-		
 	</div>
-	<div class="familiaID"><input type="hidden" id="familiaID"></div>
+	<div class="familiaID"><input type="hidden" id="familiaID" value="<?php echo $id?>"></div>
+	<div id="dialog" title="Basic dialog">
+		<p>Actualizando Informacion</p>
+	</div>
 <script src="../../js/EditarFamilia/functions.js"></script>
 </body>
 </html>
