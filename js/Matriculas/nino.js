@@ -72,6 +72,7 @@ function CerrarPM(){
 	$("#montoEfectivoPM").val("");
 }
 function GuardarPM(I){
+    if(I!=1){
 	$("#modalPM"+I).html($("#mymodalPM").children(".modal-body").children().children(".btn-group").children(".active").html());
 	$("#modalPM"+I).attr("tipo",$("#myModalPM").children(".modal-body").children().children(".btn-group").children(".active").attr("idval"));
 	if($("#myModalPM").children(".modal-body").children().children(".btn-group").children(".active").attr("idval") == "Cheque"){
@@ -89,6 +90,26 @@ function GuardarPM(I){
 	$("#modalPM"+I).attr("numero","");
 	$("#modalPM"+I).attr("monto",$("#montoEfectivoPM").val());
 	}
+    }
+    else{
+        $("a[id*='modalPM']").html($("#mymodalPM").children(".modal-body").children().children(".btn-group").children(".active").html());
+        $("a[id*='modalPM']").attr("tipo",$("#myModalPM").children(".modal-body").children().children(".btn-group").children(".active").attr("idval"));
+        if($("#myModalPM").children(".modal-body").children().children(".btn-group").children(".active").attr("idval") == "Cheque"){
+            $("a[id*='modalPM']").attr("banco",$("#bancoChequePM").val());
+            $("a[id*='modalPM']").attr("numero",$("#numeroChequePM").val());
+            $("a[id*='modalPM']").attr("monto",$("#montoChequePM").val());
+        }
+        else if ($("#myModalPM").children(".modal-body").children().children(".btn-group").children(".active").attr("idval") == "Letra"){
+            $("a[id*='modalPM']").attr("banco","");
+            $("a[id*='modalPM']").attr("numero",$("#numeroLetraPM").val());
+            $("a[id*='modalPM']").attr("monto",$("#montoLetraPM").val());
+        }
+        else if ($("#myModalPM").children(".modal-body").children().children(".btn-group").children(".active").attr("idval") == "Efectivo"){
+            $("a[id*='modalPM']").attr("banco","")
+            $("a[id*='modalPM']").attr("numero","");
+            $("a[id*='modalPM']").attr("monto",$("#montoEfectivoPM").val());
+        }
+    }
 	CerrarPM();
 	$('#myModalPM').modal('hide');
 }
@@ -106,5 +127,4 @@ $("#numeroChequePM").val($("#modalPM"+I).attr("numero"));
 $("#montoChequePM").val($("#modalPM"+I).attr("monto"));
 $("#guardarPM").attr("onClick","GuardarPM("+I+")")
 $('#myModalPM').modal('show');
-	
 }

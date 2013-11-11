@@ -856,6 +856,7 @@ verificarIP(); ?>
         <a href="#" data-dismiss="modal" id="cerrarPM" class="btn" onclick="CerrarPM()">Cerrar</a>
     </div>
 </div>
+<?php print_r($_SESSION['envio']); ?>
 
 
 ;</body></html>

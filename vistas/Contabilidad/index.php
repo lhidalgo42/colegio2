@@ -82,13 +82,9 @@ verificarIP(); ?>
   </div>
 
     <script>
+    $("select#mes").change(function() {
         var mes = $("#mes").val();
         var anio = $("#anio").val();
-
-    if(mes != "" && anio != "")
-    {
-    $("#mes").change(function() {
-
         $.ajax({
             async:false,
             dataType:"html",
@@ -106,8 +102,9 @@ verificarIP(); ?>
             }
         });
     });
-        $("#anio").change(function() {
-
+        $("select#anio").change(function() {
+            var mes = $("#mes").val();
+            var anio = $("#anio").val();
             $.ajax({
                 async:false,
                 dataType:"html",
@@ -125,7 +122,6 @@ verificarIP(); ?>
                 }
             });
         });
-    }
     </script>
 	</body>
 </html>

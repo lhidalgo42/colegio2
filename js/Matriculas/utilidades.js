@@ -7,7 +7,7 @@ $(".cAlm").keyup(function(){
     $("#CouTAlm").html(total);
 });
 
- $("input").keyup(function(){
+var actualizar1 = setInterval(function(){
     var cuotas = +$('#cuotas').val();
     var cuotasInc = +$("#cuotaInc").val();
     var col = 0;
@@ -35,8 +35,8 @@ $(".cAlm").keyup(function(){
     $('#DeuT').html(deu);
     $('#TotalT').html(totalReal);
     $("#familia").val(""+$("#modalPAPA").attr("apellido1")+" "+$("#modalMAMA").attr("apellido1")+"");
-});
-$("input").keyup(function(){
+},500);
+var actualizar2 = setInterval(function(){
     var cuotas = +$('#cuotaInc').val();
     var cuo = 0;
     var totalCol = 0;
@@ -50,7 +50,7 @@ $("input").keyup(function(){
     }
     $('#CuoTInc').html(cuo);
     $('#TotalTInc').html(totalReal);
-});
+},500);
 function siguente(){
     var familia = new Array();
     familia[0] = $("#familia").val();
@@ -223,8 +223,7 @@ function verificarRut( Objeto ){
         }
         if ( dvr != dv.toLowerCase() )
         {
-            $('#mensaje').html("<h2>El rut ingresado no es válido</h2>");
-            $('#mensaje2').html("<small><h4>El rut ingresado no es válido</h4></small>");
+            fail()
             Objeto.focus();
             return false;
         }

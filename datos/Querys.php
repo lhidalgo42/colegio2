@@ -53,6 +53,7 @@ class Query {
                         BETWEEN  '".$fecha1."'
                         AND  '".$fecha2."'";
         $result = CallQuery($queryString);
+        echo $queryString;
         $resultArray = array();
         while ($fila = $result->fetch_assoc()) {
             $resultArray[] = $fila;

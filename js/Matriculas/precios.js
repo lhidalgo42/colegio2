@@ -6,19 +6,41 @@ var actualizar3 = setInterval(function(){
 	  var b = i+1;
 	var dato = $( "select[id*='Curso'] option:selected" )[i];
 	val.push($(dato).val());
-  if(val[i]=="Kinder" || val[i]=="" || $("#modalNino"+b).attr("nuevo")==1){
+  if(val[i]=="Kinder" || val[i]==""){
   c++;	
   }//fin if
  }//fin for
  var cantidad = length-c;
  if(cantidad==0)
- var valor = 0;
+ var debe = 0;
  else if(cantidad== 1)
- var valor = 32;
+ var debe = 32;
  else if(cantidad==2)
- var valor = 42;
- else
- var valor = 50;
+ var debe = 42;
+ else{
+ var debe = 50;
+ }
+    var n =0;
+ for (var b = 0;b<length;b++)
+    {
+        var i = b+1;
+    var nuevo = parseFloat($("#modalNino"+i).attr("nuevo"));
+        console.log(nuevo)
+        if(nuevo==0){
+            n++;
+        }
+    }
+    if(n==0)
+    var pago = 0;
+    else if(n==1)
+    var pago = 32;
+    else if(n==2)
+    var pago = 42;
+    else
+    var pago = 50;
+    var valor = debe-pago;
+    if(valor<0)
+    var valor =0;
  $("#valor").html(valor+" UF");
  var uf = $("#uf").attr("uf");
  cuotas = $("#cuotaInc").val()
@@ -73,5 +95,5 @@ var mat = new Array();
   totalMat=Math.round(totalMat);
   $("input[id*='Col']").val(total)
   $("input[id*='Mat']").val(totalMat)
-},500);
+},500)
 
