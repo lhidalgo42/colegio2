@@ -39,9 +39,8 @@ echo "<td valign='top'>" . nl2br( $row['Lugar_Trabajo']) . "</td>";
 echo "<td valign='top'>" . nl2br( $row['Direccion_Trabajo']) . "</td>";  
 echo "<td valign='top'>" . nl2br( $row['Telefonos']) . "</td>";  
 echo "<td valign='top'>" . nl2br( $row['comunas_ID']) . "</td>";  
-echo "<td valign='top'><a href=edit.php?RUT={$row['RUT']}>Editar</a></td><td><a href=delete.php?RUT={$row['RUT']}>Borrar</a></td> "; 
+echo "<td valign='top'><a href=edit.php?RUT={$row['RUT']}>Editar</a></td>";
 echo "</tr>"; 
 } 
 echo "</table>"; 
-echo "<a href=new.php>Nueva Fila</a>"; 
 ?>

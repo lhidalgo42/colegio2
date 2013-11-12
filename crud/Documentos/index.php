@@ -26,10 +26,9 @@ echo "<td valign='top'>" . nl2br( $row['Cuota_Inc']) . "</td>";
 echo "<td valign='top'>" . nl2br( $row['Almuerzo']) . "</td>";  
 echo "<td valign='top'>" . nl2br( $row['Deuda']) . "</td>";  
 echo "<td valign='top'>" . nl2br( $row['Observaciones']) . "</td>";  
-echo "<td valign='top'>" . nl2br( $row['UF_ID']) . "</td>";  
-echo "<td valign='top'><a href=edit.php?ID={$row['ID']}>Editar</a></td><td><a href=delete.php?ID={$row['ID']}>Borrar</a></td> "; 
-echo "</tr>"; 
+echo "<td valign='top'>" . nl2br( $row['UF_ID']) . "</td>";
+echo "<td valign='top'><a href=edit.php?ID={$row['ID']}>Editar</a></td> ";
+echo "</tr>";
 } 
-echo "</table>"; 
-echo "<a href=new.php>Nueva Fila</a>"; 
+echo "</table>";
 ?>
