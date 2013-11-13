@@ -22,7 +22,7 @@ echo "<table class='table table-striped'>";
 
 while($results = mysql_fetch_assoc($familiaSQL)){
 	$id = $results['ID'];
-	$familia = $results['FAMILIA'];
+	$familia = $results['Familia'];
 	$familiaUpper = strtoupper($familia);
 	echo "<tr>
 			<td class='span4'>FAMILIA $familiaUpper</td>
