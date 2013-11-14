@@ -74,7 +74,7 @@ if(I != 1)
 $("#copiar").children("button").attr("onClick","copiar("+A+")")
 $("#copiar").css('display','block');	
 }
-$("#guardarP").attr("onClick","GuardarP("+I+")")
+$("#formP").attr("action","javascript:GuardarP("+I+")")
 $('#myModalP').modal('show');
 }
 function copiar(I){

@@ -42,5 +42,5 @@ echo "<td valign='top'>" . nl2br( $row['comunas_ID']) . "</td>";
 echo "<td valign='top'><a href=edit.php?RUT={$row['RUT']}>Editar</a></td>";
 echo "</tr>"; 
 } 
-echo "</table>"; 
+echo "</table>";
 ?>

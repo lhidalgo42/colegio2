@@ -1,7 +1,7 @@
 function MostrarNino(I){
 	var tipo =$("#modalNino"+I).attr("sexo")
 	$("#SelectSexoMN").children("button[idval='"+tipo+"']").addClass("active");
-	$("#guardarNino").attr("onClick","GuardarNino("+I+")")
+	$("#formNino").attr("action","javsscript:GuardarNino("+I+")")
 	$("#inputRutN").val($("#modalNino"+I).attr("rut"));
 	$("#inputNombreN").val($("#modalNino"+I).attr("nombre"));
 	$("#inputApellidoPN").val($("#modalNino"+I).attr("apellidop"));
@@ -125,6 +125,6 @@ $("#montoEfectivoPM").val($("#modalPM"+I).attr("monto"));
 $("#bancoChequePM").val($("#modalPM"+I).attr("banco"));
 $("#numeroChequePM").val($("#modalPM"+I).attr("numero"));
 $("#montoChequePM").val($("#modalPM"+I).attr("monto"));
-$("#guardarPM").attr("onClick","GuardarPM("+I+")")
+$("#formPM").attr("action","javascript:GuardarPM("+I+")")
 $('#myModalPM').modal('show');
 }

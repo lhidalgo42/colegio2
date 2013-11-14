@@ -3,6 +3,7 @@
         <a data-dismiss="modal" class="close">×</a>
         <h4>Cheque - Letra Mandado Tipo/Detalle Documento N°</h4>
      </div>
+    <form id="formP" action="GuardarP()">
      <div class="modal-body">
 		<div id="copiar" class="pull-right" style="display:none;"><button type="button" class="btn" onClick="copiar()">Copiar datos anteriores</button></div><br>
 <br>
@@ -67,16 +68,10 @@
 </div>               
     </div>
     <div class="modal-footer">
-        <a  class="btn btn-success" id="guardarP" onClick="GuardarP()">Guardar</a>
-        <a href="#" data-dismiss="modal" id="cerrarP" class="btn" onClick="CerrarP()">Cerrar</a>
-    </div>
-</div>
-<!-- datas-->
-<div id="myModalC" class="modal hide fade in" style="display: none;">
-    <div class="modal-header">
-        <a data-dismiss="modal" class="close">×</a>
+        <button  class="btn btn-success" id="guardarP" type="submit">Guardar</button>
         <h4>Seleccione Lugar de Seguro Esclar</h4>
      </div>
+    <form id="formC" action="javascrip:GuardarC()"></form>
      <div class="modal-body">
               <center><h4>Seleccione</h4></center>
         <center><div class="btn-group" data-toggle="buttons-radio" id="tipoc">
@@ -92,7 +87,6 @@
   <button type="button" class="btn btn-primary" onClick="tipoPC(3)" idval="Efectivo">Efectivo/Deposito</button>
 </div></center><br>
 <br>
-
 <div class="form-horizontal">
   <div id="tipoC"></div>
     <div id="tipoPC1" style="display: none;">
@@ -132,7 +126,7 @@
            <div class="control-group">
             <label class="control-label" for="montoChequeC">Ingrese Monto</label>
             <div class="controls">
-       			<input id='montoChequeC' placeholder='Monto Chque' type='number'>
+       			<input id='montoChequeC' placeholder='Monto Chque' pattern="[0-9]{5,7}" type='number'>
             </div>
           </div>
     </center>
@@ -148,7 +142,7 @@
     <div class="control-group">
     <label class="control-label" for="montoLetraC">Ingrese Monto</label>
      <div class="controls">
-      <input id='montoLetraC' placeholder='Monto Letra' type='number'>
+      <input id='montoLetraC' placeholder='Monto Letra' pattern="[0-9]{5,7}" type='number'>
      </div>
 	</div>
     </center>
@@ -157,16 +151,17 @@
     <div class="control-group">
     <label class="control-label" for="montoEfectivoC">Ingrese Monto</label>
      <div class="controls">
-      <input id='montoEfectivoC' placeholder='Monto Efectivo' type='number'>
+      <input id='montoEfectivoC' placeholder='Monto Efectivo' pattern="[0-9]{5,7}" type='number' required="">
      </div>
     </div>
 </div>	
 </div>   
      </div>
     <div class="modal-footer">
-        <a  class="btn btn-success" id="guardarC" onClick="GuardarC()">Guardar</a>
-        <a href="#" data-dismiss="modal" id="cerrarC" class="btn" onClick="CerrarC()">Cerrar</a>
+        <button  class="btn btn-success" id="guardarC" type="submit">Guardar</button>
+        <button href="#" data-dismiss="modal" id="cerrarC" class="btn" TYPE="reset" onClick="CerrarC()">Cerrar</button>
     </div>
+    </form>
 </div>
 
 <div id="myModalPapa" class="modal hide fade in" style="display: none;">
@@ -174,56 +169,57 @@
         <a data-dismiss="modal" class="close">×</a>
         <h4 id="tittlePapa">Complete los Datos del Papa</h4>
      </div>
+    <form id="formPapa" action="javascript:GuardarPapa()">
      <div class="modal-body form-horizontal" id="bodyPapa">
         <center>
    <div class="control-group">
     <label class="control-label" for="inputRUT">RUT</label>
     <div class="controls">
-      <input type="text" id="inputRUT" placeholder="Rut" required>
+      <input type="text" id="inputRUT" pattern="([1-9])+(?:-?\d){4,12}" placeholder="Rut" required>
     </div>
   </div>
   <span id="mensaje2" class="alert-danger"></span>
   <div class="control-group">
     <label class="control-label" for="inputNombre">Nombre</label>
     <div class="controls">
-      <input type="text" id="inputNombre" placeholder="Nombre" onFocus="verificarRut(inputRUT)" required>
+      <input type="text" id="inputNombre" placeholder="Nombre" pattern="[a-zA-Z]+"  required>
     </div>
   </div>
   <div class="control-group">
     <label class="control-label" for="inputApellidoP">Apellido Paterno</label>
     <div class="controls">
-      <input type="text" id="inputApellidoP" placeholder="Apellido Paterno" onFocus="verificarRut(inputRUT)" required>
+      <input type="text" id="inputApellidoP" placeholder="Apellido Paterno" pattern="[a-zA-Z]+" required>
     </div>
   </div>
   <div class="control-group">
     <label class="control-label" for="inputApellidoM">Apellido Materno</label>
     <div class="controls">
-      <input type="text" id="inputApellidoM" placeholder="Apellido Materno" onFocus="verificarRut(inputRUT)" required>
+      <input type="text" id="inputApellidoM" placeholder="Apellido Materno" pattern="[a-zA-Z]+">
     </div>
   </div>
   <div class="control-group">
     <label class="control-label" for="inputFechaNac">Fecha Nacimiento</label>   
 	<div class="controls">
-        <input type="date"  id="inputFechaNac" placeholder="Fecha Nacimiento" onFocus="verificarRut(inputRUT)" requiered>
+        <input type="date"  id="inputFechaNac"  placeholder="Fecha Nacimiento">
     </div>
   </div>
   <div class="control-group">
     <label class="control-label" for="inputProfesion">Profesión</label>
     <div class="controls">
-      <input type="text" id="inputProfesion" placeholder="Profesion" onFocus="verificarRut(inputRUT)" required>
+      <input type="text" id="inputProfesion" placeholder="Profesion">
     </div>
   </div>
   <div class="control-group">
     <label class="control-label" for="inputDireccion">Dirección</label>
     <div class="controls">
-      <input type="text" id="inputDireccion" placeholder="Direccion" onFocus="verificarRut(inputRUT)" required>
+      <input type="text" id="inputDireccion" placeholder="Direccion">
     </div>
   </div>
   <div class="control-group">
     <label class="control-label" for="inputComuna">Comuna</label>
     <div class="controls">
-      <select id="inputComuna" onFocus="verificar(inputRUT)" required>
-        <option value=""></option>
+      <select id="inputComuna">
+        <option value="0"></option>
         <option value="1" >ALHUE</option>
         <option value="2" >BUIN</option>
         <option value="3" >CALERA DE TANGO</option>
@@ -286,43 +282,45 @@
     <div class="controls">
       <div class="input-prepend">
         <span class="add-on"><i class="icon-envelope"></i></span>
-        <input type="email" id="inputEmail"  onFocus="verificarRut(inputRUT)">
+        <input type="email" id="inputEmail" >
       </div>      
     </div>
   </div>
   <div class="control-group">
     <label class="control-label" for="inputLugarTrabajo">Lugar de trabajo</label>
     <div class="controls">
-      <input type="text" id="inputLugarTrabajo" placeholder="Lugar de Trabajo" onFocus="verificarRut(inputRUT)">
+      <input type="text" id="inputLugarTrabajo" placeholder="Lugar de Trabajo">
     </div>
   </div>
   <div class="control-group">
     <label class="control-label" for="inputDireccionT">Direccion Trabajo</label>
     <div class="controls">
-      <input type="text" id="inputDireccionT" placeholder="Direccion Trabajo" onFocus="verificarRut(inputRUT)">
+      <input type="text" id="inputDireccionT" placeholder="Direccion Trabajo">
     </div>
   </div>
   <div class="control-group">
     <label class="control-label" for="inputTelefonos">Telefonos</label>
     <small>Si es mas de uno, separarlos por coma</small>
     <div class="controls">
-      <input type="text" id="inputTelefonos" placeholder="Telefonos" onFocus="verificarRut(inputRUT)">
+      <input type="text" id="inputTelefonos" placeholder="Telefonos">
     </div>
   </div>
         </center>               
     </div>
     <div class="modal-footer">
-        <a  class="btn btn-success" id="guardarPapa" onClick="GuardarPapa()">Guardar</a>
-        <a href="#" data-dismiss="modal" id="cerrarPapa" class="btn" onClick="CerrarPapa()">Cerrar</a>
+        <button  class="btn btn-success" id="guardarPapa" type="submit">Guardar</button>
+        <button href="#" data-dismiss="modal" id="cerrarPapa" class="btn" type="reset" onClick="CerrarPapa()">Cerrar</button>
     </div>
+    </form>
 </div>
 
 
 <div id="myModalNino" class="modal hide fade in" style="display: none;">
     <div class="modal-header">
         <a data-dismiss="modal" class="close">×</a>
-        <h4 id="tittlePapa">Complete los Datos del Alumno</h4>
+        <h4 id="tittleNino">Complete los Datos del Alumno</h4>
      </div>
+    <form id="formNino" action="javascript:GuardarNino()"></form>
      <div class="modal-body form-horizontal" id="bodyNino">
     <!-- <center><h3><strong>Alumerzos</strong></h3></center>
 <center><div class="btn-group" data-toggle="buttons-checkbox">
@@ -381,7 +379,7 @@
   <div class="control-group">
     <label class="control-label" for="inputFechaNacN">Fecha Nacimiento</label>
     <div class="controls">
-    <input type="date"  id="inputFechaNacN" placeholder="Fecha Nacimiento" requiered>
+    <input type="date"  id="inputFechaNacN" placeholder="Fecha Nacimiento">
     </div>
   </div>
   <div class="control-group">
@@ -394,9 +392,10 @@
         </center>               
     </div>
     <div class="modal-footer">
-        <a  class="btn btn-success" id="guardarNino" onClick="GuardarNino()">Guardar</a>
-        <a href="#" data-dismiss="modal" id="cerrarNino" class="btn" onClick="CerrarNino()">Cerrar</a>
+        <button  class="btn btn-success" id="guardarNino">Guardar</button>
+        <button href="#" data-dismiss="modal" id="cerrarNino" class="btn" onClick="CerrarNino()">Cerrar</button>
     </div>
+    </form>
 </div>
 
 
@@ -406,6 +405,7 @@
         <a data-dismiss="modal" class="close">×</a>
         <h4>Cheque - Letra Mandado Tipo/Detalle Documento N°</h4>
      </div>
+    <form id="formPM" action="javascript:GuardarPM()">
      <div class="modal-body">
          <center><h4>Seleccione</h4></center>
         <center><div class="btn-group" data-toggle="buttons-radio">
@@ -467,7 +467,8 @@
 </div>               
     </div>
     <div class="modal-footer">
-        <a  class="btn btn-success" id="guardarPM" onClick="GuardarPM()">Guardar</a>
-        <a href="#" data-dismiss="modal" id="cerrarPM" class="btn" onClick="CerrarPM()">Cerrar</a>
+        <a  class="btn btn-success" id="guardarPM" type="submit">Guardar</a>
+        <a href="#" data-dismiss="modal" id="cerrarPM" class="btn" type="reset" onClick="CerrarPM()">Cerrar</a>
     </div>
+        </form>
 </div>
