@@ -41,7 +41,7 @@ var tipo =$("#modalC"+I).attr("tipoc")
 $("#myModalC").children(".modal-body").children("center:last").children(".btn-group").children("button[idval='"+tipo+"']").addClass("active"); 
 if(tipo == "OTRA"){
 $("#tipoC").html("<div class='control-group'><label class='control-label' for='NombreC'>Ingrese Nombre de la Clinica</label> <div class='controls'><input type='text' id='NombreC' value='"+$("#modalC"+I).attr("nombre")+"' placeholder='Nombre'></div></div>");}
-$("#formC").attr("actiom","javascript:GuardarC("+I+")")
+$("#guardarC").attr("onClick","GuardarC("+I+")")
 $('#myModalC').modal('show');
 }
 function GuardarC(I){

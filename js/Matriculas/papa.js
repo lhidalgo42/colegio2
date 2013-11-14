@@ -49,7 +49,7 @@ var Apellido = $("#inputApellidoP").val();
 	$('#myModalPapa').modal('hide');
 }	
 function MostrarPadre(I){
-	$("#formPapa").attr("action","javascript:GuardarPapa("+I+")");
+	$("#guardarPapa").attr("onClick","GuardarPapa("+I+")");
 	if(I==0)
 	{
 		$("#tittlePapa").html("<center>Complete los Datos de la Madre</center>");
