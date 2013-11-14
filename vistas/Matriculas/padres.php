@@ -8,10 +8,8 @@
  <button type="button" class="btn" onClick="clickButton(0)">Papa</button>
  <button type="button" class="btn" onClick="clickButton(1)">Mama</button>
 </div></td>
-
-
   </tr>
-  <tr>
+  <tr id="tr-papas" class="opaco">
     <td><strong>Padre</strong></td>
     <td><a id="modalPAPA" role="button" onClick="MostrarPadre(1)" class="btn" data-toggle="modal" rut="" nombre="" apellido1="" apellido2="" fechaNac="" sexo="1" profesion="" direccion="" comuna="" email="" lugarTrabajo="" direccionTrabajo="" telefonos="" aEconomico="" >Papa</a></td>
     <td><strong>Madre</strong></td>

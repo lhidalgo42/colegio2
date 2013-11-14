@@ -47,7 +47,8 @@ var Apellido = $("#inputApellidoP").val();
 	}
 	CerrarPapa();
 	$('#myModalPapa').modal('hide');
-}	
+    $("#ninos").removeClass("opaco");
+}
 function MostrarPadre(I){
 	$("#guardarPapa").attr("onClick","GuardarPapa("+I+")");
 	if(I==0)

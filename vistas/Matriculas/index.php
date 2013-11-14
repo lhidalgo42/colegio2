@@ -39,6 +39,11 @@ width: 600px;
 	display: none;
 	margin-top: 10px;
 }
+.opaco{
+    opacity:1;
+    filter:alpha(opacity=100);
+
+}
 
 .pagosContainer{
 	margin-top: 10px;
@@ -60,20 +65,22 @@ $(function() {
  <p><span id="mensaje" class="alert-danger"></span></p><br>
 <div id="padres"><?php include'padres.php'; ?></div>
 <div class="clearfix"></div>
-<div id="ninos"><?php include'Alumnos.php'; ?></div>
+<div id="ninos" class="opaco"><?php include'Alumnos.php'; ?></div>
 <div class="clearfix"></div>
-<div id="coutaIncorporacion" class="pagosContainer">
+<div id="coutaIncorporacion" class="pagosContainer opaco">
 	<div><input type="button" id="cIncBtn" class="btn btn-block btn-large" value="PAGAR CUOTA INCORPORACION"></div>
 	<div id="cInc" class="pago"><?php include'cuotaInc.php'; ?></div>
 </div>
-<div id="documentos" class="pagosContainer">
+<div id="documentos" class="pagosContainer opaco">
 	<div><input type="button" id="cDocBtn" value="PAGAR DOCUMENTOS" class="btn btn-block btn-large"></div>
 	<div id="cDoc" class="pago"><?php include'Documentos.php'; ?></div>
 </div>
-<div id="almuerzos" class="pagosContainer">
+<div id="almuerzos" class="pagosContainer opaco">
 	<div><input type="button" id="cAlmBtn" class="btn btn-block btn-large" value="PAGAR ALMUERZOS"></div>
 	<div id="cAlm" class="pago"><?php include'Almuerzos.php'; ?></div>
+
 </div>
+    </div>
 <button type="submit" class="btn btn-success btn-block btn-large"><strong>Siguente</strong></button> 
 </form>
 </div>
@@ -106,62 +113,6 @@ siguente()
 
 </script>
 <?php include("modal.php"); ?>
-<?php include_once"../../datos/Querys.php";
-if(!Query::BuscarUFDate(date('Y-m-d'))){ ?>
-    <script>
-        $(document).ready(function() {
-            $("#modalUF").modal('show');
-        });
-    </script>
-<?php } ?>
-<div id="modalUF" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel">Valores UF</h3>
-    </div>
-    <div class="modal-body">
-        <form action="javascript:GUF()"
-        <h4>El valor de la UF se encuentra desactualizado .</h4>
-        <p>Ingrese el valor de la UF del Dia de Hoy .</p>
-       <a href="#"><input type="text" placeholder="ej 12345.67" id="valuf" class="input-large" pattern=".{7,10}" ></a>
-        <p><small>Valores los puede encontrar en</small> <a href="http://www.sii.cl/pagina/valores/uf/uf2013.htm#contenido" target="_blank" onClick="window.open(this.href, this.target, 'width=870,height=700'); return false;">SII Valores UF</a></p>
-       </div>
-    <div class="modal-footer">
-        <button class="btn" data-dismiss="modal">Cerrar</button>
-        <button class="btn btn-primary" type="submit">Guardar Cambios</button>
-        </form>
-    </div>
-</div>
-<script>
-    function GUF(){
-        var UF = $("#valuf").val();
-        $.ajax({
-            url: "../../ajax/uf.php",
-            data: {UF:UF},
-            type: "POST",
-            success: function(data) {
-            if(data==1){
-                alert('Cambios Guardados Correctamente');
-                $('#modalUF').modal('hide');
-            }
-            else{
-                $("#modalUF").html("Ha Ocurrido un Error");
-                location.reload();
-
-
-            }
-        }
-        });
-    }
-    $(function () {
-        $('#valuf').popover({
-            title: 'Ultimo Valor Conocido',
-            <?php $ufpasada=Query::BuscarUF();?>
-            content: '<?php echo "".$ufpasada['Valor']." - ".$ufpasada['Fecha'].""; ?>',
-            placement: 'right'
-        });
-    });
-
-</script>
+<?php include("uf.php"); ?>
 </body>
-</html >;
+</html >

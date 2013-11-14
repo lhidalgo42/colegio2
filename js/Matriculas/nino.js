@@ -41,6 +41,9 @@ if(Nombre != "" || Apellido != "")
  $("#modalNino"+I).attr("sexo",$("#SelectSexoMN").children(".active").attr("idval"));
 $('#myModalNino').modal('hide');
  CerrarNino()
+    $("#coutaIncorporacion").removeClass("opaco");
+    $("#documentos").removeClass("opaco");
+    $("#almuerzos").removeClass("opaco");
 }
 function tipoPM(I){
 	if(I == 1){

@@ -2,25 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26bd3670-3a66-419f-9f66-fff0af623ad5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajax/crud.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crud/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crud/lista.php" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\Colegio\crud\Documentos\delete.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\Colegio\crud\Documentos\new.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\Colegio\crud\Familia\delete.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\Colegio\crud\Familia\new.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\Colegio\crud\Nino\delete.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\Colegio\crud\Nino\new.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\Colegio\crud\Pago\delete.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\Colegio\crud\Pago\new.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\Colegio\crud\Papas\delete.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\Colegio\crud\Papas\new.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datos/dbconfig.php" afterPath="$PROJECT_DIR$/datos/dbconfig.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crud/Documentos/index.php" afterPath="$PROJECT_DIR$/crud/Documentos/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crud/Familia/index.php" afterPath="$PROJECT_DIR$/crud/Familia/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crud/Nino/index.php" afterPath="$PROJECT_DIR$/crud/Nino/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crud/Pago/index.php" afterPath="$PROJECT_DIR$/crud/Pago/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crud/Papas/index.php" afterPath="$PROJECT_DIR$/crud/Papas/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vistas/Matriculas/index.php" afterPath="$PROJECT_DIR$/vistas/Matriculas/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Matriculas/nino.js" afterPath="$PROJECT_DIR$/js/Matriculas/nino.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vistas/Matriculas/padres.php" afterPath="$PROJECT_DIR$/vistas/Matriculas/padres.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Matriculas/papa.js" afterPath="$PROJECT_DIR$/js/Matriculas/papa.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Matriculas/utilidades.js" afterPath="$PROJECT_DIR$/js/Matriculas/utilidades.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="colegio.iws" />
@@ -49,46 +36,72 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crud/Pago/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="16" selection-start="1287" selection-end="1287" vertical-scroll-proportion="-16.038462" vertical-offset="93" max-vertical-offset="629">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/crud/Papas/index.php">
+        <entry file="file://$PROJECT_DIR$/vistas/Matriculas/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="17" selection-start="2036" selection-end="2036" vertical-scroll-proportion="0.7779851" vertical-offset="331" max-vertical-offset="867">
+            <state line="43" column="28" selection-start="1050" selection-end="1050" vertical-scroll-proportion="0.8038462" vertical-offset="313" max-vertical-offset="2091">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crud/Documentos/index.php">
+      <file leaf-file-name="utilidades.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/Matriculas/utilidades.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="2" selection-start="1405" selection-end="1405" vertical-scroll-proportion="-16.692308" vertical-offset="127" max-vertical-offset="663">
+            <state line="240" column="44" selection-start="8222" selection-end="8222" vertical-scroll-proportion="0.0" vertical-offset="3859" max-vertical-offset="6409">
+              <folding>
+                <marker date="1384451440380" expanded="false" signature="8951:8963" placeholder="..." />
+                <marker date="1384451440380" expanded="false" signature="9045:9057" placeholder="..." />
+                <marker date="1384451440380" expanded="false" signature="9130:9142" placeholder="..." />
+                <marker date="1384451440380" expanded="false" signature="9342:9353" placeholder="..." />
+                <marker date="1384451440380" expanded="false" signature="9396:9407" placeholder="..." />
+                <marker date="1384451440380" expanded="false" signature="9503:9515" placeholder="..." />
+                <marker date="1384451440380" expanded="false" signature="9587:9599" placeholder="..." />
+                <marker date="1384451440380" expanded="false" signature="9904:9916" placeholder="..." />
+                <marker date="1384451440380" expanded="false" signature="9998:10010" placeholder="..." />
+                <marker date="1384451440380" expanded="false" signature="10083:10095" placeholder="..." />
+                <marker date="1384451440380" expanded="false" signature="10295:10306" placeholder="..." />
+                <marker date="1384451440380" expanded="false" signature="10336:10347" placeholder="..." />
+                <marker date="1384451440380" expanded="false" signature="10416:10427" placeholder="..." />
+                <marker date="1384451440380" expanded="false" signature="10512:10524" placeholder="..." />
+                <marker date="1384451440380" expanded="false" signature="10587:10599" placeholder="..." />
+                <marker date="1384451440380" expanded="false" signature="10934:10946" placeholder="..." />
+                <marker date="1384451440380" expanded="false" signature="11028:11040" placeholder="..." />
+                <marker date="1384451440380" expanded="false" signature="11113:11125" placeholder="..." />
+                <marker date="1384451440380" expanded="false" signature="11346:11357" placeholder="..." />
+                <marker date="1384451440380" expanded="false" signature="11430:11441" placeholder="..." />
+                <marker date="1384451440380" expanded="false" signature="11491:11502" placeholder="..." />
+                <marker date="1384451440380" expanded="false" signature="11532:11543" placeholder="..." />
+                <marker date="1384451440380" expanded="false" signature="11613:11624" placeholder="..." />
+                <marker date="1384451440380" expanded="false" signature="11706:11718" placeholder="..." />
+                <marker date="1384451440380" expanded="false" signature="11781:11793" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="papa.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/Matriculas/papa.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="37" selection-start="2266" selection-end="2266" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1802">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crud/Familia/index.php">
+      <file leaf-file-name="nino.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/Matriculas/nino.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="16" selection-start="823" selection-end="823" vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="459">
+            <state line="45" column="41" selection-start="2464" selection-end="2464" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="2346">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crud/Nino/index.php">
+      <file leaf-file-name="padres.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vistas/Matriculas/padres.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="16" selection-start="1923" selection-end="1923" vertical-scroll-proportion="-18.653847" vertical-offset="229" max-vertical-offset="833">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="408">
               <folding />
             </state>
           </provider>
@@ -112,12 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/vistas/EditarFamilia/getFamilia.php" />
-        <option value="$PROJECT_DIR$/vistas/EditarFamilia/successAlumno.php" />
-        <option value="$PROJECT_DIR$/vistas/EditarFamilia/successFamilia.php" />
-        <option value="$PROJECT_DIR$/ajax/uf.php" />
-        <option value="$PROJECT_DIR$/crud/config.php" />
-        <option value="$PROJECT_DIR$/datos/insert.php" />
         <option value="$PROJECT_DIR$/ajax/enviar.php" />
         <option value="$PROJECT_DIR$/crud/index.php" />
         <option value="$PROJECT_DIR$/ajax/crud.php" />
@@ -128,15 +135,20 @@
         <option value="$PROJECT_DIR$/crud/Nino/index.php" />
         <option value="$PROJECT_DIR$/crud/Pago/index.php" />
         <option value="$PROJECT_DIR$/crud/Papas/index.php" />
+        <option value="$PROJECT_DIR$/js/Matriculas/uf.php" />
+        <option value="$PROJECT_DIR$/vistas/Matriculas/uf.php" />
+        <option value="$PROJECT_DIR$/js/Matriculas/utilidades.js" />
+        <option value="$PROJECT_DIR$/js/Matriculas/papa.js" />
+        <option value="$PROJECT_DIR$/js/Matriculas/nino.js" />
+        <option value="$PROJECT_DIR$/vistas/Matriculas/index.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="1" />
+    <option name="width" value="1364" />
+    <option name="height" value="728" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -164,7 +176,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -193,7 +204,57 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="vistas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="colegio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Colegio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vistas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Matriculas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="colegio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Colegio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="colegio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Colegio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Matriculas" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -255,6 +316,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -262,14 +324,14 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="160" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="154" />
-    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="154" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$APPLICATION_HOME_DIR$" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="162" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="829" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="836" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="829" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="154" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="153" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
@@ -288,8 +350,8 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig" serverName="localhost" serverId="8d86b13a-9def-41e0-ae13-9a9f17cb4a65">
     <servers>
@@ -314,6 +376,7 @@
       <recent name="C:\xampp\htdocs\Colegio\vistas\Matriculas" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Colegio\vistas\Matriculas" />
       <recent name="C:\xampp\htdocs\Colegio\ajax" />
     </key>
   </component>
@@ -419,7 +482,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="1" y="0" width="1364" height="728" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32764506" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -427,9 +490,8 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3265306" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.67064846" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28484848" sideWeight="0.67346936" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17588326" sideWeight="0.67346936" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993174" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2715959" sideWeight="0.45392492" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39795917" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -439,6 +501,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32935154" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -463,9 +526,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.67064846" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28038067" sideWeight="0.67346936" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39966273" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39966273" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -492,237 +555,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="uml://DATABASE/0f2474ec-50b8-4259-af96-d5d121fd7acf">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>0f2474ec-50b8-4259-af96-d5d121fd7acf</OriginalElement>
-          <nodes>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.USER_PRIVILEGES</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:phpmyadmin.pma_tracking</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.events_stages_summary_global_by_event_name</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.INNODB_BUFFER_PAGE</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.INNODB_SYS_FOREIGN</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.events_waits_summary_by_host_by_event_name</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.setup_objects</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.events_waits_summary_by_account_by_event_name</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.EVENTS</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:colegio.documentos</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.PARTITIONS</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:webauth.user_pwd</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.setup_consumers</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.mutex_instances</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.INNODB_FT_INDEX_TABLE</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.INNODB_LOCK_WAITS</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.events_waits_summary_by_instance</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.INNODB_SYS_TABLESPACES</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.setup_timers</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.INNODB_LOCKS</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:colegio.pago_seguro_escolar_has_pago</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.time_zone_transition</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.innodb_table_stats</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.socket_instances</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.events_statements_summary_by_thread_by_event_name</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.time_zone_leap_second</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.columns_priv</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.REFERENTIAL_CONSTRAINTS</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.INNODB_CMP</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.objects_summary_global_by_type</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.user</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.time_zone_transition_type</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.file_summary_by_event_name</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.PARAMETERS</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.INNODB_TRX</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:colegio.familia</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.accounts</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.COLLATIONS</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.events_statements_history_long</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.slave_master_info</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.ROUTINES</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.events_statements_summary_by_host_by_event_name</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.COLUMNS</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.INNODB_CMPMEM_RESET</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.SESSION_VARIABLES</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:colegio.tipo</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.SESSION_STATUS</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.INNODB_CMP_PER_INDEX</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.slave_worker_info</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.STATISTICS</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:colegio.contabilidad</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.GLOBAL_STATUS</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.proxies_priv</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.events_statements_history</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:colegio.pago_has_documentos</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.INNODB_BUFFER_POOL_STATS</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.INNODB_BUFFER_PAGE_LRU</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.INNODB_FT_BEING_DELETED</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.help_category</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.events_waits_history</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.COLUMN_PRIVILEGES</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.file_instances</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.slave_relay_log_info</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:colegio.bancos</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.INNODB_SYS_DATAFILES</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.INNODB_FT_DELETED</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:phpmyadmin.pma_bookmark</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:colegio.matriculas_has_familia</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:phpmyadmin.pma_userconfig</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.hosts</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.INNODB_FT_CONFIG</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.plugin</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.SCHEMA_PRIVILEGES</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.PROFILING</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.KEY_COLUMN_USAGE</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:phpmyadmin.pma_table_info</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.events_stages_summary_by_thread_by_event_name</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.events_stages_summary_by_user_by_event_name</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.table_io_waits_summary_by_table</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.TABLESPACES</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.TABLE_PRIVILEGES</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.events_statements_summary_by_user_by_event_name</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:colegio.pago_matricula_has_pago</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.INNODB_SYS_INDEXES</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.events_stages_history_long</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.file_summary_by_instance</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.events_waits_history_long</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.tables_priv</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.proc</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.table_io_waits_summary_by_index_usage</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.INNODB_FT_INDEX_CACHE</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.COLLATION_CHARACTER_SET_APPLICABILITY</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:colegio.comunas</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.time_zone</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.events_statements_summary_global_by_event_name</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.GLOBAL_VARIABLES</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.users</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:phpmyadmin.pma_pdf_pages</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.events_stages_summary_by_account_by_event_name</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.cond_instances</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.PROCESSLIST</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.INNODB_SYS_FOREIGN_COLS</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.ndb_binlog_index</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.TABLES</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:colegio.uf</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:colegio.almuerzos_nino</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:colegio.persona</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.events_stages_current</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:phpmyadmin.pma_column_info</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:colegio.almuerzos</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.INNODB_CMPMEM</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.host_cache</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:colegio.log</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.socket_summary_by_event_name</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.events_stages_history</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.help_keyword</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.FILES</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.INNODB_CMP_RESET</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.events_waits_current</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.INNODB_FT_DEFAULT_STOPWORD</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.events_statements_summary_by_digest</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.VIEWS</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.func</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.setup_instruments</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:phpmyadmin.pma_table_uiprefs</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.threads</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.servers</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.OPTIMIZER_TRACE</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.general_log</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.PLUGINS</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.rwlock_instances</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.ENGINES</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.SCHEMATA</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.innodb_index_stats</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:phpmyadmin.pma_relation</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.TRIGGERS</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.session_account_connect_attrs</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.events_stages_summary_by_host_by_event_name</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.events_statements_summary_by_account_by_event_name</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.INNODB_SYS_COLUMNS</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.time_zone_name</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.help_topic</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.help_relation</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:colegio.pago</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:colegio.matriculas</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.event</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.events_waits_summary_global_by_event_name</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:phpmyadmin.pma_recent</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.host</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:colegio.pago_seguro_escolar</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.table_lock_waits_summary_by_table</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:phpmyadmin.pma_designer_coords</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:phpmyadmin.pma_table_coords</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:colegio.matriculas_has_log</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.performance_timers</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.session_connect_attrs</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.INNODB_METRICS</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:colegio.admin</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:colegio.nino</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.procs_priv</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.socket_summary_by_instance</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.INNODB_SYS_TABLES</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:colegio.pago_matricula</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.TABLE_CONSTRAINTS</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:colegio.papas</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:phpmyadmin.pma_history</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.INNODB_SYS_FIELDS</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.events_waits_summary_by_user_by_event_name</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.CHARACTER_SETS</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.db</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:cdcol.cds</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.INNODB_CMP_PER_INDEX_RESET</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.events_waits_summary_by_thread_by_event_name</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:information_schema.INNODB_SYS_TABLESTATS</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:mysql.slow_log</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.setup_actors</node>
-            <node x="" y="">0f2474ec-50b8-4259-af96-d5d121fd7acf.table:performance_schema.events_statements_current</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.09301112656467315" x="2731.0" y="2886.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Columns</Category>
-            <Category>Key columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crud/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="35" selection-start="244" selection-end="244" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="272">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="1032" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/crud.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="2" selection-start="70" selection-end="70" vertical-scroll-proportion="0.25373134" vertical-offset="0" max-vertical-offset="536">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crud/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="26" selection-start="1493" selection-end="1493" vertical-scroll-proportion="-16.038462" vertical-offset="297" max-vertical-offset="1156">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="21" selection-start="2860" selection-end="2860" vertical-scroll-proportion="0.7882562" vertical-offset="747" max-vertical-offset="1615">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="19" selection-start="867" selection-end="917" vertical-scroll-proportion="0.7476099" vertical-offset="0" max-vertical-offset="901">
@@ -739,56 +571,123 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ajax/enviar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="1" selection-start="923" selection-end="923" vertical-scroll-proportion="-2.4615386" vertical-offset="514" max-vertical-offset="1479">
-          <folding />
-        </state>
+        <state line="34" column="1" selection-start="923" selection-end="923" vertical-scroll-proportion="-2.4615386" vertical-offset="514" max-vertical-offset="1479" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crud/lista.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="6" selection-start="3908" selection-end="3908" vertical-scroll-proportion="-17.346153" vertical-offset="1436" max-vertical-offset="2091">
-          <folding />
-        </state>
+        <state line="111" column="6" selection-start="3908" selection-end="3908" vertical-scroll-proportion="-17.346153" vertical-offset="1436" max-vertical-offset="2091" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/datos/dbconfig.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="27" selection-start="174" selection-end="174" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="255">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crud/Documentos/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="2" selection-start="1405" selection-end="1405" vertical-scroll-proportion="-16.692308" vertical-offset="127" max-vertical-offset="663">
-          <folding />
-        </state>
+        <state line="8" column="27" selection-start="174" selection-end="174" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="255" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crud/Familia/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="16" selection-start="823" selection-end="823" vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="459">
+        <state line="20" column="16" selection-start="823" selection-end="823" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="459">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crud/Nino/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="16" selection-start="1923" selection-end="1923" vertical-scroll-proportion="-18.653847" vertical-offset="229" max-vertical-offset="833">
+        <state line="42" column="16" selection-start="1923" selection-end="1923" vertical-scroll-proportion="0.0" vertical-offset="229" max-vertical-offset="833">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/Matriculas/uf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="9" selection-start="2164" selection-end="2164" vertical-scroll-proportion="0.10059172" vertical-offset="0" max-vertical-offset="507">
+          <folding>
+            <element signature="e#45#215#0" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="tag#div#0" expanded="false" />
+            <element signature="tag#script#1" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crud/Pago/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="16" selection-start="1287" selection-end="1287" vertical-scroll-proportion="-16.038462" vertical-offset="93" max-vertical-offset="629">
+        <state line="30" column="16" selection-start="1287" selection-end="1287" vertical-scroll-proportion="0.9807692" vertical-offset="0" max-vertical-offset="629">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crud/Papas/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="17" selection-start="2036" selection-end="2036" vertical-scroll-proportion="0.7779851" vertical-offset="331" max-vertical-offset="867">
+        <state line="45" column="2" selection-start="2039" selection-end="2039" vertical-scroll-proportion="1.4711539" vertical-offset="0" max-vertical-offset="867">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crud/Documentos/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="2" selection-start="1405" selection-end="1405" vertical-scroll-proportion="0.8346154" vertical-offset="127" max-vertical-offset="663">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Matriculas/papa.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="37" selection-start="2266" selection-end="2266" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1802">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Matriculas/utilidades.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="240" column="44" selection-start="8222" selection-end="8222" vertical-scroll-proportion="0.0" vertical-offset="3859" max-vertical-offset="6409">
+          <folding>
+            <marker date="1384451440380" expanded="false" signature="8951:8963" placeholder="..." />
+            <marker date="1384451440380" expanded="false" signature="9045:9057" placeholder="..." />
+            <marker date="1384451440380" expanded="false" signature="9130:9142" placeholder="..." />
+            <marker date="1384451440380" expanded="false" signature="9342:9353" placeholder="..." />
+            <marker date="1384451440380" expanded="false" signature="9396:9407" placeholder="..." />
+            <marker date="1384451440380" expanded="false" signature="9503:9515" placeholder="..." />
+            <marker date="1384451440380" expanded="false" signature="9587:9599" placeholder="..." />
+            <marker date="1384451440380" expanded="false" signature="9904:9916" placeholder="..." />
+            <marker date="1384451440380" expanded="false" signature="9998:10010" placeholder="..." />
+            <marker date="1384451440380" expanded="false" signature="10083:10095" placeholder="..." />
+            <marker date="1384451440380" expanded="false" signature="10295:10306" placeholder="..." />
+            <marker date="1384451440380" expanded="false" signature="10336:10347" placeholder="..." />
+            <marker date="1384451440380" expanded="false" signature="10416:10427" placeholder="..." />
+            <marker date="1384451440380" expanded="false" signature="10512:10524" placeholder="..." />
+            <marker date="1384451440380" expanded="false" signature="10587:10599" placeholder="..." />
+            <marker date="1384451440380" expanded="false" signature="10934:10946" placeholder="..." />
+            <marker date="1384451440380" expanded="false" signature="11028:11040" placeholder="..." />
+            <marker date="1384451440380" expanded="false" signature="11113:11125" placeholder="..." />
+            <marker date="1384451440380" expanded="false" signature="11346:11357" placeholder="..." />
+            <marker date="1384451440380" expanded="false" signature="11430:11441" placeholder="..." />
+            <marker date="1384451440380" expanded="false" signature="11491:11502" placeholder="..." />
+            <marker date="1384451440380" expanded="false" signature="11532:11543" placeholder="..." />
+            <marker date="1384451440380" expanded="false" signature="11613:11624" placeholder="..." />
+            <marker date="1384451440380" expanded="false" signature="11706:11718" placeholder="..." />
+            <marker date="1384451440380" expanded="false" signature="11781:11793" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/Matriculas/padres.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="533">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Matriculas/nino.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="41" selection-start="2464" selection-end="2464" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="2346">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/Matriculas/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="28" selection-start="1050" selection-end="1050" vertical-scroll-proportion="0.8038462" vertical-offset="313" max-vertical-offset="2091">
           <folding />
         </state>
       </provider>

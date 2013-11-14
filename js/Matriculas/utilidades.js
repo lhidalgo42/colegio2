@@ -233,10 +233,12 @@ function verificarRut( Objeto ){
 function clickButton(I){
     if(I ==0){
         $("#AEconomico").children("button:first").addClass("btn-success active");
-        $("#AEconomico").children("button:last").removeClass("btn-success active");}
+        $("#AEconomico").children("button:last").removeClass("btn-success active");
+    $("#tr-papas").removeClass("opaco");}
     if(I==1){
         $("#AEconomico").children("button:last").addClass("btn-success active");
-        $("#AEconomico").children("button:first").removeClass("btn-success active");}
+        $("#AEconomico").children("button:first").removeClass("btn-success active");
+        $("#tr-papas").removeClass("opaco");}
 }
 $('#valeS1').keyup(function(){
     var vale = $("#valeS1").val();
