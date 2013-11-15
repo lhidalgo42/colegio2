@@ -31,7 +31,7 @@ $(function() {
 </head>
 
 <body id="cuerpo">
-<?php print_r($_SESSION['envio']);
+<?php //print_r($_SESSION['envio']);
 $data=$_SESSION['envio']; ?>
     <div class="container-fluid">
                <br>
