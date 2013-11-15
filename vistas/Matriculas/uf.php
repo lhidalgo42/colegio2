@@ -25,6 +25,13 @@ if(!Query::BuscarUFDate(date('Y-m-d'))){ ?>
     </div>
 </div>
 <script>
+    $.ajax({
+        url: "../../ajax/curl.php",
+        dataType: "html",
+        success: function(data) {
+            $("#valuf").val(data);
+        }
+    });
     function GUF(){
         var UF = $("#valuf").val();
         $.ajax({
