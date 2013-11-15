@@ -31,7 +31,7 @@ $(function() {
 </head>
 
 <body id="cuerpo">
-<?php //print_r($_SESSION['envio']);
+<?php print_r($_SESSION['envio']);
 $data=$_SESSION['envio']; ?>
     <div class="container-fluid">
                <br>
@@ -227,8 +227,8 @@ $.ajax({
         function preguntar(){
             confirmar=confirm("¿Esta seguro que desea continuar?");
             if (confirmar){
-                enviar()
-                window.location.href = "../../vistas/decision2.php";
+                //enviar()
+                window.location.href = "query.php";
             }
         }
     </script>

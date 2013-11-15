@@ -56,6 +56,15 @@ $( document ).ready(function() {
 		var matriculaNumero = $("#matriculaNumeroHijo"+k).val();
 		var matriculaMonto = $("#matriculaMontoHijo"+k).val();
 		var matriculaFecha = $("#matriculaFechaHijo"+k).val();
+		var seguroBoleta = $("#seguroBoletaHijo"+k).val();
+		var seguroTipo = $("#seguroTipoHijo"+k).attr('value');
+		var seguroBanco = $("#seguroBancoHijo"+k).val();
+		var seguroNumero = $("#seguroNumeroHijo"+k).val();
+		var seguroMonto = $("#seguroMontoHijo"+k).val();
+		var seguroFecha = $("#seguroFechaHijo"+k).val();
+		var tipoClinica = $("#seguroTipoClinicaHijo"+k).val();
+		var nombreClinica = $("#seguroClinicaHijo"+k).attr('value');
+
 		
 		//Inyectar Datos
 		
@@ -77,7 +86,113 @@ $( document ).ready(function() {
 		$("#modalPM"+k).attr('numero', matriculaNumero);
 		$("#modalPM"+k).attr('monto', matriculaMonto);
 		$("#fechaM"+k).val(matriculaFecha);
+		$("#valeS"+k).val(seguroBoleta);
+		$("#modalC"+k).attr('tipoc', tipoClinica);
+		$("#modalC"+k).attr('nombre', nombreClinica);
+		$("#modalC"+k).attr('tipop', seguroTipo);
+		$("#modalC"+k).attr('banco', seguroBanco);
+		$("#modalC"+k).attr('numero', seguroNumero);
+		$("#modalC"+k).attr('monto', seguroMonto);
+		$("#fechaS"+k).val(seguroFecha);
 
 		
+	}
+	
+	var cuotas = +$("#cuotasPagos").val();
+	$("#cuotaInc").val(cuotas);
+	$("#cuotas").val(cuotas);
+	$("#almuerzoCuotas").val(cuotas);
+	cambio();
+	cambio2();
+	cambio3();
+	
+	var cantidadPrimero = cuotas;
+	var cantidadSegundo = cuotas + 1;
+	var cantidadTercero = (cuotas*2) + 1;
+	var cantidadFinal = cuotas*3;
+	
+	for(var l=1; l< cantidadPrimero + 1; l++){
+		var boleta = +$("#boletaCuota"+l).val();
+		var cuotaInc = $("#cuotaIncCuota"+l).val();
+		var fecha = $("#fechaCuota"+l).val();
+		var pagoTipo = $("#pagoTipo"+l).attr('value');
+		var banco = $("#bancoCuota"+l).val();
+		var numero = $("#numeroCuota"+l).val();
+		var monto = $("#montoCuota"+l).val();
+		var fechaDeposito = $("#fechaDepositoCuota"+l).val();
+		
+		$("#Nbol"+l).val(boleta);
+		$("#FechaBol"+l).val(fecha);
+		$("#modalP"+l).attr('tipo', pagoTipo);
+		$("#modalP"+l).attr('banco', banco);
+		$("#modalP"+l).attr('numero', numero);
+		$("#modalP"+l).attr('monto', monto);
+		$("#Cou"+l).val(cuotaInc);
+		
+		if(pagoTipo == "Efectivo"){
+			$("#fechaD"+l).val(fechaDeposito);
+		}
+		
+	}
+
+	for(var m=cantidadSegundo; m<cantidadTercero; m++){
+		
+		var igualador = cantidadSegundo - 1;
+		var adaptador = m - igualador;
+		
+		var boleta = +$("#boletaCuota"+adaptador).val();
+		var colegiatura = $("#colegiaturaCuota"+adaptador).val();
+		var materiales = $("#materialesCuota"+adaptador).val();
+		var deuda = $("#deudaCuota"+adaptador).val();
+		var fecha = $("#fechaCuota"+adaptador).val();
+		var pagoTipo = $("#pagoTipo"+adaptador).attr('value');
+		var banco = $("#bancoCuota"+adaptador).val();
+		var numero = $("#numeroCuota"+adaptador).val();
+		var monto = $("#montoCuota"+adaptador).val();
+		var fechaDeposito = $("#fechaDepositoCuota"+adaptador).val();
+		
+		$("#Nbol"+m).val(boleta);
+		$("#FechaBol"+m).val(fecha);
+		$("#modalP"+m).attr('tipo', pagoTipo);
+		$("#modalP"+m).attr('banco', banco);
+		$("#modalP"+m).attr('numero', numero);
+		$("#modalP"+m).attr('monto', monto);
+		$("#Col"+m).val(colegiatura);
+		$("#Mat"+m).val(materiales);
+		$("#Deu"+m).val(deuda);
+		
+		if(pagoTipo == "Efectivo"){
+			$("#fechaD"+adaptador).val(fechaDeposito);
+		}
+		
+		igualador = igualador + 1;
+
+	}
+	
+	for(var n=cantidadTercero; n<cantidadFinal+1; n++){
+	
+		var igualador = cantidadTercero - 1;
+		var adaptador = n - igualador;
+		var boleta = +$("#boletaCuota"+adaptador).val();
+		var almuerzo = $("#almuerzoCuota"+adaptador).val();
+		var fecha = $("#fechaCuota"+adaptador).val();
+		var pagoTipo = $("#pagoTipo"+adaptador).attr('value');
+		var banco = $("#bancoCuota"+adaptador).val();
+		var numero = $("#numeroCuota"+adaptador).val();
+		var monto = $("#montoCuota"+adaptador).val();
+		var fechaDeposito = $("#fechaDepositoCuota"+adaptador).val();
+		
+		$("#Nbol"+n).val(boleta);
+		$("#FechaBol"+n).val(fecha);
+		$("#modalP"+n).attr('tipo', pagoTipo);
+		$("#modalP"+n).attr('banco', banco);
+		$("#modalP"+n).attr('numero', numero);
+		$("#modalP"+n).attr('monto', monto);
+		$("#Alm"+n).val(almuerzo);
+		
+		if(pagoTipo == "Efectivo"){
+			$("#fechaD"+adaptador).val(fechaDeposito);
+		}
+		igualador = igualador + 1;
 	}
 });

@@ -83,7 +83,6 @@ $(function() {
 <script src="../../js/Matriculas/papa.js"></script>
 <script src="../../js/Matriculas/nino.js"></script>
 <script src="../../js/Matriculas/utilidades.js"></script>
-<script src="../../js/Matriculas/precios.js"></script>
 <script src="../../js/Matriculas/validacion.js"></script>
 
 <script>
@@ -163,7 +162,7 @@ if(!Query::BuscarUFDate(date('Y-m-d'))){ ?>
     });
 
 </script>
-	<div class="results">
+	<div class="results" style="display:none">
 		<div class="span8 offset2" id="results"><?php include "getFamilia.php"; ?></div>
 	</div>
 	<div class="familiaID"><input type="hidden" id="familiaID" value="<?php echo $id?>"></div>
