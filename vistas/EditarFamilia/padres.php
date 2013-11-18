@@ -5,8 +5,8 @@
     <td><strong>Apoderado Economico</strong></td>
     <td>
   <div class="btn-group" id="AEconomico" data-toggle="buttons-radio">
- <button type="button" class="btn" onClick="clickButton(0)">Papa</button>
- <button type="button" class="btn" onClick="clickButton(1)">Mama</button>
+ <button type="button" id="PAPAAEbtn" class="btn" onClick="clickButton(0)">Papa</button>
+ <button type="button" id="MAMAAEbtn" class="btn" onClick="clickButton(1)">Mama</button>
 </div></td>
 
 

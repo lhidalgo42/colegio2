@@ -1,7 +1,129 @@
 $( document ).ready(function() {
+	
+	function escribirNino(I){
+		var tipo =$("#modalNino"+I).attr("sexo")
+		$("#SelectSexoMN").children("button[idval='"+tipo+"']").addClass("active");
+		$("#guardarNino").attr("onClick","GuardarNino("+I+")")
+		$("#inputRutN").val($("#modalNino"+I).attr("rut"));
+		$("#inputNombreN").val($("#modalNino"+I).attr("nombre"));
+		$("#inputApellidoPN").val($("#modalNino"+I).attr("apellidop"));
+		$("#inputApellidoMN").val($("#modalNino"+I).attr("apellidom"));
+		$("#inputFechaNacN").val($("#modalNino"+I).attr("fechanac"));
+		$("#inputCPast").val($("#modalNino"+I).attr("colegioanterior"));
+		var Nombre = $("#inputNombreN").val();
+		var Apellido = $("#inputApellidoPN").val();
+		if(Nombre != "" || Apellido != "")
+		{
+			$("#modalNino"+I).html(Nombre+" "+Apellido);
+		}
+		$("#modalNino"+I).attr("rut",$("#inputRutN").val());
+		$("#modalNino"+I).attr("nuevo",$("#ANuevo").children(".active").attr("idval"));
+		$("#modalNino"+I).attr("nombre",$("#inputNombreN").val());
+		$("#modalNino"+I).attr("apellidoP",$("#inputApellidoPN").val());
+		$("#modalNino"+I).attr("apellidoM",$("#inputApellidoMN").val());
+		$("#modalNino"+I).attr("fechanac",$("#inputFechaNacN").val());
+		$("#modalNino"+I).attr("colegioanterior",$("#inputCPast").val());
+		$("#modalNino"+I).attr("sexo",$("#SelectSexoMN").children(".active").attr("idval"));
+		$('#myModalNino').modal('hide');
+	}
+	
+	function escribirPadre(I){
+		$("#guardarPapa").attr("onClick","GuardarPapa("+I+")");
+		if(I==0)
+		{
+			$("#tittlePapa").html("<center>Complete los Datos de la Madre</center>");
+			$("#inputRUT").val($("#modalMAMA").attr("rut"));
+			$("#inputNombre").val($("#modalMAMA").attr("nombre"));
+			$("#inputApellidoP").val($("#modalMAMA").attr("apellido1"));
+			$("#inputApellidoM").val($("#modalMAMA").attr("apellido2"));
+			$("#inputFechaNac").val($("#modalMAMA").attr("fechaNac"));
+			$("#inputProfesion").val($("#modalMAMA").attr("profesion"));
+			$("#inputDireccion").val($("#modalMAMA").attr("direccion"));
+			$("#inputComuna").val($("#modalMAMA").attr("comuna"));
+			$("#inputEmail").val($("#modalMAMA").attr("email"));
+			$("#inputLugarTrabajo").val($("#modalMAMA").attr("lugarTrabajo"));
+			$("#inputDireccionT").val($("#modalMAMA").attr("direccionTrabajo"));
+			$("#inputTelefonos").val($("#modalMAMA").attr("telefonos"));
+		}
+		if(I==1)
+		{
+			$("#tittlePapa").html("<center>Complete los Datos del Padre</center>");
+			$("#inputRUT").val($("#modalPAPA").attr("rut"));
+			$("#inputNombre").val($("#modalPAPA").attr("nombre"));
+			$("#inputApellidoP").val($("#modalPAPA").attr("apellido1"));
+			$("#inputApellidoM").val($("#modalPAPA").attr("apellido2"));
+			$("#inputFechaNac").val($("#modalPAPA").attr("fechaNac"));
+			$("#inputProfesion").val($("#modalPAPA").attr("profesion"));
+			$("#inputDireccion").val($("#modalPAPA").attr("direccion"));
+			$("#inputComuna").val($("#modalPAPA").attr("comuna"));
+			$("#inputEmail").val($("#modalPAPA").attr("email"));
+			$("#inputLugarTrabajo").val($("#modalPAPA").attr("lugarTrabajo"));
+			$("#inputDireccionT").val($("#modalPAPA").attr("direccionTrabajo"));
+			$("#inputTelefonos").val($("#modalPAPA").attr("telefonos"));
+		}
+		var Nombre = $("#inputNombre").val();
+		var Apellido = $("#inputApellidoP").val();
+		if(I==0)
+		{
+			if(Nombre != "" || Apellido != "")
+			{
+				$("#modalMAMA").html(Nombre+" "+Apellido);
+			}
+			$("#modalMAMA").attr("rut",$("#inputRUT").val());
+			$("#modalMAMA").attr("nombre",$("#inputNombre").val());
+			$("#modalMAMA").attr("apellido1",$("#inputApellidoP").val());
+			$("#modalMAMA").attr("apellido2",$("#inputApellidoM").val());
+			$("#modalMAMA").attr("fechaNac",$("#inputFechaNac").val());
+			$("#modalMAMA").attr("profesion",$("#inputProfesion").val());
+			$("#modalMAMA").attr("direccion",$("#inputDireccion").val());
+			if($("#modalPAPA").attr("direccion")=="")
+			{
+				$("#modalPAPA").attr("direccion",$("#inputDireccion").val());
+			}
+			$("#modalMAMA").attr("comuna",$("#inputComuna").val());
+			$("#modalMAMA").attr("email",$("#inputEmail").val());
+			$("#modalMAMA").attr("lugarTrabajo",$("#inputLugarTrabajo").val());
+			$("#modalMAMA").attr("direccionTrabajo",$("#inputDireccionT").val());
+			$("#modalMAMA").attr("telefonos",$("#inputTelefonos").val());
+			$("a[id*='modalNino']").attr("apellidom",$("#inputApellidoP").val());
+		}
+		if(I==1)
+		{
+			if(Nombre != "" || Apellido != "")
+			{
+				$("#modalPAPA").html(Nombre+" "+Apellido);
+			}
+			$("#modalPAPA").attr("rut",$("#inputRUT").val());
+			$("#modalPAPA").attr("nombre",$("#inputNombre").val());
+			$("#modalPAPA").attr("apellido1",$("#inputApellidoP").val());
+			$("#modalPAPA").attr("apellido2",$("#inputApellidoM").val());
+			$("#modalPAPA").attr("fechaNac",$("#inputFechaNac").val());
+			$("#modalPAPA").attr("profesion",$("#inputProfesion").val());
+			$("#modalPAPA").attr("direccion",$("#inputDireccion").val());
+			if($("#modalMAMA").attr("direccion")=="")
+			{
+				$("#modalMAMA").attr("direccion",$("#inputDireccion").val());
+			}
+			$("#modalPAPA").attr("comuna",$("#inputComuna").val());
+			$("#modalPAPA").attr("email",$("#inputEmail").val());
+			$("#modalPAPA").attr("lugarTrabajo",$("#inputLugarTrabajo").val());
+			$("#modalPAPA").attr("direccionTrabajo",$("#inputDireccionT").val());
+			$("#modalPAPA").attr("telefonos",$("#inputTelefonos").val());
+			$("a[id*='modalNino']").attr("apellidop",$("#inputApellidoP").val());
+		}
+	}
+
+	
+	//Obtener datos Papas	
 	for(var i=0; i<2; i++){
-		if(i == 0){ var rol = "PAPA"; }
-		else{ var rol = "MAMA"; }
+		if(i == 0){ 
+			var rol = "PAPA"; 
+			var identificador = "1";
+		}
+		else{ 
+			var rol = "MAMA"; 
+			var identificador = "0";
+		}
 		
 		//Obtener Datos
 		
@@ -17,6 +139,7 @@ $( document ).ready(function() {
 		var lugarT = $("#lugarT"+rol).val();
 		var direccionT = $("#direccionT"+rol).val();
 		var telefonos = $("#telefonos"+rol).val();
+		var apoderadoAE = $("#apoderadoAE"+rol).val();
 				
 		//Inyectar Datos
 		
@@ -32,6 +155,12 @@ $( document ).ready(function() {
 		$("#modal"+rol).attr('lugartrabajo', lugarT);
 		$("#modal"+rol).attr('direcciontrabajo', direccionT);
 		$("#modal"+rol).attr('telefonos', telefonos);
+		
+		escribirPadre(identificador);
+		
+		if(apoderadoAE == "1"){
+			$("#"+rol+"AEbtn").trigger("click");
+		}
 	}
 	
 	hijos = +$("#numberChildren").val();
@@ -95,7 +224,7 @@ $( document ).ready(function() {
 		$("#modalC"+k).attr('monto', seguroMonto);
 		$("#fechaS"+k).val(seguroFecha);
 
-		
+		escribirNino(k);
 	}
 	
 	var cuotas = +$("#cuotasPagos").val();

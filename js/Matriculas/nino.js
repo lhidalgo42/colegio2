@@ -40,7 +40,7 @@ if(Nombre != "" || Apellido != "")
  $("#modalNino"+I).attr("colegioanterior",$("#inputCPast").val());
  $("#modalNino"+I).attr("sexo",$("#SelectSexoMN").children(".active").attr("idval"));
 $('#myModalNino').modal('hide');
- CerrarNino()
+ CerrarNino();
     $("#coutaIncorporacion").removeClass("opaco");
     $("#documentos").removeClass("opaco");
     $("#almuerzos").removeClass("opaco");

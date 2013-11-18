@@ -115,6 +115,10 @@ while($results = mysql_fetch_array($papasSQL)){
 				<div class='span3'>Telefonos:</div>
 				<div class='span4'><input type='number' id='telefonos$i' value='$telefonos'></div>
 			</div>
+			<div>
+				<div class='span3'>Apoderado Eco:</div>
+				<div class='span4'><input type='number' id='apoderadoAE$i' value='$apoderadoEcono'></div>
+			</div>
 			<div class='bottom'>
 				<div class='span3'></div>
 				<div class='span4'>
