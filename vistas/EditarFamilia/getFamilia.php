@@ -241,11 +241,6 @@ while($results = mysql_fetch_array($estudiantesSQL)){
 				$matriculaMonto = $results2['Monto'];
 				$matriculaFecha = $results2['Fecha'];
 				$matriculaBoleta = $results2['N_de_Boleta'];
-				$seguroTipo = $results2['tipo_ID'];
-				$seguroBanco = $results2['Bancos_ID'];
-				$seguroNumero = $results2['Numero'];
-				$seguroMonto = $results2['Monto'];
-				$seguroFecha = $results2['Fecha'];
 				
 				if($matriculaTipo == 1){$matriculaTipo = "Cheque";}
 				else if($matriculaTipo == 2){$matriculaTipo = "Letra";}
@@ -338,36 +333,35 @@ while($results = mysql_fetch_array($estudiantesSQL)){
 		echo "</div>";
 }
 
-$pagoSQL = mysql_query("SELECT * FROM documentos D
+
+
+$pagoCuotaIncSQL = mysql_query("SELECT * FROM documentos D
 						JOIN pago_has_documentos PHD ON D.ID = PHD.documentos_ID
 						JOIN pago P ON P.ID = PHD.pago_ID
-						WHERE Familia_ID = '$id'");
-$cuotas = mysql_num_rows($pagoSQL);
+						WHERE Familia_ID = '$id' AND Cuota_Inc != 0");
+						
+$cuotasInc = mysql_num_rows($pagoCuotaIncSQL);
 
-echo "<table class='apoderado table'>
+echo "<table class='cuotasInc table'>
 			<tr>
-				<td class='span4'>Pagos</td>
+				<td class='span4'>Pagos Cuota de Incorporacion</td>
 				<td class='span1'><button id='$rut' class='editarInfo btn'>Editar</button></td>
 			</tr>
 		</table>
-		<div class='pagoInfo $rut'>
+		<div class='CuotaInc'>
 			<div>
-				<div class='span3'>Cuotas:</div>
-				<div class='span4'><input type='text' id='cuotasPagos' value='$cuotas'></div>
+				<div class='span3'>Cuotas de Incorporacion:</div>
+				<div class='span4'><input type='text' id='cuotasIncPagos' value='$cuotasInc'></div>
 			</div>";
 
 $j = 0;
 
-while($results4 = mysql_fetch_array($pagoSQL)){
+while($results4 = mysql_fetch_array($pagoCuotaIncSQL)){
 
 	$j = $j + 1;
 	$numeroBoleta = $results4['NBoleta'];
-	$colegiatura = $results4['Colegiatura'];
-	$materiales = $results4['Materiales'];
-	$cuotaInc = $results4['cuotaInc'];
-	$almuerzo = $results4['Almuerzo'];
-	$deuda = $results4['Deuda'];
 	$fecha = $results4['Fecha'];
+	$observaciones = $results4['Observaciones'];
 	$pagoTipo = $results4['tipo_ID'];
 	$banco = $results4['Bancos_ID'];
 	$numero = $results4['Numero'];
@@ -379,52 +373,202 @@ while($results4 = mysql_fetch_array($pagoSQL)){
 	else{$pagoTipo = "Efectivo";}
 	
 	echo	"<div>
-				<div class='span3'>Numero de Boleta:</div>
-				<div class='span4'><input type='text' id='boletaCuota$j' value='$numeroBoleta'></div>
-			</div>
-			<div>
-				<div class='span3'>Colegiatura:</div>
-				<div class='span4'><input type='text' id='colegiaturaCuota$j' value='$colegiatura'></div>
-			</div>
-			<div>
-				<div class='span3'>Materiales</div>
-				<div class='span4'><input type='text' id='materialesCuota$j' value='$materiales'></div>
-			</div>
-			<div>
-				<div class='span3'>Cuota Incorporacion:</div>
-				<div class='span4'><input type='text' id='cuotaIncCuota$j' value='$cuotaInc'></div>
-			</div>
-			<div>
-				<div class='span3'>Almuerzo:</div>
-				<div class='span4'><input type='text' id='almuerzoCuota$j' value='$almuerzo'></div>
-			</div>
-			<div>
-				<div class='span3'>Deuda:</div>
-				<div class='span4'><input type='text' id='deudaCuota$j' value='$deuda'></div>
+				<div class='span3'>Numero de Boleta CI:</div>
+				<div class='span4'><input type='text' id='boletaCuotaInc$j' value='$numeroBoleta'></div>
 			</div>
 			<div>
 				<div class='span3'>Monto:</div>
-				<div class='span4'><input type='text' id='montoCuota$j' value='$monto'></div>
+				<div class='span4'><input type='text' id='montoCuotaInc$j' value='$monto'></div>
 			</div>
 			<div>
 				<div class='span3'>Fecha:</div>
-				<div class='span4'><input type='text' id='fechaCuota$j' value='$fecha'></div>
+				<div class='span4'><input type='text' id='fechaCuotaInc$j' value='$fecha'></div>
 			</div>
 			<div>
 				<div class='span3'>Pago Tipo:</div>
-				<div class='span4'><p id='pagoTipo$j' value='$pagoTipo'>$pagoTipo</p></div>
+				<div class='span4'><p id='pagoTipoCI$j' value='$pagoTipo'>$pagoTipo</p></div>
 			</div>
 			<div>
 				<div class='span3'>Banco:</div>
-				<div class='span4'><input type='text' id='bancoCuota$j' value='$banco'></div>
+				<div class='span4'><input type='text' id='bancoCuotaInc$j' value='$banco'></div>
 			</div>
 			<div>
 				<div class='span3'>Numero:</div>
-				<div class='span4'><input type='text' id='numeroCuota$j' value='$numero'></div>
+				<div class='span4'><input type='text' id='numeroCuotaInc$j' value='$numero'></div>
 			</div>
 			<div>
 				<div class='span3'>Fecha Deposito:</div>
-				<div class='span4'><input type='text' id='fechaDepositoCuota$j' value='$fechaDeposito'></div>
+				<div class='span4'><input type='text' id='fechaDepositoCuotaInc$j' value='$fechaDeposito'></div>
+			</div>
+			<div>
+				<div class='span3'>Observaciones:</div>
+				<div class='span4'><input type='text' id='observacionesCuotaInc$j' value='$observaciones'></div>
+			</div>";
+}
+
+echo "</div>";
+
+
+$pagoDocumentosSQL = mysql_query("SELECT * FROM documentos D
+						JOIN pago_has_documentos PHD ON D.ID = PHD.documentos_ID
+						JOIN pago P ON P.ID = PHD.pago_ID
+						WHERE Familia_ID = '$id' AND Colegiatura != 0");
+$cuotasDoc = mysql_num_rows($pagoDocumentosSQL);
+
+echo "<table class='apoderado table'>
+			<tr>
+				<td class='span4'>Pagos Documentos</td>
+				<td class='span1'><button id='$rut' class='editarInfo btn'>Editar</button></td>
+			</tr>
+		</table>
+		<div class='pagoInfo'>
+			<div>
+				<div class='span3'>Cuotas:</div>
+				<div class='span4'><input type='text' id='cuotasPagosDoc' value='$cuotasDoc'></div>
+			</div>";
+
+$j = 0;
+
+while($results5 = mysql_fetch_array($pagoDocumentosSQL)){
+
+	$j = $j + 1;
+	$numeroBoleta = $results5['NBoleta'];
+	$colegiatura = $results5['Colegiatura'];
+	$materiales = $results5['Materiales'];
+	$deuda = $results5['Deuda'];
+	$fecha = $results5['Fecha'];
+	$pagoTipo = $results5['tipo_ID'];
+	$banco = $results5['Bancos_ID'];
+	$numero = $results5['Numero'];
+	$monto = $results5['Monto'];
+	$fechaDeposito = $results5['Fecha_Deposito'];
+	$observaciones = $results5['Observaciones'];
+				
+	if($pagoTipo == 1){$pagoTipo = "Cheque";}
+	else if($pagoTipo == 2){$pagoTipo = "Letra";}
+	else{$pagoTipo = "Efectivo";}
+	
+	echo	"<div>
+				<div class='span3'>Numero de Boleta:</div>
+				<div class='span4'><input type='text' id='boletaCuotaDoc$j' value='$numeroBoleta'></div>
+			</div>
+			<div>
+				<div class='span3'>Colegiatura:</div>
+				<div class='span4'><input type='text' id='colegiaturaCuotaDoc$j' value='$colegiatura'></div>
+			</div>
+			<div>
+				<div class='span3'>Materiales</div>
+				<div class='span4'><input type='text' id='materialesCuotaDoc$j' value='$materiales'></div>
+			</div>
+			<div>
+				<div class='span3'>Deuda:</div>
+				<div class='span4'><input type='text' id='deudaCuotaDoc$j' value='$deuda'></div>
+			</div>
+			<div>
+				<div class='span3'>Monto:</div>
+				<div class='span4'><input type='text' id='montoCuotaDoc$j' value='$monto'></div>
+			</div>
+			<div>
+				<div class='span3'>Fecha:</div>
+				<div class='span4'><input type='text' id='fechaCuotaDoc$j' value='$fecha'></div>
+			</div>
+			<div>
+				<div class='span3'>Pago Tipo:</div>
+				<div class='span4'><p id='pagoTipoD$j' value='$pagoTipo'>$pagoTipo</p></div>
+			</div>
+			<div>
+				<div class='span3'>Banco:</div>
+				<div class='span4'><input type='text' id='bancoCuotaDoc$j' value='$banco'></div>
+			</div>
+			<div>
+				<div class='span3'>Numero:</div>
+				<div class='span4'><input type='text' id='numeroCuotaDoc$j' value='$numero'></div>
+			</div>
+			<div>
+				<div class='span3'>Fecha Deposito:</div>
+				<div class='span4'><input type='text' id='fechaDepositoCuotaDoc$j' value='$fechaDeposito'></div>
+			</div>
+			<div>
+				<div class='span3'>Observaciones:</div>
+				<div class='span4'><input type='text' id='observacionesCuotaDoc$j' value='$observaciones'></div>
+			</div>";
+}
+
+echo "</div>";
+
+
+$pagoAlmuerzoSQL = mysql_query("SELECT * FROM documentos D
+						JOIN pago_has_documentos PHD ON D.ID = PHD.documentos_ID
+						JOIN pago P ON P.ID = PHD.pago_ID
+						WHERE Familia_ID = '$id' AND Almuerzo != 0");
+$cuotasAlm = mysql_num_rows($pagoAlmuerzoSQL);
+
+echo "<table class='apoderado table'>
+			<tr>
+				<td class='span4'>Pagos Almuerzo</td>
+				<td class='span1'><button id='$rut' class='editarInfo btn'>Editar</button></td>
+			</tr>
+		</table>
+		<div class='pagoInfo'>
+			<div>
+				<div class='span3'>Cuotas Almuerzo:</div>
+				<div class='span4'><input type='text' id='cuotasPagosAlm' value='$cuotasAlm'></div>
+			</div>";
+
+$j = 0;
+
+while($results6 = mysql_fetch_array($pagoAlmuerzoSQL)){
+
+	$j = $j + 1;
+	$numeroBoleta = $results6['NBoleta'];
+	$almuerzo = $results6['Almuerzo'];
+	$fecha = $results6['Fecha'];
+	$pagoTipo = $results6['tipo_ID'];
+	$banco = $results6['Bancos_ID'];
+	$numero = $results6['Numero'];
+	$monto = $results6['Monto'];
+	$fechaDeposito = $results6['Fecha_Deposito'];
+	$observaciones = $results6['Observaciones'];
+				
+	if($pagoTipo == 1){$pagoTipo = "Cheque";}
+	else if($pagoTipo == 2){$pagoTipo = "Letra";}
+	else{$pagoTipo = "Efectivo";}
+	
+	echo	"<div>
+				<div class='span3'>Numero de Boleta:</div>
+				<div class='span4'><input type='text' id='boletaCuotaAlm$j' value='$numeroBoleta'></div>
+			</div>
+			<div>
+				<div class='span3'>Almuerzo:</div>
+				<div class='span4'><input type='text' id='almuerzoCuotaAlm$j' value='$almuerzo'></div>
+			</div>
+			<div>
+				<div class='span3'>Monto:</div>
+				<div class='span4'><input type='text' id='montoCuotaAlm$j' value='$monto'></div>
+			</div>
+			<div>
+				<div class='span3'>Fecha:</div>
+				<div class='span4'><input type='text' id='fechaCuotaAlm$j' value='$fecha'></div>
+			</div>
+			<div>
+				<div class='span3'>Pago Tipo:</div>
+				<div class='span4'><p id='pagoTipoA$j' value='$pagoTipo'>$pagoTipo</p></div>
+			</div>
+			<div>
+				<div class='span3'>Banco:</div>
+				<div class='span4'><input type='text' id='bancoCuotaAlm$j' value='$banco'></div>
+			</div>
+			<div>
+				<div class='span3'>Numero:</div>
+				<div class='span4'><input type='text' id='numeroCuotaAlm$j' value='$numero'></div>
+			</div>
+			<div>
+				<div class='span3'>Fecha Deposito:</div>
+				<div class='span4'><input type='text' id='fechaDepositoCuotaAlm$j' value='$fechaDeposito'></div>
+			</div>
+			<div>
+				<div class='span3'>Observaciones:</div>
+				<div class='span4'><input type='text' id='observacionesCuotaAlm$j' value='$observaciones'></div>
 			</div>";
 }
 

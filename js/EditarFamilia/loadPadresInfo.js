@@ -163,6 +163,7 @@ $( document ).ready(function() {
 		}
 	}
 	
+	//Obtener datos hijos
 	hijos = +$("#numberChildren").val();
 	for(var k=1; k<hijos+1; k++){
 		
@@ -227,28 +228,31 @@ $( document ).ready(function() {
 		escribirNino(k);
 	}
 	
-	var cuotas = +$("#cuotasPagos").val();
-	$("#cuotaInc").val(cuotas);
-	$("#cuotas").val(cuotas);
-	$("#almuerzoCuotas").val(cuotas);
+	//Obtener pagos
+	var cuotasCI = +$("#cuotasIncPagos").val();
+	var cuotasD = +$("#cuotasPagosDoc").val();
+	var cuotasA = +$("#cuotasPagosAlm").val();
+	$("#cuotaInc").val(cuotasCI);
+	$("#cuotas").val(cuotasD);
+	$("#almuerzoCuotas").val(cuotasA);
 	cambio();
 	cambio2();
 	cambio3();
 	
-	var cantidadPrimero = cuotas;
-	var cantidadSegundo = cuotas + 1;
-	var cantidadTercero = (cuotas*2) + 1;
-	var cantidadFinal = cuotas*3;
+	var cantidadPrimero = cuotasCI;
+	var cantidadSegundo = cuotasCI + 1;
+	var cantidadTercero = cuotasCI + cuotasD + 1;
+	var cantidadFinal = cantidadTercero + cuotasA ;
 	
 	for(var l=1; l< cantidadPrimero + 1; l++){
-		var boleta = +$("#boletaCuota"+l).val();
-		var cuotaInc = $("#cuotaIncCuota"+l).val();
-		var fecha = $("#fechaCuota"+l).val();
-		var pagoTipo = $("#pagoTipo"+l).attr('value');
-		var banco = $("#bancoCuota"+l).val();
-		var numero = $("#numeroCuota"+l).val();
-		var monto = $("#montoCuota"+l).val();
-		var fechaDeposito = $("#fechaDepositoCuota"+l).val();
+		var boleta = +$("#boletaCuotaInc"+l).val();
+		var fecha = $("#fechaCuotaInc"+l).val();
+		var pagoTipo = $("#pagoTipoCI"+l).attr('value');
+		var banco = $("#bancoCuotaInc"+l).val();
+		var numero = $("#numeroCuotaInc"+l).val();
+		var monto = $("#montoCuotaInc"+l).val();
+		var fechaDeposito = $("#fechaDepositoCuotaInc"+l).val();
+		var observaciones = $("#observacionesCuotaInc"+l).val();
 		
 		$("#Nbol"+l).val(boleta);
 		$("#FechaBol"+l).val(fecha);
@@ -256,7 +260,8 @@ $( document ).ready(function() {
 		$("#modalP"+l).attr('banco', banco);
 		$("#modalP"+l).attr('numero', numero);
 		$("#modalP"+l).attr('monto', monto);
-		$("#Cou"+l).val(cuotaInc);
+		$("#Cou"+l).val(monto);
+		$("#obs"+l).val(observaciones);
 		
 		if(pagoTipo == "Efectivo"){
 			$("#fechaD"+l).val(fechaDeposito);
@@ -269,16 +274,17 @@ $( document ).ready(function() {
 		var igualador = cantidadSegundo - 1;
 		var adaptador = m - igualador;
 		
-		var boleta = +$("#boletaCuota"+adaptador).val();
-		var colegiatura = $("#colegiaturaCuota"+adaptador).val();
-		var materiales = $("#materialesCuota"+adaptador).val();
-		var deuda = $("#deudaCuota"+adaptador).val();
-		var fecha = $("#fechaCuota"+adaptador).val();
-		var pagoTipo = $("#pagoTipo"+adaptador).attr('value');
-		var banco = $("#bancoCuota"+adaptador).val();
-		var numero = $("#numeroCuota"+adaptador).val();
-		var monto = $("#montoCuota"+adaptador).val();
-		var fechaDeposito = $("#fechaDepositoCuota"+adaptador).val();
+		var boleta = +$("#boletaCuotaDoc"+adaptador).val();
+		var colegiatura = $("#colegiaturaCuotaDoc"+adaptador).val();
+		var materiales = $("#materialesCuotaDoc"+adaptador).val();
+		var deuda = $("#deudaCuotaDoc"+adaptador).val();
+		var fecha = $("#fechaCuotaDoc"+adaptador).val();
+		var pagoTipo = $("#pagoTipoD"+adaptador).attr('value');
+		var banco = $("#bancoCuotaDoc"+adaptador).val();
+		var numero = $("#numeroCuotaDoc"+adaptador).val();
+		var monto = $("#montoCuotaDoc"+adaptador).val();
+		var fechaDeposito = $("#fechaDepositoCuotaDoc"+adaptador).val();
+		var observaciones = $("#observacionesCuotaDoc"+adaptador).val();
 		
 		$("#Nbol"+m).val(boleta);
 		$("#FechaBol"+m).val(fecha);
@@ -289,6 +295,7 @@ $( document ).ready(function() {
 		$("#Col"+m).val(colegiatura);
 		$("#Mat"+m).val(materiales);
 		$("#Deu"+m).val(deuda);
+		$("#obs"+m).val(observaciones);
 		
 		if(pagoTipo == "Efectivo"){
 			$("#fechaD"+adaptador).val(fechaDeposito);
@@ -302,14 +309,15 @@ $( document ).ready(function() {
 	
 		var igualador = cantidadTercero - 1;
 		var adaptador = n - igualador;
-		var boleta = +$("#boletaCuota"+adaptador).val();
-		var almuerzo = $("#almuerzoCuota"+adaptador).val();
-		var fecha = $("#fechaCuota"+adaptador).val();
-		var pagoTipo = $("#pagoTipo"+adaptador).attr('value');
-		var banco = $("#bancoCuota"+adaptador).val();
-		var numero = $("#numeroCuota"+adaptador).val();
-		var monto = $("#montoCuota"+adaptador).val();
-		var fechaDeposito = $("#fechaDepositoCuota"+adaptador).val();
+		var boleta = +$("#boletaCuotaAlm"+adaptador).val();
+		var almuerzo = $("#almuerzoCuotaAlm"+adaptador).val();
+		var fecha = $("#fechaCuotaAlm"+adaptador).val();
+		var pagoTipo = $("#pagoTipoA"+adaptador).attr('value');
+		var banco = $("#bancoCuotaAlm"+adaptador).val();
+		var numero = $("#numeroCuotaAlm"+adaptador).val();
+		var monto = $("#montoCuotaAlm"+adaptador).val();
+		var fechaDeposito = $("#fechaDepositoCuotaAlm"+adaptador).val();
+		var observaciones = $("#observacionesCuotaAlm"+adaptador).val();
 		
 		$("#Nbol"+n).val(boleta);
 		$("#FechaBol"+n).val(fecha);
@@ -318,6 +326,7 @@ $( document ).ready(function() {
 		$("#modalP"+n).attr('numero', numero);
 		$("#modalP"+n).attr('monto', monto);
 		$("#Alm"+n).val(almuerzo);
+		$("#obs"+n).val(observaciones);
 		
 		if(pagoTipo == "Efectivo"){
 			$("#fechaD"+adaptador).val(fechaDeposito);

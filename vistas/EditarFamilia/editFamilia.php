@@ -162,7 +162,7 @@ if(!Query::BuscarUFDate(date('Y-m-d'))){ ?>
     });
 
 </script>
-	<div class="results" style="display:none">
+	<div class="results" style="display">
 		<div class="span8 offset2" id="results"><?php include "getFamilia.php"; ?></div>
 	</div>
 	<div class="familiaID"><input type="hidden" id="familiaID" value="<?php echo $id?>"></div>
