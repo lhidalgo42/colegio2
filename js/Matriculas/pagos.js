@@ -21,7 +21,7 @@ function CerrarP(){
 	$('#tipoP1').css('display','none');
 	$("#bancoCheque").val("");
 	$("#numeroCheque").val("");
-	$("#montoCheque").val("");		
+	$("#montoCheque").val("");
 	$('#tipoP2').css('display','none');
 	$("#numeroLetra").val("");
 	$("#montoLetra").val("");
@@ -53,6 +53,10 @@ function GuardarP(I){
 function MostrarP(I){
 var tipo =$("#modalP"+I).attr("tipo")
 $("#myModalP").children(".modal-body").children().children(".btn-group").children("button[idval='"+tipo+"']").addClass("active");
+    $("#montoCheque").val(parseFloat($("#Total"+I).html()));
+    $("#montoLetra").val(parseFloat($("#Total"+I).html()));
+    $("#montoEfectivo").val(parseFloat($("#Total"+I).html()));
+
 if(tipo == "Cheque"){
 	tipoP(1);
 	$("#bancoCheque").val($("#modalP"+I).attr("banco"));
@@ -62,7 +66,7 @@ if(tipo == "Cheque"){
 if(tipo == "Letra"){
 	tipoP(2);
 	$("#numeroLetra").val($("#modalP"+I).attr("numero"));
-	$("#montoLetra").val($("#modalP"+I).attr("monto"));		
+	$("#montoLetra").val($("#modalP"+I).attr("monto"));
 	}
 if(tipo == "Efectivo"){
 	tipoP(3);

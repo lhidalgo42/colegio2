@@ -42,6 +42,11 @@ verificarIP(); ?>
 				margin-top: 10px;
 				margin-bottom: 10px;
 			}
+            th{
+                background-color:#ddd;
+                width:200px;
+                padding:10px;
+            }
 		</style>
 	</head>
 	<body>

@@ -91,8 +91,6 @@ $(function() {
 <script src="../../js/Matriculas/nino.js"></script>
 <script src="../../js/Matriculas/utilidades.js"></script>
 <script src="../../js/Matriculas/precios.js"></script>
-<script src="../../js/Matriculas/validacion.js"></script>
-
 <script>
 
 var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
@@ -109,6 +107,13 @@ function preguntar(){
 if (confirmar){
 siguente()
 }
+}
+function pago(I){
+    if(I==0)
+    $("#pagoCI").css('display','block');
+    if(I==1)
+    $("#pagoCI").css('display','none');
+    $("#pagocI").val("0");
 }
 
 </script>

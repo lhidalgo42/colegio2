@@ -20,44 +20,26 @@ var actualizar3 = setInterval(function(){
  else{
  var debe = 50;
  }
-    var n =0;
- for (var b = 0;b<length;b++)
-    {
-        var i = b+1;
-    var nuevo = parseFloat($("#modalNino"+i).attr("nuevo"));
-        console.log(nuevo)
-        if(nuevo==0){
-            n++;
-        }
-    }
-    if(n==0)
-    var pago = 0;
-    else if(n==1)
-    var pago = 32;
-    else if(n==2)
-    var pago = 42;
-    else
-    var pago = 50;
-    var valor = debe-pago;
-    if(valor<0)
-    var valor =0;
- $("#valor").html(valor+" UF");
- var uf = $("#uf").attr("uf");
- cuotas = $("#cuotaInc").val()
- if(cuotas != 0)
- total = (uf*valor)/cuotas;
- else
- total = 0;
- total=parseFloat(total);
- total=Math.round(total);
- $("input[id*='Cou']").val(total)
- c=0;
- var val = new Array();
-var total = 0;
-var totalMat = 0;
-    var cuotas=$("#cuotas").val()
-var monto = new Array();
-var mat = new Array();
+    var pago = $("#pago-cuota-inc-input").val();
+    var valor =debe-pago
+  $("#valor").attr("uf",valor);
+  $("#valor").html(valor+" UF");
+  var uf = $("#uf").attr("uf");
+  cuotas = $("#cuotaInc").val()
+  if(cuotas != 0)
+  total = (uf*valor)/cuotas;
+  else
+  total = 0;
+  total=parseFloat(total);
+  total=Math.round(total);
+  $("input[id*='Cou']").val(total)
+  c=0;
+  var val = new Array();
+ var total = 0;
+ var totalMat = 0;
+ var cuotas=$("#cuotas").val()
+ var monto = new Array();
+ var mat = new Array();
  var length = $( "select[id*='Curso'] option:selected" ).length;
   for (var i = 0; i < length; i++){
 	var dato = $( "select[id*='Curso'] option:selected" )[i];

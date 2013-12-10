@@ -2,11 +2,14 @@
   <dictionary name="Leoo">
     <words>
       <w>abril</w>
+      <w>apoderado</w>
       <w>async</w>
       <w>buscar</w>
       <w>datos</w>
       <w>diciembre</w>
+      <w>economico</w>
       <w>enero</w>
+      <w>familia</w>
       <w>febrero</w>
       <w>fecha</w>
       <w>junio</w>
@@ -19,6 +22,7 @@
       <w>respuesta</w>
       <w>septiembre</w>
       <w>sleccione</w>
+      <w>tipo</w>
     </words>
   </dictionary>
 </component>

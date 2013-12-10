@@ -41,10 +41,10 @@ if(!Query::BuscarUFDate(date('Y-m-d'))){ ?>
             success: function(data) {
                 if(data==1){
                     alert('Cambios Guardados Correctamente');
-                    $('#modalUF').modal('hide');
+                    location.reload();
                 }
                 else{
-                    $("#modalUF").html("Ha Ocurrido un Error");
+                    $("#modalUF").html("<h2>Ha Ocurrido un Error</h2>");
                     location.reload();
 
 

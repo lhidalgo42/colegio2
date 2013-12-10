@@ -6,7 +6,7 @@ verificarIP(); ?>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Matriculas - Revisión de datos</title>
 <link rel="stylesheet" href="../../css/bootstrap-combined.min.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -38,10 +38,10 @@ $data=$_SESSION['envio']; ?>
         <br>
 
         <div class="span12" id="panel_superior">
-            <div class="span2 pull-left"><button type="button" class="btn btn-info" id="print"><i class="icon-print"></i><strong>Imprimir</strong></button></div>
+            <div class="span2 pull-left"><button type="button" class="btn btn-info" onclick="pdf()"><i class="icon-print"></i><strong>Imprimir</strong></button></div>
 
-            <div class="pull-right span4">
-            <table class="table  table-bordered">
+
+            <table class="table  table-bordered" style="float: right;width: 370px;min-height: 1px;margin-left: 30px;">
                 <tr>
                     <td><strong>FAMILIA</strong></td>
                     <td colspan="3"><?php echo $data['familia'][0]; ?></td>
@@ -53,17 +53,12 @@ $data=$_SESSION['envio']; ?>
                     <td><?php echo "".$data['Papas'][1][1]." ".$data['Papas'][1][2].""; ?></td>
                 </tr>
             </table>
-            </div>
-            <div class="offset2 span2">
-                <br>
-                <br>
-                <table>
+                <table style="margin-left: 230px;width: 170px;float: left;min-height: 1px;line-height: 20px;">
                     <tr>
                         <td><strong>AÑO</strong></td>
                         <td>&nbsp;&nbsp;<u>2014</u></td>
                     </tr>
                 </table>
-            </div>
     	</div>
         <div class="span12">
         <table class="table table-bordered" border="1">
@@ -105,19 +100,6 @@ $data=$_SESSION['envio']; ?>
                     <td><?php echo $data['alumnos'][$i][21]; ?></td>
                     <td><?php echo $data['alumnos'][$i][22]; ?></td>
                     <td><?php echo $data['alumnos'][$i][23]; ?></td>
-                </tr><?php }?>
-                <?php for($i=0;$i<4-$b;$i++){?>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
                 </tr><?php }?>
             </tbody>
         </table>
@@ -179,7 +161,7 @@ $data=$_SESSION['envio']; ?>
                   <tr>
                     <td><?php echo $data['documentos'][$i][12]; ?></td>
                     <td><?php echo $data['documentos'][$i][0]; ?></td>
-                    <td><?php echo $data['documentos'][$i][8]."<br>".$data['documentos'][$i][9]."<br>".$data['documentos'][$i][10]; ?></td>
+                    <td><?php echo substr($data['documentos'][$i][8], 0,1)."/".$data['documentos'][$i][9]."/$".$data['documentos'][$i][10]; ?></td>
                     <td><center><?php echo $data['documentos'][$i][1]; ?></center></td>
                     <td><center><?php echo $data['documentos'][$i][2]; ?></center></td>
                     <td><center><?php echo $data['documentos'][$i][3]; ?></center></td>
@@ -228,9 +210,21 @@ $.ajax({
             confirmar=confirm("¿Esta seguro que desea continuar?");
             if (confirmar){
                 enviar()
-                window.location.href = "../../vistas/decision2.php";
+                //window.location.href = "../../vistas/decision2.php";
             }
         }
+        function pdf(){
+
+                var data =$("html");
+            $.ajax({
+                url: "../../ajax/pdf.php",
+                data: {data:data},
+                type: "POST",
+                beforeSend: function(){},
+                success: function( data ) {
+                    $("#ayuda").html(data);
+                }
+            });}
     </script>
 </body>
 </html>

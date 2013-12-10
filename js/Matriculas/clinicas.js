@@ -53,7 +53,7 @@ $("#modalC"+I).attr("tipop",$("#tipop").children(".active").attr("idval"));
 if($("#tipoc").children(".active").attr("idval")=="OTRA")
 {
 var A = $("#NombreC").val();
-$("#modalC"+I).attr("nombre",$("#NombreC").val());
+$("#modalC"+I).attr("nombre",A);
 }
 else if($("#tipoc").children(".active").attr("idval")=="CA")
 {

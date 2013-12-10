@@ -256,29 +256,32 @@ function cambio3(){
     var cuotasAlm = parseFloat($("#almuerzoCuotas").val());
     var cuotas = parseFloat($('#cuotas').val());
     var cuotasINC = parseFloat($("#cuotaInc").val());
+    var NBol = $("#bolM1").val();
     if(cuotas >20){var cuotas = 20}
     $("#cuotaAlm").change(cambio);
     $('#pagoCuotasAlm').html("");
     for(var i=1+cuotas+cuotasINC;i<cuotas+cuotasINC+cuotasAlm+1;i++){
-        $('#pagoCuotasAlm').append('<tr><td><input style="width:115px;" type="number" id="Nbol'+i+'" onKeyUp="copiarNbol('+i+')"></td><td><input style="width:125px;" type="date" id="FechaBol'+i+'" onChange="fecha('+i+')"></td><td style="width:100px;"><center><a id="modalP'+i+'" role="button" onClick="MostrarP('+i+')"class="btn" data-toggle="modal" tipo="" banco="" numero="" monto="">Seleccionar</a></center></td><!-- suma desde aqui--><td style="width:90px;"><input type="number" class="cAlm" style="width:90px;" min="0" value="0" id="Alm'+i+'"></td><!-- hasta aqui --><td><center><input type="date" style="width:115px;" id="fechaD'+i+'" disabled></center></td><td><input type="text" style="width:170px;" id="obs'+i+'"></td></tr>');
+        $('#pagoCuotasAlm').append('<tr><td><input style="width:115px;" type="number" id="Nbol'+i+'" value="'+NBol+'" onKeyUp="copiarNbol('+i+')"></td><td><input style="width:125px;" type="date" id="FechaBol'+i+'" onChange="fecha('+i+')"></td><td style="width:100px;"><center><a id="modalP'+i+'" role="button" onClick="MostrarP('+i+')"class="btn" data-toggle="modal" tipo="" banco="" numero="" monto="">Seleccionar</a></center></td><!-- suma desde aqui--><td style="width:90px;"><input type="number" class="cAlm" style="width:90px;" min="0" value="0" id="Alm'+i+'"></td><!-- hasta aqui --><td><center><input type="date" style="width:115px;" id="fechaD'+i+'" disabled></center></td><td><input type="text" style="width:170px;" id="obs'+i+'"></td></tr>');
     }
 }
 function cambio2(){
+    var NBol = $("#bolM1").val();
     var cuotas = parseFloat($("#cuotaInc").val());
     if(cuotas >20){var cuotas = 20}
     $("#cuotaInc").change(cambio);
     $('#pagoCuotasInc').html("");
     for(var i=1;i<cuotas+1;i++){
-        $('#pagoCuotasInc').append('<tr><td><input style="width:115px;" type="number" id="Nbol'+i+'" onKeyUp="copiarNbol('+i+')"></td><td><input style="width:125px;" type="date" id="FechaBol'+i+'" onChange="fecha('+i+')"></td><td style="width:100px;"><center><a id="modalP'+i+'" role="button" onClick="MostrarP('+i+')"class="btn" data-toggle="modal" tipo="" banco="" numero="" monto="">Seleccionar</a></center></td><!-- suma desde aqui--><td style="width:90px;"><input type="number" style="width:90px;" min="0" value="0" id="Cou'+i+'"></td><!-- hasta aqui --><td style="width:80px;"><center><div id="TotalInc'+i+'">0</div></center></td><td><input type="date" style="width:115px;" id="fechaD'+i+'" disabled></td><td><input type="text" style="width:170px;" id="obs'+i+'"></td></tr>');
+        $('#pagoCuotasInc').append('<tr><td><input style="width:115px;" type="number" id="Nbol'+i+'" value="'+NBol+'" onKeyUp="copiarNbol('+i+')"></td><td><input style="width:125px;" type="date" id="FechaBol'+i+'" onChange="fecha('+i+')"></td><td style="width:100px;"><center><a id="modalP'+i+'" role="button" onClick="MostrarP('+i+')"class="btn" data-toggle="modal" tipo="" banco="" numero="" monto="">Seleccionar</a></center></td><!-- suma desde aqui--><td style="width:90px;"><input type="number" style="width:90px;" min="0" value="0" id="Cou'+i+'"></td><!-- hasta aqui --><td style="width:80px;"><center><div id="TotalInc'+i+'">0</div></center></td><td><input type="date" style="width:115px;" id="fechaD'+i+'" disabled></td><td><input type="text" style="width:170px;" id="obs'+i+'"></td></tr>');
     }
 }
 function cambio(){
+    var NBol = $("#bolM1").val();
     var cuotas = parseFloat($('#cuotas').val());
     var cuotasINC = parseFloat($("#cuotaInc").val());
     if(cuotas >20){var cuotas = 20}
     $('#pagoCuotas').html("");
     for(var i=cuotasINC+1;i<cuotasINC+cuotas+1;i++){
-        $('#pagoCuotas').append('<tr><td><input style="width:115px;" type="number" id="Nbol'+i+'" onKeyUp="copiarNbol('+i+')"></td><td><input style="width:125px;" type="date" id="FechaBol'+i+'" onChange="fecha('+i+')"></td><td style="width:100px;"><center><a id="modalP'+i+'" role="button" onClick="MostrarP('+i+')"class="btn" data-toggle="modal" tipo="" banco="" numero="" monto="">Seleccionar</a></center></td><!-- suma desde aqui--><td><input type="number" style="width:80px;" min="0"  value="0" id="Col'+i+'" ></td><td><input type="number" style="width:80px;" min="0" value="0" id="Mat'+i+'"></td><td style="width:90px;"><input type="number" style="width:90px;" min="0" value="0"  id="Deu'+i+'"></td><!-- hasta aqui --><td style="width:80px;"><center><div id="Total'+i+'">0</div></center></td><td><input type="date" style="width:115px;" id="fechaD'+i+'" disabled></td><td><input type="text" style="width:170px;" id="obs'+i+'"></td></tr>');
+        $('#pagoCuotas').append('<tr><td><input style="width:115px;" type="number" id="Nbol'+i+'" value="'+NBol+'" onKeyUp="copiarNbol('+i+')"></td><td><input style="width:125px;" type="date" id="FechaBol'+i+'" onChange="fecha('+i+')"></td><td style="width:100px;"><center><a id="modalP'+i+'" role="button" onClick="MostrarP('+i+')"class="btn" data-toggle="modal" tipo="" banco="" numero="" monto="">Seleccionar</a></center></td><!-- suma desde aqui--><td><input type="number" style="width:80px;" min="0"  value="0" id="Col'+i+'" ></td><td><input type="number" style="width:80px;" min="0" value="0" id="Mat'+i+'"></td><td style="width:90px;"><input type="number" style="width:90px;" min="0" value="0"  id="Deu'+i+'"></td><!-- hasta aqui --><td style="width:80px;"><center><div id="Total'+i+'">0</div></center></td><td><input type="date" style="width:115px;" id="fechaD'+i+'" disabled></td><td><input type="text" style="width:170px;" id="obs'+i+'"></td></tr>');
     }
 }
 function copiarNbol(B){
@@ -290,8 +293,8 @@ function copiarNbol(B){
         $("#Nbol"+i).val(A);
     }}
 function fecha(B){
-    var C = parseFloat($('#cuotas').val());
-    var CI = parseFloat($("#cuotaInc").val());
+    var C = parseFloat($('#cuotas').val());//10
+    var CI = parseFloat($("#cuotaInc").val());//12
     var CA = parseFloat($("#almuerzoCuotas").val());
     var valor = $("#FechaBol"+B).val()
     if(CI!=0){
@@ -299,7 +302,6 @@ function fecha(B){
         var anio = $("#FechaBol"+A).val().substr(0,4)
         var mes = $("#FechaBol"+A).val().substr(5,2)
         var dia = $("#FechaBol"+A).val().substr(8,2)
-        var mes2 ="0"+mes;
         for	(var i =A;i<CI+1;i++){
             if(mes>12){
                 mes=1
@@ -309,42 +311,40 @@ function fecha(B){
                 dia=28;
             }
             if(mes<10){
-                mes2="0"+mes}
+               var mes2="0"+mes}
             else{
-                mes2=mes}
+               var mes2=mes}
             $("#FechaBol"+i).val(anio+"-"+mes2+"-"+dia)
             mes++;
         }
 
     }
     if(C!=0){
-        var A=B+CI
+        var A=B+CI+1
         var anio = $("#FechaBol"+A).val().substr(0,4)
         var mes = $("#FechaBol"+A).val().substr(5,2)
         var dia = $("#FechaBol"+A).val().substr(8,2)
-        var mes2 ="0"+mes;
         for	(var i =A ;i<CI+1+C;i++){
             if(mes>12){
                 mes=1
                 anio++
             }
             if(mes==2 && dia>28){
-                dia=28;
+               var dia=28;
             }
             if(mes<10)
-                mes2="0"+mes
+                var mes2="0"+mes
             else
-                mes2=mes
+                var mes2=mes
             $("#FechaBol"+i).val(anio+"-"+mes2+"-"+dia)
             mes++;
         }
     }
     if(CA!=0){
-        var A=B+CI+C
+        var A=B+CI+C+1
         var anio = $("#FechaBol"+A).val().substr(0,4)
         var mes = $("#FechaBol"+A).val().substr(5,2)
         var dia = $("#FechaBol"+A).val().substr(8,2)
-        var mes2 ="0"+mes;
         alert(mes2)
         for	(var i =A ;i<CI+1+C+CA;i++){
             var i = i-1;
@@ -356,17 +356,17 @@ function fecha(B){
                 dia=28;
             }
             if(mes<10)
-                mes2="0"+mes
+                var mes2="0"+mes
             else
-                mes2=mes
+               var mes2=mes
             $("#FechaBol"+i).val(anio+"-"+mes2+"-"+dia)
             mes++;
         }
 
     }
-    $("#FechaBol"+B).val(valor)
 }
-$('#almuerzoCuotas').keyup(cambio3);
+$('#almuerzoCuotas').keyup(function(){
+});
 $('#cuotaInc').keyup(cambio2);
 $('#cuotas').keyup(cambio);
 	
