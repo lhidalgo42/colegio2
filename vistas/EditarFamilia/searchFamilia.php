@@ -14,13 +14,13 @@ $db_selected = mysql_select_db($base_de_datos);
 
 $keyword = $_REQUEST['keyword'];
 
-$familiaSQL = mysql_query("SELECT DISTINCT ID, Familia FROM familia F JOIN papas P ON F.ID = P.Familia_ID WHERE Familia LIKE '%$keyword%'");
+$familiaSQL = mysql_query("SELECT DISTINCT F.ID, Familia FROM familia F JOIN papas P ON F.ID = P.Familia_ID WHERE Familia LIKE '%$keyword%'");
 
 //Mostrar Resultados
 
 echo "<table class='table table-striped'>";
 
-while($results = mysql_fetch_assoc($familiaSQL)){
+while($results = mysql_fetch_array($familiaSQL)){
 	$id = $results['ID'];
 	$familia = $results['Familia'];
 	$familiaUpper = strtoupper($familia);

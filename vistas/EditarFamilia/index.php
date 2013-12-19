@@ -66,6 +66,6 @@ $(function() {
 		
 	</div>
 	<div class="familiaID"><input type="hidden" id="familiaID"></div>
-<script src="../../js/EditarFamilia/functions.js"></script>
+	<script src="../../js/EditarFamilia/functions.js"></script>
 </body>
 </html>
