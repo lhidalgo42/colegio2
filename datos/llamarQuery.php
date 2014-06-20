@@ -22,7 +22,7 @@ function CallQueryReturnID($queryString){
 		$mysqlCon->set_charset("utf8");
 
 		if($mysqlCon->errno) {
-			printf("Conexion fallida: %s\n", $mysqli->connect_error);
+			printf("Conexion fallida: %s\n", $mysqlCon->connect_error);
 			exit();
 		}
 		
@@ -35,5 +35,13 @@ function CallQueryReturnID($queryString){
 			$mysqlCon->close();
 			return false;
 		}  
+}
+function SelectSql($sql){
+    $result=CallQuery($sql);
+    $resultArray = array();
+    while($fila = $result->fetch_assoc()) {
+        $resultArray[] = $fila;
+    }
+    return $resultArray;
 }
 ?>

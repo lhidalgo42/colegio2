@@ -1,8 +1,9 @@
-<?php
+|<?php
 session_start();
 # Cargamos la librería dompdf.
 include'../../dompdf/dompdf_config.inc.php';
-$html=$_SESSION['html'];
+//$html=$_SESSION['html'];
+print_r($_SESSION);
 
 $titulo="Matriculas - Revisión de datos";
 # Contenido HTML del documento que queremos generar en PDF.
@@ -212,8 +213,8 @@ $mipdf ->set_paper("letter", "landscape");
 $mipdf ->load_html(utf8_decode($html));
 
 # Renderizamos el documento PDF.
-//$mipdf ->render();
-echo $_SESSION['html'];
+$mipdf ->render();
+//echo $_SESSION['html'];
 # Enviamos el fichero PDF al navegador.
-//$mipdf ->stream('Familia '.$_SESSION['envio']['familia'][0].'.pdf');
+$mipdf ->stream('Familia '.$_SESSION['envio']['familia'][0].'.pdf');
 ?>

@@ -51,7 +51,8 @@ var actualizar2 = setInterval(function(){
     $('#CuoTInc').html(cuo);
     $('#TotalTInc').html(totalReal);
 },500);
-function siguente(){
+
+function enviar(){
     var familia = new Array();
     familia[0] = $("#familia").val();
     familia[1] = $("#AEconomico").children(".active").html()
@@ -126,27 +127,17 @@ function siguente(){
         documentos[i][13] = $("#uf").attr("iduf");
     }
     $.ajax({
-        url: "../../ajax/siguente.php",
-        data: {familia:familia,Papas:Papas,alumnos:alumnos,documentos:documentos},
-        type: "POST",
-        beforeSend: function()
-        {
-        },
-        success: function( data ) {
-            window.location.href = "revision.php"
-        }
-    });
-}
-function enviar(){
-    $.ajax({
         url: "../../ajax/enviar.php",
-        data: {familia:familia,Papas:Papas,alumnos:alumnos,documentos:documentos},
+        data: {'familia':familia,'Papas':Papas,'alumnos':alumnos,'documentos':documentos},
         type: "POST",
         beforeSend: function()
         {
         },
         success: function( data ) {
-            $("#ayuda").html(data);
+            if(data==1)
+            {
+            window.location.href="revision.php"
+            }
         }
     });}
 function curso(I){

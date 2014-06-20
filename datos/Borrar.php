@@ -62,6 +62,10 @@ class Borrar {
 		$query = CallQuery($queryString);
 		return $query;
 	}
+    public static function SQL($SQL) {
+        $query = CallQuery($SQL);
+        return $query;
+    }
 
    }
 ?>

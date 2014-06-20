@@ -24,7 +24,7 @@ echo "<td valign='top'>" . nl2br( $row['Numero']) . "</td>";
 echo "<td valign='top'>" . nl2br( $row['Bancos_ID']) . "</td>";  
 echo "<td valign='top'>" . nl2br( $row['Fecha_Deposito']) . "</td>";  
 echo "<td valign='top'>" . nl2br( $row['Fecha_Ins']) . "</td>";  
-echo "<td valign='top'>" . nl2br( $row['papas_RUT']) . "</td>";  
+echo "<td valign='top'>" . nl2br( $row['papas_ID']) . "</td>";
 echo "<td valign='top'><a href=edit.php?ID={$row['ID']}>Editar</a></td>";
 echo "</tr>"; 
 } 

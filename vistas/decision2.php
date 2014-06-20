@@ -70,7 +70,6 @@ verificarIP();
 				<a href="Matriculas/index.php" class="btn btn-large btn-block">Matricular Alumnos Nuevos</a>
 				<a href="#" class="btn btn-large btn-block" disabled>Matricular Alumnos Antiguos</a>
                 <a href="EditarFamilia/index.php" class="btn btn-large btn-block">Agregar Detalles alumnos Matriculados</a>
-                <a href="logout.php" class="btn btn-large btn-block btn-danger">Salir</a>
                 <div id="mensaje"></div> <!-- div para mostrar mensajes de error -->
             </form>
         </div> <!-- /container -->

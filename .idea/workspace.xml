@@ -2,23 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26bd3670-3a66-419f-9f66-fff0af623ad5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vistas/Matriculas/dd.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajax/pdf.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajax/pdf2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Leoo.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Leoo.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datos/Update.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datos/_notes/dwsync.xml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/datos/insert.php" afterPath="$PROJECT_DIR$/datos/insert.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datos/Borrar.php" afterPath="$PROJECT_DIR$/datos/Borrar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datos/Querys.php" afterPath="$PROJECT_DIR$/datos/Querys.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datos/Select.php" afterPath="$PROJECT_DIR$/datos/Select.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/ajaxPago.php" afterPath="$PROJECT_DIR$/ajax/ajaxPago.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Matriculas/clinicas.js" afterPath="$PROJECT_DIR$/js/Matriculas/clinicas.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vistas/Matriculas/cuotaInc.php" afterPath="$PROJECT_DIR$/vistas/Matriculas/cuotaInc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vistas/decision.php" afterPath="$PROJECT_DIR$/vistas/decision.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vistas/decision2.php" afterPath="$PROJECT_DIR$/vistas/decision2.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/enviar.php" afterPath="$PROJECT_DIR$/ajax/enviar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crud/Pago/index.php" afterPath="$PROJECT_DIR$/crud/Pago/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vistas/Contabilidad/index.php" afterPath="$PROJECT_DIR$/vistas/Contabilidad/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vistas/Matriculas/index.php" afterPath="$PROJECT_DIR$/vistas/Matriculas/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datos/llamarQuery.php" afterPath="$PROJECT_DIR$/datos/llamarQuery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Matriculas/pagos.js" afterPath="$PROJECT_DIR$/js/Matriculas/pagos.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Matriculas/precios.js" afterPath="$PROJECT_DIR$/js/Matriculas/precios.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vistas/Matriculas/modal.php" afterPath="$PROJECT_DIR$/vistas/Matriculas/modal.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/pdf2.php" afterPath="$PROJECT_DIR$/ajax/pdf2.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vistas/Matriculas/revision.php" afterPath="$PROJECT_DIR$/vistas/Matriculas/revision.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vistas/Matriculas/uf.php" afterPath="$PROJECT_DIR$/vistas/Matriculas/uf.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Matriculas/utilidades.js" afterPath="$PROJECT_DIR$/js/Matriculas/utilidades.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Matriculas/validacion.js" afterPath="$PROJECT_DIR$/js/Matriculas/validacion.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/verificarPassUsuario.php" afterPath="$PROJECT_DIR$/ajax/verificarPassUsuario.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="colegio.iws" />
@@ -47,10 +49,60 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="validacion.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/Matriculas/validacion.js">
+      <file leaf-file-name="ajaxPagoAutocomplete.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ajax/ajaxPagoAutocomplete.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+            <state line="14" column="15" selection-start="375" selection-end="375" vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="340">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Borrar.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/datos/Borrar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="69" column="4" selection-start="2538" selection-end="2538" vertical-scroll-proportion="-17.038462" vertical-offset="730" max-vertical-offset="1292">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajaxPago.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ajax/ajaxPago.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="36" selection-start="103" selection-end="103" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="7072">
+              <folding>
+                <marker date="1403238911389" expanded="true" signature="2519:2556" placeholder="SELECT Curso..nino..." />
+                <marker date="1403238911389" expanded="true" signature="3001:3022" placeholder="SELECT * FRO..familia..." />
+                <marker date="1403238911389" expanded="true" signature="3064:3153" placeholder="SELECT * FRO..familia..." />
+                <marker date="1403238911389" expanded="true" signature="3191:3251" placeholder="SELECT famil..familia..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="verificarPassUsuario.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ajax/verificarPassUsuario.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="110" selection-start="315" selection-end="315" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="816">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="llamarQuery.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/datos/llamarQuery.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="31" selection-start="908" selection-end="908" vertical-scroll-proportion="-13.730769" vertical-offset="221" max-vertical-offset="901">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sql.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sql/sql.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="27" selection-start="421" selection-end="421" vertical-scroll-proportion="3.2692308" vertical-offset="425" max-vertical-offset="969">
               <folding />
             </state>
           </provider>
@@ -59,63 +111,64 @@
       <file leaf-file-name="utilidades.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/Matriculas/utilidades.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="297" column="52" selection-start="12431" selection-end="12431" vertical-scroll-proportion="0.287796" vertical-offset="4891" max-vertical-offset="6409">
+            <state line="140" column="9" selection-start="5403" selection-end="5403" vertical-scroll-proportion="0.767148" vertical-offset="1955" max-vertical-offset="6256">
               <folding>
-                <marker date="1386683054830" expanded="false" signature="8985:8997" placeholder="..." />
-                <marker date="1386683054830" expanded="false" signature="9096:9108" placeholder="..." />
-                <marker date="1386683054830" expanded="false" signature="9181:9193" placeholder="..." />
-                <marker date="1386683054830" expanded="false" signature="9393:9404" placeholder="..." />
-                <marker date="1386683054830" expanded="false" signature="9447:9458" placeholder="..." />
-                <marker date="1386683054830" expanded="false" signature="9554:9566" placeholder="..." />
-                <marker date="1386683054830" expanded="false" signature="9638:9650" placeholder="..." />
-                <marker date="1386683054830" expanded="false" signature="9989:10001" placeholder="..." />
-                <marker date="1386683054830" expanded="false" signature="10100:10112" placeholder="..." />
-                <marker date="1386683054830" expanded="false" signature="10185:10197" placeholder="..." />
-                <marker date="1386683054830" expanded="false" signature="10397:10408" placeholder="..." />
-                <marker date="1386683054830" expanded="false" signature="10438:10449" placeholder="..." />
-                <marker date="1386683054830" expanded="false" signature="10518:10529" placeholder="..." />
-                <marker date="1386683054830" expanded="false" signature="10614:10626" placeholder="..." />
-                <marker date="1386683054830" expanded="false" signature="10689:10701" placeholder="..." />
-                <marker date="1386683054830" expanded="false" signature="11070:11082" placeholder="..." />
-                <marker date="1386683054830" expanded="false" signature="11181:11193" placeholder="..." />
-                <marker date="1386683054830" expanded="false" signature="11266:11278" placeholder="..." />
-                <marker date="1386683054830" expanded="false" signature="11499:11510" placeholder="..." />
-                <marker date="1386683054830" expanded="false" signature="11583:11594" placeholder="..." />
-                <marker date="1386683054830" expanded="false" signature="11644:11655" placeholder="..." />
-                <marker date="1386683054830" expanded="false" signature="11685:11696" placeholder="..." />
-                <marker date="1386683054830" expanded="false" signature="11766:11777" placeholder="..." />
-                <marker date="1386683054830" expanded="false" signature="11859:11871" placeholder="..." />
-                <marker date="1386683054830" expanded="false" signature="11934:11946" placeholder="..." />
+                <marker date="1403253867015" expanded="false" signature="8721:8733" placeholder="..." />
+                <marker date="1403253867015" expanded="false" signature="8832:8844" placeholder="..." />
+                <marker date="1403253867015" expanded="false" signature="8917:8929" placeholder="..." />
+                <marker date="1403253867015" expanded="false" signature="9129:9140" placeholder="..." />
+                <marker date="1403253867015" expanded="false" signature="9183:9194" placeholder="..." />
+                <marker date="1403253867015" expanded="false" signature="9290:9302" placeholder="..." />
+                <marker date="1403253867015" expanded="false" signature="9374:9386" placeholder="..." />
+                <marker date="1403253867015" expanded="false" signature="9725:9737" placeholder="..." />
+                <marker date="1403253867015" expanded="false" signature="9836:9848" placeholder="..." />
+                <marker date="1403253867015" expanded="false" signature="9921:9933" placeholder="..." />
+                <marker date="1403253867015" expanded="false" signature="10133:10144" placeholder="..." />
+                <marker date="1403253867015" expanded="false" signature="10174:10185" placeholder="..." />
+                <marker date="1403253867015" expanded="false" signature="10254:10265" placeholder="..." />
+                <marker date="1403253867015" expanded="false" signature="10350:10362" placeholder="..." />
+                <marker date="1403253867015" expanded="false" signature="10425:10437" placeholder="..." />
+                <marker date="1403253867015" expanded="false" signature="10806:10818" placeholder="..." />
+                <marker date="1403253867015" expanded="false" signature="10917:10929" placeholder="..." />
+                <marker date="1403253867015" expanded="false" signature="11002:11014" placeholder="..." />
+                <marker date="1403253867015" expanded="false" signature="11235:11246" placeholder="..." />
+                <marker date="1403253867015" expanded="false" signature="11319:11330" placeholder="..." />
+                <marker date="1403253867015" expanded="false" signature="11380:11391" placeholder="..." />
+                <marker date="1403253867015" expanded="false" signature="11421:11432" placeholder="..." />
+                <marker date="1403253867015" expanded="false" signature="11502:11513" placeholder="..." />
+                <marker date="1403253867015" expanded="false" signature="11595:11607" placeholder="..." />
+                <marker date="1403253867015" expanded="false" signature="11670:11682" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="precios.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/Matriculas/precios.js">
+      <file leaf-file-name="revision.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vistas/Matriculas/revision.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="24" selection-start="583" selection-end="583" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1479">
+            <state line="163" column="77" selection-start="7315" selection-end="7354" vertical-scroll-proportion="-98.73077" vertical-offset="204" max-vertical-offset="3995">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cuotaInc.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vistas/Matriculas/cuotaInc.php">
+      <file leaf-file-name="enviar.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ajax/enviar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="94" selection-start="762" selection-end="762" vertical-scroll-proportion="-5.8846154" vertical-offset="51" max-vertical-offset="1071">
+            <state line="17" column="13" selection-start="516" selection-end="516" vertical-scroll-proportion="24.807692" vertical-offset="934" max-vertical-offset="1751">
               <folding>
-                <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#2;n#!!top" expanded="true" />
+                <marker date="1403253867021" expanded="true" signature="220:292" placeholder="INSERT INTO ..." />
+                <marker date="1403253867021" expanded="true" signature="1617:1681" placeholder="INSERT INTO ..." />
+                <marker date="1403253867021" expanded="true" signature="2537:2608" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vistas/Matriculas/index.php">
+      <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bbdd/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="13" selection-start="1020" selection-end="1020" vertical-scroll-proportion="-13.730769" vertical-offset="357" max-vertical-offset="2176">
+            <state line="20" column="2" selection-start="643" selection-end="643" vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="442">
               <folding />
             </state>
           </provider>
@@ -139,21 +192,39 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/conexion.php" />
-        <option value="$PROJECT_DIR$/datos/llamarQuery.php" />
-        <option value="$PROJECT_DIR$/datos/insert.php" />
-        <option value="$PROJECT_DIR$/ajax/enviar.php" />
-        <option value="$PROJECT_DIR$/dompdf/www/demo.php" />
-        <option value="$PROJECT_DIR$/vistas/Matriculas/dd.php" />
-        <option value="$PROJECT_DIR$/js/Matriculas/pagos.js" />
         <option value="$PROJECT_DIR$/js/Matriculas/clinicas.js" />
         <option value="$PROJECT_DIR$/dompdf/dompdf_config.inc.php" />
-        <option value="$PROJECT_DIR$/ajax/pdf2.php" />
         <option value="$PROJECT_DIR$/ajax/pdf.php" />
-        <option value="$PROJECT_DIR$/vistas/Matriculas/revision.php" />
         <option value="$PROJECT_DIR$/js/Matriculas/precios.js" />
-        <option value="$PROJECT_DIR$/vistas/Matriculas/index.php" />
         <option value="$PROJECT_DIR$/vistas/Matriculas/cuotaInc.php" />
+        <option value="$PROJECT_DIR$/vistas/Matriculas/index.php" />
+        <option value="$PROJECT_DIR$/vistas/Matriculas/modal.php" />
+        <option value="$PROJECT_DIR$/ajax/pdf2.php" />
+        <option value="$PROJECT_DIR$/vistas/Matriculas/revision.php" />
+        <option value="$PROJECT_DIR$/crud/Pago/index.php" />
+        <option value="$PROJECT_DIR$/vistas/Admin/index.html" />
+        <option value="$PROJECT_DIR$/vistas/decision2.php" />
+        <option value="$PROJECT_DIR$/css/decision-css.css" />
+        <option value="$PROJECT_DIR$/vistas/Admin/forms.html" />
+        <option value="$PROJECT_DIR$/vistas/info/index.php" />
+        <option value="$PROJECT_DIR$/ajax/adminUpdate.php" />
+        <option value="$PROJECT_DIR$/vistas/Admin/forms.php" />
+        <option value="$PROJECT_DIR$/ajax/ajaxPagoAutocomplete.php" />
+        <option value="$PROJECT_DIR$/vistas/Contabilidad/index.php" />
+        <option value="$PROJECT_DIR$/datos/insert.php" />
+        <option value="$PROJECT_DIR$/datos/Select.php" />
+        <option value="$PROJECT_DIR$/datos/Borrar.php" />
+        <option value="$PROJECT_DIR$/datos/Update.php" />
+        <option value="$PROJECT_DIR$/vistas/decision.php" />
+        <option value="$PROJECT_DIR$/datos/Querys.php" />
+        <option value="$PROJECT_DIR$/ajax/ajaxPago.php" />
+        <option value="$PROJECT_DIR$/datos/dbconfig.php" />
+        <option value="$PROJECT_DIR$/sql/modelo.php" />
+        <option value="$PROJECT_DIR$/bbdd/config.php" />
+        <option value="$PROJECT_DIR$/ajax/verificarPassUsuario.php" />
+        <option value="$PROJECT_DIR$/datos/llamarQuery.php" />
+        <option value="$PROJECT_DIR$/sql/sql.php" />
+        <option value="$PROJECT_DIR$/ajax/enviar.php" />
         <option value="$PROJECT_DIR$/js/Matriculas/utilidades.js" />
       </list>
     </option>
@@ -191,7 +262,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -252,6 +322,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="vistas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="info" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="colegio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Colegio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sql" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="colegio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Colegio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -284,7 +386,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dompdf" />
+              <option name="myItemId" value="datos" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -298,7 +400,61 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="datos" />
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="colegio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Colegio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="font-awesome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="colegio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Colegio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="font-awesome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="colegio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Colegio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bbdd" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -318,6 +474,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -325,14 +482,14 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="160" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="154" />
-    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="154" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../acordion" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="162" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="829" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="836" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="829" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="154" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="153" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
@@ -346,34 +503,18 @@
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="vcs.Git" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
-  </component>
-  <component name="PublishConfig" serverName="localhost" serverId="8d86b13a-9def-41e0-ae13-9a9f17cb4a65">
-    <servers>
-      <server id="8d86b13a-9def-41e0-ae13-9a9f17cb4a65">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" />
-          </mappings>
-        </serverdata>
-      </server>
-      <server id="a45102c8-2536-419f-9b89-32478699cd46">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" />
-          </mappings>
-        </serverdata>
-      </server>
-    </servers>
+    <property name="options.searchVisible" value="true" />
+    <property name="SearchEverywhereHistory" value="" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Colegio\datos" />
       <recent name="C:\xampp\htdocs\Colegio\vistas\Matriculas" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -486,16 +627,16 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32692307" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3257329" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32764506" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3265306" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3257329" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.67064846" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4530303" sideWeight="0.67346936" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20694864" sideWeight="0.67346936" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993174" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2715959" sideWeight="0.45392492" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39795917" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39739415" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3139932" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -532,6 +673,11 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39966273" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -549,123 +695,334 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dompdf/www/head.inc">
+    <entry file="file://$PROJECT_DIR$/datos/Querys.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.7653846" vertical-offset="398" max-vertical-offset="1020" />
+        <state line="57" column="7" selection-start="1984" selection-end="2071" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="1479" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vistas/Matriculas/dd.php">
+    <entry file="file://$PROJECT_DIR$/datos/Select.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="169" column="16" selection-start="7848" selection-end="7892" vertical-scroll-proportion="0.5884615" vertical-offset="272" max-vertical-offset="816" />
+        <state line="3" column="0" selection-start="54" selection-end="304" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="612" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Matriculas/pagos.js">
+    <entry file="file://$PROJECT_DIR$/crud/Pago/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="62" selection-start="2428" selection-end="2428" vertical-scroll-proportion="-0.69572955" vertical-offset="1360" max-vertical-offset="1938" />
+        <state line="26" column="48" selection-start="1161" selection-end="1161" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Matriculas/clinicas.js">
+    <entry file="file://$PROJECT_DIR$/vistas/Contabilidad/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="28" selection-start="1975" selection-end="1975" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1717" />
+        <state line="27" column="13" selection-start="840" selection-end="840" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="2074" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/pdf.php">
+    <entry file="file://$PROJECT_DIR$/ajax/ajaxPago.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="11" selection-start="720" selection-end="720" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="680" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vistas/Matriculas/revision.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="223" column="43" selection-start="9836" selection-end="9836" vertical-scroll-proportion="-13.653846" vertical-offset="3436" max-vertical-offset="3995">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../acordion/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2329" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dompdf/www/demo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="17" selection-start="1204" selection-end="1213" vertical-scroll-proportion="0.6660448" vertical-offset="391" max-vertical-offset="1513" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/pdf2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="207" column="26" selection-start="8138" selection-end="8138" vertical-scroll-proportion="0.5" vertical-offset="3251" max-vertical-offset="3808" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/Matriculas/nino.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.0871887" vertical-offset="1173" max-vertical-offset="2346" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dompdf/dompdf_config.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="299" column="0" selection-start="10558" selection-end="10558" vertical-scroll-proportion="-0.25373134" vertical-offset="5083" max-vertical-offset="6494" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/Matriculas/validacion.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/Matriculas/precios.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="24" selection-start="583" selection-end="583" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1479">
-          <folding />
-        </state>
+        <state line="43" column="36" selection-start="1121" selection-end="1121" vertical-scroll-proportion="0.0" vertical-offset="603" max-vertical-offset="1683" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vistas/Matriculas/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="13" selection-start="1020" selection-end="1020" vertical-scroll-proportion="-13.730769" vertical-offset="357" max-vertical-offset="2176">
+        <state line="20" column="18" selection-start="681" selection-end="681" vertical-scroll-proportion="0.0" vertical-offset="1640" max-vertical-offset="2176" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Matriculas/utilidades.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="0" selection-start="5043" selection-end="5043" vertical-scroll-proportion="0.0" vertical-offset="2040" max-vertical-offset="6239" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/crud.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/curl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="2" selection-start="1403" selection-end="1477" vertical-scroll-proportion="0.0" vertical-offset="399" max-vertical-offset="901" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datos/llamarQuery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datos/Querys.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="7" selection-start="1984" selection-end="2071" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="1479" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datos/Select.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="54" selection-end="304" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="612" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/pdf2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="1" selection-start="1" selection-end="1" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="3825" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../hada/Datos/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="60" selection-start="264" selection-end="277" vertical-scroll-proportion="0.3631068" vertical-offset="0" max-vertical-offset="515" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Matriculas/clinicas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="0" selection-start="1886" selection-end="1886" vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="1717" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crud/Pago/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="48" selection-start="1161" selection-end="1161" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="629" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/curl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="2" selection-start="1403" selection-end="1477" vertical-scroll-proportion="0.0" vertical-offset="318" max-vertical-offset="901" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/crud.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="541" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/decision2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="123" selection-start="2848" selection-end="2848" vertical-scroll-proportion="-12.461538" vertical-offset="815" max-vertical-offset="1343" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/Matriculas/modal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="346" column="6" selection-start="14901" selection-end="14901" vertical-scroll-proportion="-0.8371212" vertical-offset="6324" max-vertical-offset="8126" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/sb-admin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.707231" vertical-offset="2102" max-vertical-offset="2805" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/font-awesome/css/font-awesome.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="10" selection-start="7940" selection-end="7944" vertical-scroll-proportion="0.3327032" vertical-offset="912" max-vertical-offset="6953" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/info/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="562" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/Matriculas/Alumnos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1207" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/Matriculas/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-24.081966" vertical-offset="13221" max-vertical-offset="14739" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/Matriculas/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="18" selection-start="681" selection-end="681" vertical-scroll-proportion="-2.2669039" vertical-offset="1614" max-vertical-offset="2176" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../remel-repo/Capa_Controladores/claseDiagnostico.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="8" selection-start="1775" selection-end="1782" vertical-scroll-proportion="0.0017793594" vertical-offset="1172" max-vertical-offset="1734" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="16" selection-start="945" selection-end="945" vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="901" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/Admin/forms.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="15" selection-start="291" selection-end="291" vertical-scroll-proportion="-0.21675774" vertical-offset="306" max-vertical-offset="3689" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/Contabilidad/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="174" column="7" selection-start="6216" selection-end="6216" vertical-scroll-proportion="0.84517306" vertical-offset="2494" max-vertical-offset="3077" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datos/insert.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="5" selection-start="4689" selection-end="4689" vertical-scroll-proportion="2.2295082" vertical-offset="0" max-vertical-offset="1377" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datos/Update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="2" selection-start="153" selection-end="153" vertical-scroll-proportion="0.24199288" vertical-offset="0" max-vertical-offset="562" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/decision.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="65" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1122">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vistas/Matriculas/cuotaInc.php">
+    <entry file="file://$PROJECT_DIR$/datos/dbconfig.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="94" selection-start="762" selection-end="762" vertical-scroll-proportion="-5.8846154" vertical-offset="51" max-vertical-offset="1071">
+        <state line="7" column="15" selection-start="130" selection-end="130" vertical-scroll-proportion="0.21996303" vertical-offset="0" max-vertical-offset="541">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/error_log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.25812274" vertical-offset="143" max-vertical-offset="697">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/adminUpdate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="23" selection-start="120" selection-end="120" vertical-scroll-proportion="-2.024911" vertical-offset="1206" max-vertical-offset="1870">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="588">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datos/Select.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="4" selection-start="1492" selection-end="1492" vertical-scroll-proportion="-17.038462" vertical-offset="305" max-vertical-offset="867">
           <folding>
-            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#2;n#!!top" expanded="true" />
+            <marker date="1402469448626" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..bancos..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/decision-css.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="0" selection-start="717" selection-end="717" vertical-scroll-proportion="0.82653064" vertical-offset="41" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datos/Borrar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="4" selection-start="2538" selection-end="2538" vertical-scroll-proportion="-17.038462" vertical-offset="730" max-vertical-offset="1292">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datos/Querys.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="31" selection-start="273" selection-end="273" vertical-scroll-proportion="0.06049822" vertical-offset="119" max-vertical-offset="918">
+          <folding>
+            <marker date="1403238452868" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..uf..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/modelo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="23" selection-start="120" selection-end="120" vertical-scroll-proportion="0.21174377" vertical-offset="0" max-vertical-offset="562">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/verificarPassUsuario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="110" selection-start="315" selection-end="315" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="816">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bbdd/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="2" selection-start="643" selection-end="643" vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="442">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datos/llamarQuery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="31" selection-start="908" selection-end="908" vertical-scroll-proportion="-13.730769" vertical-offset="221" max-vertical-offset="901">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/ajaxPago.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="36" selection-start="103" selection-end="103" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="7072">
+          <folding>
+            <marker date="1403238911389" expanded="true" signature="2519:2556" placeholder="SELECT Curso..nino..." />
+            <marker date="1403238911389" expanded="true" signature="3001:3022" placeholder="SELECT * FRO..familia..." />
+            <marker date="1403238911389" expanded="true" signature="3064:3153" placeholder="SELECT * FRO..familia..." />
+            <marker date="1403238911389" expanded="true" signature="3191:3251" placeholder="SELECT famil..familia..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/ajaxPagoAutocomplete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="15" selection-start="375" selection-end="375" vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="340">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/sql.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="27" selection-start="421" selection-end="421" vertical-scroll-proportion="3.2692308" vertical-offset="425" max-vertical-offset="969">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/Matriculas/revision.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="163" column="77" selection-start="7315" selection-end="7354" vertical-scroll-proportion="-98.73077" vertical-offset="204" max-vertical-offset="3995">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/enviar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="13" selection-start="516" selection-end="516" vertical-scroll-proportion="24.807692" vertical-offset="934" max-vertical-offset="1751">
+          <folding>
+            <marker date="1403253867021" expanded="true" signature="220:292" placeholder="INSERT INTO ..." />
+            <marker date="1403253867021" expanded="true" signature="1617:1681" placeholder="INSERT INTO ..." />
+            <marker date="1403253867021" expanded="true" signature="2537:2608" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/Matriculas/utilidades.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="297" column="52" selection-start="12431" selection-end="12431" vertical-scroll-proportion="0.287796" vertical-offset="4891" max-vertical-offset="6409">
+        <state line="140" column="9" selection-start="5403" selection-end="5403" vertical-scroll-proportion="0.767148" vertical-offset="1955" max-vertical-offset="6256">
           <folding>
-            <marker date="1386683054830" expanded="false" signature="8985:8997" placeholder="..." />
-            <marker date="1386683054830" expanded="false" signature="9096:9108" placeholder="..." />
-            <marker date="1386683054830" expanded="false" signature="9181:9193" placeholder="..." />
-            <marker date="1386683054830" expanded="false" signature="9393:9404" placeholder="..." />
-            <marker date="1386683054830" expanded="false" signature="9447:9458" placeholder="..." />
-            <marker date="1386683054830" expanded="false" signature="9554:9566" placeholder="..." />
-            <marker date="1386683054830" expanded="false" signature="9638:9650" placeholder="..." />
-            <marker date="1386683054830" expanded="false" signature="9989:10001" placeholder="..." />
-            <marker date="1386683054830" expanded="false" signature="10100:10112" placeholder="..." />
-            <marker date="1386683054830" expanded="false" signature="10185:10197" placeholder="..." />
-            <marker date="1386683054830" expanded="false" signature="10397:10408" placeholder="..." />
-            <marker date="1386683054830" expanded="false" signature="10438:10449" placeholder="..." />
-            <marker date="1386683054830" expanded="false" signature="10518:10529" placeholder="..." />
-            <marker date="1386683054830" expanded="false" signature="10614:10626" placeholder="..." />
-            <marker date="1386683054830" expanded="false" signature="10689:10701" placeholder="..." />
-            <marker date="1386683054830" expanded="false" signature="11070:11082" placeholder="..." />
-            <marker date="1386683054830" expanded="false" signature="11181:11193" placeholder="..." />
-            <marker date="1386683054830" expanded="false" signature="11266:11278" placeholder="..." />
-            <marker date="1386683054830" expanded="false" signature="11499:11510" placeholder="..." />
-            <marker date="1386683054830" expanded="false" signature="11583:11594" placeholder="..." />
-            <marker date="1386683054830" expanded="false" signature="11644:11655" placeholder="..." />
-            <marker date="1386683054830" expanded="false" signature="11685:11696" placeholder="..." />
-            <marker date="1386683054830" expanded="false" signature="11766:11777" placeholder="..." />
-            <marker date="1386683054830" expanded="false" signature="11859:11871" placeholder="..." />
-            <marker date="1386683054830" expanded="false" signature="11934:11946" placeholder="..." />
+            <marker date="1403253867015" expanded="false" signature="8721:8733" placeholder="..." />
+            <marker date="1403253867015" expanded="false" signature="8832:8844" placeholder="..." />
+            <marker date="1403253867015" expanded="false" signature="8917:8929" placeholder="..." />
+            <marker date="1403253867015" expanded="false" signature="9129:9140" placeholder="..." />
+            <marker date="1403253867015" expanded="false" signature="9183:9194" placeholder="..." />
+            <marker date="1403253867015" expanded="false" signature="9290:9302" placeholder="..." />
+            <marker date="1403253867015" expanded="false" signature="9374:9386" placeholder="..." />
+            <marker date="1403253867015" expanded="false" signature="9725:9737" placeholder="..." />
+            <marker date="1403253867015" expanded="false" signature="9836:9848" placeholder="..." />
+            <marker date="1403253867015" expanded="false" signature="9921:9933" placeholder="..." />
+            <marker date="1403253867015" expanded="false" signature="10133:10144" placeholder="..." />
+            <marker date="1403253867015" expanded="false" signature="10174:10185" placeholder="..." />
+            <marker date="1403253867015" expanded="false" signature="10254:10265" placeholder="..." />
+            <marker date="1403253867015" expanded="false" signature="10350:10362" placeholder="..." />
+            <marker date="1403253867015" expanded="false" signature="10425:10437" placeholder="..." />
+            <marker date="1403253867015" expanded="false" signature="10806:10818" placeholder="..." />
+            <marker date="1403253867015" expanded="false" signature="10917:10929" placeholder="..." />
+            <marker date="1403253867015" expanded="false" signature="11002:11014" placeholder="..." />
+            <marker date="1403253867015" expanded="false" signature="11235:11246" placeholder="..." />
+            <marker date="1403253867015" expanded="false" signature="11319:11330" placeholder="..." />
+            <marker date="1403253867015" expanded="false" signature="11380:11391" placeholder="..." />
+            <marker date="1403253867015" expanded="false" signature="11421:11432" placeholder="..." />
+            <marker date="1403253867015" expanded="false" signature="11502:11513" placeholder="..." />
+            <marker date="1403253867015" expanded="false" signature="11595:11607" placeholder="..." />
+            <marker date="1403253867015" expanded="false" signature="11670:11682" placeholder="..." />
           </folding>
         </state>
       </provider>

@@ -67,6 +67,10 @@ class Insert {
         $query = CallQueryReturnID($queryString);
         return $query;
     }
+    public static function SQL($sql) {
+        $query = CallQueryReturnID($sql);
+        return $query;
+    }
 
    }
 ?>

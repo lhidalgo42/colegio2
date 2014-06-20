@@ -40,8 +40,8 @@ width: 600px;
 	margin-top: 10px;
 }
 .opaco{
-    opacity:1;
-    filter:alpha(opacity=100);
+    opacity:0.1;
+    filter:alpha(opacity=10);
 
 }
 

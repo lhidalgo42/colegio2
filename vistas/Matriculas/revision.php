@@ -161,7 +161,7 @@ $data=$_SESSION['envio']; ?>
                   <tr>
                     <td><?php echo $data['documentos'][$i][12]; ?></td>
                     <td><?php echo $data['documentos'][$i][0]; ?></td>
-                    <td><?php echo substr($data['documentos'][$i][8], 0,1)."/".$data['documentos'][$i][9]."/$".$data['documentos'][$i][10]; ?></td>
+                    <td><?php echo "".substr($data['documentos'][$i][9], 0,9)." #".$data['documentos'][$i][10]; ?></td>
                     <td><center><?php echo $data['documentos'][$i][1]; ?></center></td>
                     <td><center><?php echo $data['documentos'][$i][2]; ?></center></td>
                     <td><center><?php echo $data['documentos'][$i][3]; ?></center></td>
@@ -197,20 +197,20 @@ $data=$_SESSION['envio']; ?>
     </div>
     <div id="ayuda"></div>
     <script>
-		function enviar(){
-$.ajax({
-  url: "../../ajax/enviar.php",
-  success: function( data ) {
-    if(data==1){}
-	$("#ayuda").html(data);
-	
-  }
-});}
         function preguntar(){
             confirmar=confirm("¿Esta seguro que desea continuar?");
             if (confirmar){
-                enviar()
-                //window.location.href = "../../vistas/decision2.php";
+                $.ajax({
+                    url: "../../ajax/enviar.php",
+                    success: function( data ) {
+                        if(data==1){
+                            window.location.href = "../../vistas/decision2.php";
+                        }
+                        else{
+                            $("#ayuda").html("ha Ocurrido un error<br>"+data);
+                        }
+                    }
+                });
             }
         }
         function pdf(){

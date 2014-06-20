@@ -341,7 +341,7 @@
      <div class="controls">
          <div class="btn-group" id="ANuevo" data-toggle="buttons-radio">
          <button type="button" class="btn btn-success" idval="1">SI</button>
-         <button type="button" class="btn btn-success" idval="0">NO</button>
+         <button type="button" class="btn btn-success active" idval="0">NO</button>
         </div>
     </div>
 </div>
